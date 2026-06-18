@@ -4,13 +4,13 @@ import { signals } from '@/data/portfolio'
 export function SignalSection() {
   return (
     <section
-      className="grid grid-cols-3 gap-3.5 max-md:grid-cols-1"
+      className="grid grid-cols-3 gap-4 max-md:grid-cols-1"
       aria-label="Axes principaux"
     >
       {signals.map((signal) => (
         <article
           key={signal.title}
-          className="rounded-lg border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-6"
+          className="rounded-[1.5rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-7 shadow-[0_18px_60px_rgba(0,0,0,0.08)] backdrop-blur-sm"
           data-reveal
         >
           <Rocket

@@ -1,22 +1,22 @@
 export const navItems = [
+  { href: '#profile', label: 'Profil' },
   { href: '#skills', label: 'Compétences' },
   { href: '#projects', label: 'Projets' },
-  { href: '#pipeline', label: 'Pipeline' },
   { href: '#contact', label: 'Contact' },
 ]
 
 export const signals = [
   {
-    title: 'Automatiser',
-    text: 'Réduire les tâches manuelles et les écarts entre environnements.',
+    title: 'Profil',
+    text: 'Développeur orienté DevOps, attentif aux systèmes simples, fiables et maintenables.',
   },
   {
-    title: 'Fiabiliser',
-    text: 'Rendre les builds, checks et releases reproductibles.',
+    title: 'Approche',
+    text: 'J’aime comprendre le cycle complet: code, qualité, image, livraison, exploitation.',
   },
   {
-    title: 'Observer',
-    text: 'Favoriser les signaux utiles plutôt que le bruit opérationnel.',
+    title: 'Univers',
+    text: 'L’astrophysique et le spatial nourrissent mon goût pour les systèmes exigeants et précis.',
   },
 ]
 
@@ -41,23 +41,29 @@ export const skills = [
 
 export const projects = [
   {
-    name: 'Portfolio cloud-ready',
+    name: 'Culture DevOps',
     description:
-      'Application React/Vite packagée avec Docker, contrôles qualité, release SemVer et publication registry.',
-    stack: ['React', 'Vite', 'Docker', 'GHCR'],
+      'Automatiser ce qui peut l’être, documenter ce qui doit durer, garder une chaîne de livraison lisible.',
+    stack: ['CI/CD', 'Docker', 'Release', 'Qualité'],
   },
   {
-    name: 'Pipeline qualité',
+    name: 'Rigueur d’exploitation',
     description:
-      'Pré-commit, ESLint, Prettier, Hadolint et validations YAML/JSON pour garder un dépôt propre.',
-    stack: ['ESLint', 'Prettier', 'Hadolint', 'GitHub Actions'],
+      'Privilégier les signaux utiles: logs clairs, checks pertinents, erreurs compréhensibles et corrections traçables.',
+    stack: ['Observability', 'Runbooks', 'Linux', 'Monitoring'],
   },
   {
-    name: 'Image de production',
+    name: 'Curiosité scientifique',
     description:
-      'Build multi-stage, runtime nginx non-root, cache assets et fallback SPA pour déploiement statique.',
-    stack: ['Node', 'Nginx', 'Docker', 'SPA'],
+      'J’aime l’espace, l’astrophysique et les systèmes où chaque contrainte compte: trajectoire, énergie, observation.',
+    stack: ['Astrophysique', 'Spatial', 'Télémétrie', 'Précision'],
   },
 ]
 
-export const pipelineSteps = ['Code', 'Quality', 'Build', 'Image', 'Release']
+export const pipelineSteps = [
+  'Comprendre',
+  'Automatiser',
+  'Fiabiliser',
+  'Observer',
+  'Améliorer',
+]

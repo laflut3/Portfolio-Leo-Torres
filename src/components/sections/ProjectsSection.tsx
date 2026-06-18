@@ -6,8 +6,8 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="mt-24 max-md:mt-14">
       <SectionHeading
-        kicker="Projets"
-        title="Des exemples concrets, centrés sur la qualité de livraison."
+        kicker="Ce que je cherche à construire"
+        title="Des environnements sérieux, maintenables et agréables à faire évoluer."
       />
       <div className="grid gap-3">
         {projects.map((project) => (

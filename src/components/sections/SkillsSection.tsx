@@ -6,8 +6,8 @@ export function SkillsSection() {
   return (
     <section id="skills" className="mt-24 max-md:mt-14">
       <SectionHeading
-        kicker="Stack DevOps"
-        title="Un socle technique orienté livraison."
+        kicker="Compétences"
+        title="Les sujets DevOps que j’aime pratiquer et approfondir."
       />
       <div className="grid grid-cols-4 gap-3.5 max-md:grid-cols-1">
         {skills.map((skill) => (

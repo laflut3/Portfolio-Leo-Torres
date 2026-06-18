@@ -51,6 +51,7 @@
   --portfolio-text-soft: #4d6078;
   --portfolio-cyan: #0369a1;
   --portfolio-amber: #b45309;
+  --portfolio-orbit: rgba(3, 105, 161, 0.18);
   --portfolio-panel: rgba(255, 255, 255, 0.68);
   --portfolio-panel-strong: rgba(255, 255, 255, 0.86);
   --portfolio-line: rgba(20, 70, 110, 0.16);
@@ -141,6 +142,7 @@ body {
   --portfolio-text-soft: #b6c2d2;
   --portfolio-cyan: #7dd3fc;
   --portfolio-amber: #f6c66b;
+  --portfolio-orbit: rgba(125, 211, 252, 0.2);
   --portfolio-panel: rgba(9, 18, 31, 0.74);
   --portfolio-panel-strong: rgba(15, 28, 46, 0.82);
   --portfolio-line: rgba(148, 163, 184, 0.17);
@@ -184,6 +186,7 @@ body {
     --portfolio-text-soft: #b6c2d2;
     --portfolio-cyan: #7dd3fc;
     --portfolio-amber: #f6c66b;
+    --portfolio-orbit: rgba(125, 211, 252, 0.2);
     --portfolio-panel: rgba(9, 18, 31, 0.74);
     --portfolio-panel-strong: rgba(15, 28, 46, 0.82);
     --portfolio-line: rgba(148, 163, 184, 0.17);

@@ -17,7 +17,7 @@ export function ThemeSwitch() {
 
   return (
     <div
-      className="flex rounded-lg border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-1"
+      className="fixed top-5 right-5 z-30 flex rounded-full border border-[var(--portfolio-line)] bg-[color-mix(in_oklch,var(--portfolio-panel-strong)_88%,transparent)] p-1 shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl"
       aria-label="Choix du thème"
     >
       {options.map(({ mode: optionMode, label, Icon }) => (
@@ -27,7 +27,7 @@ export function ThemeSwitch() {
           aria-label={label}
           aria-pressed={mode === optionMode}
           className={cn(
-            'inline-flex size-7 items-center justify-center rounded-md text-[var(--portfolio-text-soft)] transition-colors hover:text-foreground',
+            'inline-flex size-8 items-center justify-center rounded-full text-[var(--portfolio-text-soft)] transition-colors hover:text-foreground',
             mode === optionMode &&
               'bg-[var(--portfolio-panel-strong)] text-foreground shadow-sm',
           )}

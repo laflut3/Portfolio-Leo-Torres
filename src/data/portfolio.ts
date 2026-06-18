@@ -38,32 +38,3 @@ export const skills = [
     items: ['Logs', 'Health checks', 'Alerting', 'Runbooks'],
   },
 ]
-
-export const projects = [
-  {
-    name: 'Culture DevOps',
-    description:
-      'Automatiser ce qui peut l’être, documenter ce qui doit durer, garder une chaîne de livraison lisible.',
-    stack: ['CI/CD', 'Docker', 'Release', 'Qualité'],
-  },
-  {
-    name: 'Rigueur d’exploitation',
-    description:
-      'Privilégier les signaux utiles: logs clairs, checks pertinents, erreurs compréhensibles et corrections traçables.',
-    stack: ['Observability', 'Runbooks', 'Linux', 'Monitoring'],
-  },
-  {
-    name: 'Curiosité scientifique',
-    description:
-      'J’aime l’espace, l’astrophysique et les systèmes où chaque contrainte compte: trajectoire, énergie, observation.',
-    stack: ['Astrophysique', 'Spatial', 'Télémétrie', 'Précision'],
-  },
-]
-
-export const pipelineSteps = [
-  'Comprendre',
-  'Automatiser',
-  'Fiabiliser',
-  'Observer',
-  'Améliorer',
-]

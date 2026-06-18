@@ -3,11 +3,8 @@ import { ContactSection } from '@/components/sections/ContactSection'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { PipelineSection } from '@/components/sections/PipelineSection'
-import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { SignalSection } from '@/components/sections/SignalSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
-import { SpaceNoteSection } from '@/components/sections/SpaceNoteSection'
 import { ThemeSwitch } from '@/components/layout/ThemeSwitch'
 import { usePortfolioAnimation } from '@/hooks/usePortfolioAnimation'
 
@@ -42,9 +39,6 @@ function App() {
         <HeroSection />
         <SignalSection />
         <SkillsSection />
-        <ProjectsSection />
-        <PipelineSection />
-        <SpaceNoteSection />
         <ContactSection />
       </main>
       <Footer />

@@ -1,8 +1,10 @@
-import { useRef } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { ContactSection } from '@/components/sections/ContactSection'
+import { EducationSection } from '@/components/sections/EducationSection'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { HeroSection } from '@/components/sections/HeroSection'
+import { IntroOverlay } from '@/components/layout/IntroOverlay'
 import { SignalSection } from '@/components/sections/SignalSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
 import { ThemeSwitch } from '@/components/layout/ThemeSwitch'
@@ -10,8 +12,12 @@ import { usePortfolioAnimation } from '@/hooks/usePortfolioAnimation'
 
 function App() {
   const pageRef = useRef<HTMLDivElement>(null)
+  const [introComplete, setIntroComplete] = useState(false)
+  const handleIntroComplete = useCallback(() => {
+    setIntroComplete(true)
+  }, [])
 
-  usePortfolioAnimation(pageRef)
+  usePortfolioAnimation(pageRef, introComplete)
 
   return (
     <div
@@ -20,14 +26,17 @@ function App() {
     >
       <div
         aria-hidden="true"
+        data-space-layer="stars"
         className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle,var(--portfolio-star)_1px,transparent_1px)] bg-[length:110px_110px] opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent_82%)]"
       />
       <div
         aria-hidden="true"
+        data-space-layer="grid"
         className="pointer-events-none fixed inset-0 bg-[linear-gradient(var(--portfolio-line)_1px,transparent_1px),linear-gradient(90deg,var(--portfolio-line)_1px,transparent_1px)] bg-[length:88px_88px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]"
       />
       <div
         aria-hidden="true"
+        data-orbit-ring
         className="pointer-events-none fixed top-24 right-[8vw] size-[38rem] rounded-full border border-[var(--portfolio-orbit)] opacity-50"
       />
       <ThemeSwitch />
@@ -39,9 +48,11 @@ function App() {
         <HeroSection />
         <SignalSection />
         <SkillsSection />
+        <EducationSection />
         <ContactSection />
       </main>
       <Footer />
+      {!introComplete && <IntroOverlay onComplete={handleIntroComplete} />}
     </div>
   )
 }

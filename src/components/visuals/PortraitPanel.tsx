@@ -1,3 +1,4 @@
+import { Orbit, ServerCog } from 'lucide-react'
 import photoSrc from '@/assets/leo-torres.webp'
 
 export function PortraitPanel() {
@@ -27,13 +28,15 @@ export function PortraitPanel() {
 
       <div className="relative mt-4 grid grid-cols-2 gap-3">
         <div className="rounded-2xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-4">
-          <span className="text-xs text-[var(--portfolio-text-soft)]">
+          <span className="inline-flex items-center gap-1.5 text-xs text-[var(--portfolio-text-soft)]">
+            <ServerCog className="size-3.5" aria-hidden="true" />
             Profil
           </span>
           <strong className="mt-1 block text-foreground">DevOps</strong>
         </div>
         <div className="rounded-2xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-4">
-          <span className="text-xs text-[var(--portfolio-text-soft)]">
+          <span className="inline-flex items-center gap-1.5 text-xs text-[var(--portfolio-text-soft)]">
+            <Orbit className="size-3.5" aria-hidden="true" />
             Passion
           </span>
           <strong className="mt-1 block text-foreground">Espace</strong>

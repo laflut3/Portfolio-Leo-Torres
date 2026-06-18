@@ -9,14 +9,15 @@ export function ContactSection() {
       data-reveal
     >
       <div>
-        <p className="m-0 text-xs font-bold tracking-[0.16em] text-[var(--portfolio-cyan)] uppercase">
+        <p className="m-0 inline-flex items-center gap-2 text-xs font-bold tracking-[0.16em] text-[var(--portfolio-cyan)] uppercase">
+          <Mail className="size-4" aria-hidden="true" />
           Contact
         </p>
         <h2 className="mt-3 text-[clamp(1.9rem,4vw,3.3rem)] leading-[1.08] font-medium tracking-normal text-foreground">
           Parlons infrastructure, automatisation ou projets orientés DevOps.
         </h2>
       </div>
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="flex flex-wrap justify-end gap-3 max-md:justify-start">
         <Button asChild>
           <a href="https://github.com/ltorres" target="_blank" rel="noreferrer">
             <Code data-icon="inline-start" />

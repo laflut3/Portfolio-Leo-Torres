@@ -21,7 +21,7 @@ export function PortraitPanel() {
         />
         <img
           src={photoSrc}
-          alt="Portrait de Leo Torres"
+          alt="Portrait of Leo Torres"
           className="size-full object-cover"
         />
       </div>
@@ -30,7 +30,7 @@ export function PortraitPanel() {
         <div className="rounded-2xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-4">
           <span className="inline-flex items-center gap-1.5 text-xs text-[var(--portfolio-text-soft)]">
             <ServerCog className="size-3.5" aria-hidden="true" />
-            Profil
+            Profile
           </span>
           <strong className="mt-1 block text-foreground">DevOps</strong>
         </div>
@@ -39,7 +39,7 @@ export function PortraitPanel() {
             <Orbit className="size-3.5" aria-hidden="true" />
             Passion
           </span>
-          <strong className="mt-1 block text-foreground">Espace</strong>
+          <strong className="mt-1 block text-foreground">Space</strong>
         </div>
       </div>
     </div>

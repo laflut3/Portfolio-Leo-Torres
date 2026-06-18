@@ -14,7 +14,8 @@ export function ContactSection() {
           Contact
         </p>
         <h2 className="mt-3 text-[clamp(1.9rem,4vw,3.3rem)] leading-[1.08] font-medium tracking-normal text-foreground">
-          Parlons infrastructure, automatisation ou projets orientés DevOps.
+          Let&apos;s talk infrastructure, automation or DevOps-oriented
+          projects.
         </h2>
       </div>
       <div className="flex flex-wrap justify-end gap-3 max-md:justify-start">
@@ -27,7 +28,7 @@ export function ContactSection() {
         <Button asChild variant="outline">
           <a href="mailto:leo.torres@example.com">
             <Mail data-icon="inline-start" />
-            Me contacter
+            Contact me
           </a>
         </Button>
       </div>

@@ -13,33 +13,32 @@ export function HeroSection() {
           className="m-0 text-xs font-bold tracking-[0.16em] text-[var(--portfolio-cyan)] uppercase"
           data-reveal
         >
-          Leo Torres • Développeur DevOps
+          Leo Torres • DevOps Developer
         </p>
         <h1
           className="m-0 max-w-3xl text-[clamp(3.8rem,10vw,7.8rem)] leading-[0.9] font-medium tracking-normal text-foreground"
           data-reveal
         >
-          J’aime rendre les systèmes fiables.
+          I like making systems reliable.
         </h1>
         <p
           className="mt-5 text-[clamp(1.5rem,3vw,2.7rem)] font-semibold text-[var(--portfolio-amber)]"
           data-reveal
         >
-          Et comprendre ceux qui orbitent au-dessus de nous.
+          And understanding what orbits above us.
         </p>
         <p
           className="mt-6 max-w-2xl text-[1.08rem] leading-8 text-[var(--portfolio-text-soft)]"
           data-reveal
         >
-          Je suis Leo Torres, développeur avec une forte sensibilité DevOps.
-          J’aime les environnements propres, les pipelines lisibles, les
-          déploiements maîtrisés et les outils qui simplifient vraiment le
-          travail d’une équipe.
+          I am Leo Torres, a developer with a strong DevOps mindset. I like
+          clean environments, readable pipelines, controlled deployments and
+          tools that genuinely simplify a team&apos;s work.
         </p>
         <div className="mt-8 flex flex-wrap gap-3" data-reveal>
           <Button asChild size="lg">
-            <a href="#projects">
-              Découvrir mon profil <ArrowUpRight data-icon="inline-end" />
+            <a href="#skills">
+              Explore my profile <ArrowUpRight data-icon="inline-end" />
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">

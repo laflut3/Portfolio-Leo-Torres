@@ -1,21 +1,39 @@
-import { Activity, Boxes, Cloud, GitBranch } from 'lucide-react'
+import {
+  Activity,
+  BadgeCheck,
+  BrainCircuit,
+  Code2,
+  Database,
+  ServerCog,
+  UsersRound,
+  Workflow,
+} from 'lucide-react'
 import { TagList } from '@/components/common/TagList'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { skills } from '@/data/portfolio'
 
-const skillIcons = [Cloud, GitBranch, Boxes, Activity]
+const skillIcons = [
+  ServerCog,
+  Workflow,
+  Code2,
+  Database,
+  BadgeCheck,
+  Activity,
+  UsersRound,
+  BrainCircuit,
+]
 
 export function SkillsSection() {
   return (
     <section id="skills" className="mt-24 max-md:mt-14">
       <SectionHeading
-        kicker="Compétences"
-        title="Les sujets DevOps que j’aime pratiquer et approfondir."
-        icon={<Cloud className="size-4" aria-hidden="true" />}
+        kicker="Skills"
+        title="The DevOps topics I like practicing and deepening."
+        icon={<ServerCog className="size-4" aria-hidden="true" />}
       />
       <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
         {skills.map((skill, index) => {
-          const Icon = skillIcons[index] ?? Cloud
+          const Icon = skillIcons[index] ?? ServerCog
 
           return (
             <article

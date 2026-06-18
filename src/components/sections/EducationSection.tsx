@@ -14,8 +14,8 @@ export function EducationSection() {
   return (
     <section id="education" className="mt-24 max-md:mt-14">
       <SectionHeading
-        kicker="Diplômes"
-        title="Un parcours technique, scientifique et opérationnel."
+        kicker="Education"
+        title="A technical, scientific and operational path."
         icon={<GraduationCap className="size-4" aria-hidden="true" />}
       />
       <div className="relative grid gap-4">
@@ -25,7 +25,7 @@ export function EducationSection() {
         />
         {education.map((degree, index) => {
           const Icon = educationIcons[index] ?? GraduationCap
-          const isCurrent = degree.status === 'En cours'
+          const isCurrent = degree.status === 'In progress'
 
           return (
             <article

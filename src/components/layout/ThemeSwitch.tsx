@@ -7,9 +7,9 @@ const options: Array<{
   label: string
   Icon: typeof Sun
 }> = [
-  { mode: 'light', label: 'Mode clair', Icon: Sun },
-  { mode: 'dark', label: 'Mode sombre', Icon: Moon },
-  { mode: 'system', label: 'Préférence système', Icon: Monitor },
+  { mode: 'light', label: 'Light mode', Icon: Sun },
+  { mode: 'dark', label: 'Dark mode', Icon: Moon },
+  { mode: 'system', label: 'System preference', Icon: Monitor },
 ]
 
 export function ThemeSwitch() {
@@ -18,7 +18,7 @@ export function ThemeSwitch() {
   return (
     <div
       className="fixed top-5 right-5 z-30 flex rounded-full border border-[var(--portfolio-line)] bg-[color-mix(in_oklch,var(--portfolio-panel-strong)_88%,transparent)] p-1 shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl"
-      aria-label="Choix du thème"
+      aria-label="Theme selection"
     >
       {options.map(({ mode: optionMode, label, Icon }) => (
         <button

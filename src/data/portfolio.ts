@@ -1,73 +1,89 @@
 export const navItems = [
-  { href: '#profile', label: 'Profil' },
-  { href: '#skills', label: 'Compétences' },
-  { href: '#education', label: 'Diplômes' },
+  { href: '#profile', label: 'Profile' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
 ]
 
 export const signals = [
   {
-    title: 'Profil',
-    text: 'Développeur orienté DevOps, attentif aux systèmes simples, fiables et maintenables.',
+    title: 'Profile',
+    text: 'DevOps-oriented developer focused on simple, reliable and maintainable systems.',
   },
   {
-    title: 'Approche',
-    text: 'J’aime comprendre le cycle complet: code, qualité, image, livraison, exploitation.',
+    title: 'Approach',
+    text: 'I like understanding the full cycle: code, quality, images, delivery and operations.',
   },
   {
-    title: 'Univers',
-    text: 'L’astrophysique et le spatial nourrissent mon goût pour les systèmes exigeants et précis.',
+    title: 'Universe',
+    text: 'Astrophysics and space fuel my interest in demanding, precise systems.',
   },
 ]
 
 export const skills = [
   {
-    title: 'Infrastructure',
-    items: ['Linux', 'Réseau', 'Scripting', 'IaC'],
+    title: 'System',
+    items: ['Linux', 'Networking', 'Shell', 'Security'],
   },
   {
-    title: 'CI/CD',
-    items: ['GitHub Actions', 'Pre-commit', 'Quality gates', 'Release'],
+    title: 'Deployment & Automation',
+    items: ['CI/CD', 'Docker', 'Nginx', 'Release'],
   },
   {
-    title: 'Containers',
-    items: ['Docker', 'Nginx', 'Distroless', 'Hadolint'],
+    title: 'Development',
+    items: ['TypeScript', 'React', 'APIs', 'Scripting'],
+  },
+  {
+    title: 'Databases',
+    items: ['SQL', 'Modeling', 'Queries', 'Persistence'],
+  },
+  {
+    title: 'Quality',
+    items: ['Pre-commit', 'Linting', 'Testing', 'Quality gates'],
   },
   {
     title: 'Observability',
     items: ['Logs', 'Health checks', 'Alerting', 'Runbooks'],
   },
+  {
+    title: 'Management',
+    items: ['Planning', 'Documentation', 'Coordination', 'Delivery'],
+  },
+  {
+    title: 'AI',
+    items: ['LLMs', 'Prompting', 'Automation', 'Integration'],
+  },
 ]
 
 export const education = [
   {
-    title: 'Bac STI2D',
-    meta: 'Mention bien',
-    text: 'Une base technique orientée conception, systèmes et raisonnement industriel.',
-    status: 'Obtenu',
+    title: 'STI2D Baccalaureate',
+    meta: 'With honors',
+    text: 'A technical foundation focused on design, systems and industrial reasoning.',
+    status: 'Earned',
   },
   {
     title: 'BIA',
-    meta: "Brevet d'initiation à l'aéronautique",
-    text: 'Une première passerelle entre curiosité scientifique, aéronautique et culture du vol.',
-    status: 'Obtenu',
+    meta: 'Aeronautics initiation certificate',
+    text: 'An early bridge between scientific curiosity, aeronautics and flight culture.',
+    status: 'Earned',
   },
   {
-    title: 'BUT Informatique',
-    meta: "Spécialité déploiement d'applications communicantes et sécurisées",
-    text: "Développement, réseau, sécurité et mise en production d'applications fiables.",
-    status: 'Obtenu',
+    title: 'BUT in Computer Science',
+    meta: 'Specialization in deploying communicating and secure applications',
+    text: 'Development, networking, security and production delivery for reliable applications.',
+    status: 'Earned',
   },
   {
-    title: 'Licence Sciences, Technologies, Santé',
-    meta: 'Mention sciences et technologie, parcours management technologie et sciences (e-learning)',
-    text: 'Un complément scientifique et organisationnel autour du management technologique.',
-    status: 'Obtenu',
+    title: 'Bachelor in Science, Technology and Health',
+    meta: 'Science and technology track, technology and science management path (e-learning)',
+    text: 'A scientific and organizational complement around technology management.',
+    status: 'Earned',
   },
   {
     title: 'Polytech Montpellier',
-    meta: 'Développement informatique et exploitation opérationnelle (DO)',
-    text: "Formation actuelle tournée vers le développement, l'exploitation et les pratiques opérationnelles.",
-    status: 'En cours',
+    meta: 'Software development and operational exploitation (DO)',
+    text: 'Current program focused on development, operations and practical operational methods.',
+    status: 'In progress',
   },
 ]

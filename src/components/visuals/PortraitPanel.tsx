@@ -1,10 +1,6 @@
-import { useState } from 'react'
-
-const photoSrc = '/leo-torres.jpg'
+import photoSrc from '@/assets/leo-torres.webp'
 
 export function PortraitPanel() {
-  const [hasPhoto, setHasPhoto] = useState(true)
-
   return (
     <div
       className="relative overflow-hidden rounded-[2.25rem] border border-[var(--portfolio-line)] bg-[linear-gradient(145deg,var(--portfolio-panel-strong),color-mix(in_oklch,var(--portfolio-panel)_80%,transparent))] p-4 shadow-[0_30px_90px_rgba(0,0,0,0.22)]"
@@ -22,23 +18,11 @@ export function PortraitPanel() {
           aria-hidden="true"
           className="absolute top-14 left-1/2 h-44 w-[150%] -translate-x-1/2 rotate-[-18deg] rounded-full border border-[color-mix(in_oklch,var(--portfolio-amber)_22%,transparent)]"
         />
-        {hasPhoto ? (
-          <img
-            src={photoSrc}
-            alt="Portrait de Leo Torres"
-            className="size-full object-cover"
-            onError={() => setHasPhoto(false)}
-          />
-        ) : (
-          <div className="relative flex size-full flex-col items-center justify-center gap-5 text-center">
-            <div className="inline-flex size-32 items-center justify-center rounded-full border border-[color-mix(in_oklch,var(--portfolio-cyan)_34%,transparent)] bg-[var(--portfolio-panel)] text-5xl font-semibold text-foreground shadow-[0_24px_80px_rgba(0,0,0,0.18)]">
-              LT
-            </div>
-            <p className="max-w-60 text-sm leading-6 text-[var(--portfolio-text-soft)]">
-              Portrait à ajouter
-            </p>
-          </div>
-        )}
+        <img
+          src={photoSrc}
+          alt="Portrait de Leo Torres"
+          className="size-full object-cover"
+        />
       </div>
 
       <div className="relative mt-4 grid grid-cols-2 gap-3">

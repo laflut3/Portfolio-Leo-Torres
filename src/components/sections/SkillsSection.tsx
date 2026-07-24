@@ -32,27 +32,30 @@ export function SkillsSection() {
         title={copy.skills.title}
         icon={<ServerCog className="size-4" aria-hidden="true" />}
       />
-      <div className="grid grid-cols-12 items-start gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
+      <div className="border-t border-[var(--portfolio-line)]">
         {copy.skills.entries.map(([title, items], index) => {
           const Icon = skillIcons[index] ?? ServerCog
 
           return (
             <article
               key={title}
-              className={`skill-card rounded-[1.75rem] border border-[color-mix(in_oklch,var(--portfolio-line)_86%,transparent)] bg-[var(--portfolio-panel)] p-5 shadow-[0_22px_60px_color-mix(in_oklch,var(--foreground)_6%,transparent)] max-lg:col-span-1 max-md:col-span-1 ${
-                index === 0 || index === 5 ? 'col-span-4' : 'col-span-2'
-              }`}
+              className="skill-card grid grid-cols-[3rem_minmax(10rem,0.5fr)_minmax(0,1fr)] gap-x-5 border-b border-[var(--portfolio-line)] py-7 max-md:grid-cols-[2.25rem_minmax(0,1fr)] max-md:gap-x-3"
               data-reveal
             >
+              <span className="pt-0.5 text-sm font-semibold tabular-nums text-[var(--portfolio-accent)]">
+                0{index + 1}
+              </span>
               <div className="flex items-center gap-3">
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl border border-[color-mix(in_oklch,var(--portfolio-cyan)_24%,transparent)] bg-[color-mix(in_oklch,var(--portfolio-cyan)_8%,transparent)] text-[var(--portfolio-cyan)]">
+                <span className="grid size-8 shrink-0 place-items-center text-[var(--portfolio-accent)]">
                   <Icon className="size-4" aria-hidden="true" />
                 </span>
-                <h3 className="m-0 text-base font-medium text-foreground">
+                <h3 className="m-0 text-lg font-medium text-foreground">
                   {title}
                 </h3>
               </div>
-              <TagList items={[...items]} />
+              <div className="max-md:col-start-2">
+                <TagList items={[...items]} />
+              </div>
             </article>
           )
         })}

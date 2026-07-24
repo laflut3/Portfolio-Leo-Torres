@@ -7,26 +7,26 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="contact-shell mt-24 mb-18 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-[2.5rem] border border-[color-mix(in_oklch,var(--portfolio-line)_88%,transparent)] bg-[var(--portfolio-panel-strong)] p-8 shadow-[0_30px_90px_color-mix(in_oklch,var(--foreground)_8%,transparent)] max-md:mt-14 max-md:grid-cols-1"
+      className="contact-shell mt-24 mb-18 grid grid-cols-[minmax(0,1fr)_minmax(15rem,0.5fr)] items-end gap-x-16 gap-y-8 border-y border-[var(--portfolio-line)] py-14 max-md:mt-14 max-md:grid-cols-1 max-md:py-10"
       data-reveal
     >
       <div>
-        <p className="m-0 inline-flex items-center gap-2 text-xs font-bold tracking-[0.16em] text-[var(--portfolio-cyan)] uppercase">
+        <p className="m-0 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.16em] text-[var(--portfolio-accent)] uppercase">
           <Mail className="size-4" aria-hidden="true" />
           {copy.contact.kicker}
         </p>
-        <h2 className="mt-3 text-[clamp(1.9rem,4vw,3.3rem)] leading-[1.08] font-medium tracking-normal text-foreground">
+        <h2 className="mt-3 max-w-3xl text-[clamp(2.4rem,4.5vw,4.5rem)] leading-[0.98] font-semibold tracking-[-0.06em] text-foreground">
           {copy.contact.title}
         </h2>
       </div>
-      <div className="flex flex-wrap justify-end gap-3 max-md:justify-start">
-        <Button asChild>
+      <div className="flex flex-col items-start gap-3">
+        <Button asChild className="contact-primary-action">
           <a href="https://github.com/ltorres" target="_blank" rel="noreferrer">
             <Code data-icon="inline-start" />
             {copy.contact.github}
           </a>
         </Button>
-        <Button asChild variant="outline">
+        <Button asChild variant="ghost" className="contact-secondary-action">
           <a href="mailto:leo.torres@example.com">
             <Mail data-icon="inline-start" />
             {copy.contact.email}

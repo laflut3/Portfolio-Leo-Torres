@@ -10,13 +10,13 @@ export function Footer() {
 
   return (
     <footer className="footer-shell relative mt-24 border-t border-[var(--portfolio-line)]">
-      <div className="mx-auto grid w-[min(1120px,calc(100%_-_40px))] grid-cols-[1.35fr_repeat(3,minmax(0,1fr))] gap-x-10 gap-y-10 py-14 max-lg:grid-cols-2 max-md:w-[min(100%_-_28px,1120px)] max-md:grid-cols-1 max-md:gap-y-8 max-md:py-10">
+      <div className="mx-auto grid w-[min(1240px,calc(100%_-_48px))] grid-cols-[1.35fr_repeat(3,minmax(0,1fr))] gap-x-10 gap-y-10 py-14 max-lg:grid-cols-2 max-md:w-[min(100%_-_28px,1240px)] max-md:grid-cols-1 max-md:gap-y-8 max-md:py-10">
         <div className="max-w-xs">
           <Link
             to={pathFor(locale, 'profile')}
             className="inline-flex items-center gap-3 text-lg font-semibold tracking-[-0.04em] text-foreground no-underline"
           >
-            <span className="grid size-10 place-items-center rounded-2xl border border-[color-mix(in_oklch,var(--portfolio-cyan)_35%,transparent)] bg-[color-mix(in_oklch,var(--portfolio-cyan)_8%,transparent)] font-bold text-[var(--portfolio-cyan)]">
+            <span className="grid size-10 place-items-center border border-[var(--portfolio-accent)] font-bold text-[var(--portfolio-accent)]">
               LT
             </span>
             Leo Torres
@@ -65,13 +65,13 @@ export function Footer() {
           <p className="mt-4 flex max-w-44 items-start gap-2 text-sm leading-6 text-[var(--portfolio-text-soft)]">
             <Code2
               aria-hidden="true"
-              className="mt-1 size-4 shrink-0 text-[var(--portfolio-cyan)]"
+              className="mt-1 size-4 shrink-0 text-[var(--portfolio-accent)]"
             />
             {copy.footer.stackValue}
           </p>
         </div>
       </div>
-      <div className="mx-auto flex w-[min(1120px,calc(100%_-_40px))] items-center justify-between gap-4 border-t border-[var(--portfolio-line)] py-6 text-xs text-[var(--portfolio-text-soft)] max-md:w-[min(100%_-_28px,1120px)] max-md:flex-col max-md:items-start">
+      <div className="mx-auto flex w-[min(1240px,calc(100%_-_48px))] items-center justify-between gap-4 border-t border-[var(--portfolio-line)] py-6 text-xs text-[var(--portfolio-text-soft)] max-md:w-[min(100%_-_28px,1240px)] max-md:flex-col max-md:items-start">
         <span>© {year} Leo Torres.</span>
         <span>{copy.footer.copyright}</span>
       </div>

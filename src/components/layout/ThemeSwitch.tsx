@@ -26,7 +26,7 @@ export function ThemeSwitch() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className="theme-trigger fixed top-5 right-5 z-30 max-md:top-[6.1rem] max-md:right-3"
+          className="theme-trigger"
           aria-label={copy.theme.label}
         >
           <ActiveIcon aria-hidden="true" className="size-3.5" />

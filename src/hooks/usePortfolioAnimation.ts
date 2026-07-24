@@ -13,7 +13,7 @@ export function usePortfolioAnimation(
 
     const context = gsap.context(() => {
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.set('[data-reveal], [data-space-layer], [data-orbit-ring]', {
+        gsap.set('[data-reveal]', {
           clearProps: 'all',
         })
         return
@@ -25,42 +25,6 @@ export function usePortfolioAnimation(
         autoAlpha: 0,
         filter: 'blur(10px)',
         y: 28,
-      })
-
-      gsap
-        .timeline()
-        .fromTo(
-          '[data-space-layer="stars"]',
-          { opacity: 0 },
-          { opacity: 0.6, duration: 1.1, ease: 'power2.out' },
-        )
-        .fromTo(
-          '[data-space-layer="grid"]',
-          { opacity: 0, scale: 1.02 },
-          { opacity: 1, scale: 1, duration: 1, ease: 'power2.out' },
-          '<0.12',
-        )
-        .fromTo(
-          '[data-orbit-ring]',
-          { opacity: 0, scale: 0.86 },
-          { opacity: 0.5, scale: 1, duration: 1.4, ease: 'power3.out' },
-          '<0.08',
-        )
-
-      gsap.to('[data-space-layer="stars"]', {
-        backgroundPosition: '42px 70px',
-        duration: 22,
-        ease: 'none',
-        repeat: -1,
-        yoyo: true,
-      })
-
-      gsap.to('[data-orbit-ring]', {
-        scale: 1.04,
-        duration: 5.5,
-        ease: 'sine.inOut',
-        repeat: -1,
-        yoyo: true,
       })
 
       const reveal = (targets: HTMLElement[]) => {

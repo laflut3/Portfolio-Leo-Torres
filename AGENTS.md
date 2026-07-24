@@ -91,10 +91,11 @@ Avant toute modification :
 4. identifier le gestionnaire de paquets utilisé ;
 5. examiner les scripts disponibles dans les `package.json` ;
 6. inventorier les skills disponibles ;
-7. charger tous les skills réellement adaptés à la demande ;
-8. examiner les composants UI existants ;
-9. vérifier les conventions de code du projet ;
-10. éviter toute dépendance inutile.
+7. charger `fast-codex-workflow` pour organiser une exploration ciblée ;
+8. charger tous les autres skills réellement adaptés à la demande ;
+9. examiner les composants UI existants ;
+10. vérifier les conventions de code du projet ;
+11. éviter toute dépendance inutile.
 
 Ne pas :
 
@@ -115,11 +116,12 @@ Ne pas :
 Au début de chaque demande :
 
 1. inventorier les skills disponibles ;
-2. sélectionner les skills réellement adaptés ;
-3. charger ces skills avant d’éditer le code ;
-4. appliquer leurs recommandations ;
-5. résoudre explicitement les éventuelles contradictions entre skills ;
-6. suivre en priorité les consignes de ce dépôt lorsqu’un skill propose une règle incompatible.
+2. charger `fast-codex-workflow` comme skill d’orchestration ;
+3. sélectionner le plus petit ensemble cohérent de skills spécialisés ;
+4. charger ces skills avant d’éditer le code ;
+5. appliquer leurs recommandations ;
+6. résoudre explicitement les éventuelles contradictions entre skills ;
+7. suivre en priorité les consignes de ce dépôt lorsqu’un skill propose une règle incompatible.
 
 Ne pas charger tous les skills sans discernement pour une petite correction isolée.
 
@@ -133,7 +135,95 @@ Le compte rendu final doit contenir une section `Skills utilisés`.
 
 Les skills suivants sont considérés comme installés et disponibles pour ce projet.
 
-### 5.1 Figma
+### 5.1 Optimisation du workflow et des tokens
+
+#### `fast-codex-workflow`
+
+Utiliser ce skill pour toute tâche de développement, d’analyse, de correction,
+de refactorisation, de documentation ou de conception.
+
+Il doit être chargé avant les skills techniques spécialisés afin de :
+
+- réduire la quantité de contexte chargée ;
+- limiter la consommation inutile de tokens ;
+- sélectionner uniquement les skills nécessaires ;
+- effectuer des recherches ciblées ;
+- éviter la lecture récursive de tout le dépôt ;
+- éviter les relectures inutiles ;
+- limiter les modifications au périmètre demandé ;
+- exécuter d’abord les validations les plus précises ;
+- éviter les refactorisations sans rapport avec la demande ;
+- produire des comptes rendus courts et utiles.
+
+Le skill doit commencer avec le plus petit périmètre cohérent :
+
+1. la demande utilisateur ;
+2. le présent fichier `AGENTS.md` ;
+3. `git status` et le diff existant lorsque nécessaire ;
+4. les manifests et scripts directement concernés ;
+5. les symboles, composants, routes ou clés recherchés avec `rg` ;
+6. les portions pertinentes des fichiers identifiés.
+
+Il ne doit pas lire récursivement l’intégralité du dépôt par défaut.
+
+Sauf nécessité explicite, exclure des recherches :
+
+- `node_modules/` ;
+- les répertoires de build ;
+- les caches ;
+- les rapports de couverture ;
+- les dépendances vendored ;
+- les fichiers binaires ;
+- les assets générés ;
+- les fichiers de verrouillage volumineux ;
+- les répertoires sans rapport avec la tâche.
+
+Pour les modifications :
+
+- effectuer la plus petite modification cohérente ;
+- préférer un patch ciblé à une réécriture complète ;
+- réutiliser les composants, fonctions, styles et dépendances existants ;
+- ne pas reformater les fichiers sans rapport avec la tâche ;
+- ne pas entreprendre de nettoyage ou de refactorisation spéculative ;
+- ne pas recopier les fichiers ou les logs complets dans le compte rendu.
+
+Pour les validations :
+
+1. lancer la vérification ciblée la plus rapide ;
+2. lancer les tests directement liés à la modification ;
+3. exécuter ensuite les contrôles globaux exigés par ce dépôt ;
+4. ne pas relancer une validation inchangée sans nouvelle modification.
+
+`fast-codex-workflow` ne permet jamais d’ignorer :
+
+- les traductions ;
+- le responsive design ;
+- les modes clair et sombre ;
+- l’accessibilité ;
+- le SEO ;
+- `llms.txt` ;
+- les tests ;
+- le lint ;
+- le format ;
+- le contrôle TypeScript ;
+- le build ;
+- les vérifications backend exigées.
+
+Une exploration plus large reste autorisée pour :
+
+- une refonte complète ;
+- une migration ;
+- un audit de sécurité ;
+- une analyse d’architecture ;
+- une mise à niveau majeure ;
+- une modification transversale ;
+- une demande explicitement exhaustive.
+
+Même dans ces cas, le dépôt doit être exploré progressivement.
+
+---
+
+### 5.2 Figma
 
 #### `figma-generate-design`
 
@@ -161,7 +251,7 @@ Lorsqu’une maquette Figma existe, elle constitue une référence visuelle impo
 
 ---
 
-### 5.2 Three.js fondamentaux
+### 5.3 Three.js fondamentaux
 
 #### `threejs-fundamentals`
 
@@ -310,7 +400,7 @@ Utiliser pour :
 
 ---
 
-### 5.3 React Three Fiber
+### 5.4 React Three Fiber
 
 #### `react-three-fiber`
 
@@ -333,7 +423,7 @@ Ne pas migrer une scène Three.js native vers React Three Fiber sans demande exp
 
 ---
 
-### 5.4 Génération d’assets 3D
+### 5.5 Génération d’assets 3D
 
 #### `threejs-asset-pipeline`
 
@@ -377,7 +467,7 @@ L’utilisation de Substance 3D n’est pas obligatoire lorsqu’un matériau pr
 
 ---
 
-### 5.5 GSAP
+### 5.6 GSAP
 
 #### `gsap-core`
 
@@ -473,6 +563,7 @@ Utiliser pour :
 
 Charger au minimum :
 
+- `fast-codex-workflow` ;
 - `figma-generate-design` si une phase de conception est nécessaire ;
 - `figma-use` si une maquette existe.
 
@@ -480,8 +571,9 @@ Examiner aussi les autres skills de design installés et charger ceux qui sont r
 
 ### 6.2 Nouvelle section Three.js
 
-Charger les skills concernés parmi :
+Charger au minimum `fast-codex-workflow`, puis les skills concernés parmi :
 
+- `fast-codex-workflow` ;
 - `threejs-fundamentals` ;
 - `threejs-geometry` ;
 - `threejs-materials` ;
@@ -500,6 +592,7 @@ Charger les skills concernés parmi :
 
 Charger au minimum :
 
+- `fast-codex-workflow` ;
 - `threejs-asset-pipeline` ;
 - `blender-web-pipeline` ;
 - `threejs-geometry` ;
@@ -511,8 +604,9 @@ Ajouter `substance-3d-texturing` si un texturing PBR avancé est réellement né
 
 ### 6.4 Animation d’interface avec GSAP
 
-Charger selon le besoin :
+Charger `fast-codex-workflow`, puis selon le besoin :
 
+- `fast-codex-workflow` ;
 - `gsap-core` ;
 - `gsap-timeline` ;
 - `gsap-scrolltrigger` ;
@@ -526,6 +620,7 @@ Charger selon le besoin :
 
 Charger au minimum :
 
+- `fast-codex-workflow` ;
 - `threejs-fundamentals` ;
 - `threejs-animation` ;
 - `threejs-loaders` ;
@@ -542,14 +637,15 @@ Charger au minimum :
 
 Pour une refonte complète :
 
-1. utiliser Figma lorsque pertinent ;
-2. charger tous les skills de design disponibles réellement adaptés ;
-3. charger les skills Three.js concernés ;
-4. charger les skills de génération d’assets concernés ;
-5. charger les skills GSAP concernés ;
-6. effectuer une passe de critique visuelle ;
-7. corriger les éléments génériques ou incohérents ;
-8. valider les performances et l’accessibilité.
+1. charger `fast-codex-workflow` ;
+2. utiliser Figma lorsque pertinent ;
+3. charger tous les skills de design disponibles réellement adaptés ;
+4. charger les skills Three.js concernés ;
+5. charger les skills de génération d’assets concernés ;
+6. charger les skills GSAP concernés ;
+7. effectuer une passe de critique visuelle ;
+8. corriger les éléments génériques ou incohérents ;
+9. valider les performances et l’accessibilité.
 
 ---
 
@@ -557,27 +653,28 @@ Pour une refonte complète :
 
 Pour toute création ou refonte visuelle importante :
 
-1. examiner l’existant ;
-2. examiner les composants UI disponibles ;
-3. inventorier et charger les skills adaptés ;
-4. définir le besoin fonctionnel ;
-5. définir le public visé ;
-6. définir une direction artistique claire ;
-7. définir une métaphore visuelle liée à Léo Torres ;
-8. définir la hiérarchie visuelle ;
-9. définir la palette ;
-10. définir les typographies ;
-11. définir la grille ;
-12. définir les espacements ;
-13. définir le rythme entre les sections ;
-14. définir la place de la 3D ;
-15. définir le langage d’animation ;
-16. définir les contraintes mobile ;
-17. définir les contraintes d’accessibilité ;
-18. implémenter ;
-19. effectuer une revue critique ;
-20. corriger ;
-21. exécuter les validations.
+1. charger `fast-codex-workflow` ;
+2. examiner l’existant de manière ciblée ;
+3. examiner les composants UI disponibles ;
+4. inventorier et charger les skills spécialisés adaptés ;
+5. définir le besoin fonctionnel ;
+6. définir le public visé ;
+7. définir une direction artistique claire ;
+8. définir une métaphore visuelle liée à Léo Torres ;
+9. définir la hiérarchie visuelle ;
+10. définir la palette ;
+11. définir les typographies ;
+12. définir la grille ;
+13. définir les espacements ;
+14. définir le rythme entre les sections ;
+15. définir la place de la 3D ;
+16. définir le langage d’animation ;
+17. définir les contraintes mobile ;
+18. définir les contraintes d’accessibilité ;
+19. implémenter ;
+20. effectuer une revue critique ;
+21. corriger ;
+22. exécuter les validations.
 
 Pour une modification importante, créer ou mettre à jour `DESIGN.md`.
 
@@ -1116,7 +1213,13 @@ Pour chaque skill utilisé, préciser :
 - la raison de son utilisation ;
 - la partie du projet concernée.
 
+Mentionner `fast-codex-workflow` lorsqu’il a organisé l’exploration, limité le
+contexte ou ordonné les validations.
+
 Ne jamais prétendre avoir utilisé un skill non chargé.
+
+Le compte rendu doit rester concis : ne pas recopier les fichiers, les longues
+sorties de commandes ou les raisonnements intermédiaires.
 
 ### Vérifications exécutées
 
@@ -1154,7 +1257,8 @@ Signaler :
 Une tâche n’est terminée que lorsque :
 
 - la demande fonctionnelle est satisfaite ;
-- les skills adaptés ont été utilisés ;
+- `fast-codex-workflow` a été utilisé pour limiter le contexte lorsque pertinent ;
+- les skills spécialisés adaptés ont été utilisés ;
 - les composants existants ont été privilégiés ;
 - les traductions sont complètes ;
 - le responsive est vérifié ;

@@ -4,11 +4,11 @@ type TagListProps = {
 
 export function TagList({ items }: TagListProps) {
   return (
-    <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+    <ul className="mt-4 flex list-none flex-wrap gap-x-3 gap-y-1 p-0">
       {items.map((item) => (
         <li
           key={item}
-          className="rounded-md border border-[color-mix(in_oklch,var(--portfolio-cyan)_18%,transparent)] bg-[color-mix(in_oklch,var(--portfolio-cyan)_6%,transparent)] px-2.5 py-1.5 text-xs text-[color-mix(in_oklch,var(--portfolio-cyan)_55%,var(--foreground))]"
+          className="inline-flex items-center text-sm text-[var(--portfolio-text-soft)] after:ml-3 after:text-[var(--portfolio-accent)] after:content-['/'] last:after:hidden"
         >
           {item}
         </li>

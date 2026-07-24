@@ -2,8 +2,8 @@
 
 Portfolio React/Vite de Léo Torres, avec des routes publiques localisées :
 
-- Français : `/fr-fr/profil`, `/fr-fr/competences`, `/fr-fr/parcours`, `/fr-fr/contact`
-- English: `/en-us/profile`, `/en-us/skills`, `/en-us/education`, `/en-us/contact`
+- Français : `/fr-fr/profil`, `/fr-fr/competences`, `/fr-fr/projets`, `/fr-fr/contact`
+- English: `/en-us/profile`, `/en-us/skills`, `/en-us/projects`, `/en-us/contact`
 
 ## Développement
 

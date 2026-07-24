@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { type Locale, pathFor, type PageKey, useTranslation } from '@/i18n'
 
-const pages: PageKey[] = ['profile', 'skills', 'education', 'contact']
+const pages: PageKey[] = ['profile', 'skills', 'projects', 'contact']
 
 export function Header({ locale }: { locale: Locale }) {
   const location = useLocation()

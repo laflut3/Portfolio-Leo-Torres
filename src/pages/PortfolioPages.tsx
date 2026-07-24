@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { EducationSection } from '@/components/sections/EducationSection'
 import { HeroSection } from '@/components/sections/HeroSection'
+import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { InterestsSection } from '@/components/sections/SignalSection'
+import { SkillsPreviewSection } from '@/components/sections/SkillsPreviewSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
 import { pathFor, type PageKey, useTranslation } from '@/i18n'
 
@@ -36,6 +38,8 @@ export function ProfilePage() {
       <PageMetadata page="profile" />
       <HeroSection />
       <InterestsSection />
+      <SkillsPreviewSection />
+      <EducationSection />
     </>
   )
 }
@@ -49,11 +53,11 @@ export function SkillsPage() {
   )
 }
 
-export function EducationPage() {
+export function ProjectsPage() {
   return (
     <>
-      <PageMetadata page="education" />
-      <EducationSection />
+      <PageMetadata page="projects" />
+      <ProjectsSection />
     </>
   )
 }

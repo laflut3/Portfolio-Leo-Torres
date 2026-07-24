@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { ArrowUpRight, Code2, GitFork, Mail } from 'lucide-react'
 import { pathFor, type PageKey, useTranslation } from '@/i18n'
 
-const pages: PageKey[] = ['profile', 'skills', 'education', 'contact']
+const pages: PageKey[] = ['profile', 'skills', 'projects', 'contact']
 
 export function Footer() {
   const { locale, copy } = useTranslation()

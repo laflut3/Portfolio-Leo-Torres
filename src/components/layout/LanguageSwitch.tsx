@@ -12,8 +12,8 @@ import { type Locale, pathFor, type PageKey, useTranslation } from '@/i18n'
 function pageForPath(pathname: string): PageKey {
   if (pathname.endsWith('/skills') || pathname.endsWith('/competences'))
     return 'skills'
-  if (pathname.endsWith('/education') || pathname.endsWith('/parcours'))
-    return 'education'
+  if (pathname.endsWith('/projects') || pathname.endsWith('/projets'))
+    return 'projects'
   if (pathname.endsWith('/contact')) return 'contact'
   return 'profile'
 }

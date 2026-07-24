@@ -3,19 +3,19 @@ import { createContext, type ReactNode, useContext } from 'react'
 
 export const locales = ['fr-fr', 'en-us'] as const
 export type Locale = (typeof locales)[number]
-export type PageKey = 'profile' | 'skills' | 'education' | 'contact'
+export type PageKey = 'profile' | 'skills' | 'projects' | 'contact'
 
 const paths: Record<Locale, Record<PageKey, string>> = {
   'fr-fr': {
     profile: '/fr-fr/profil',
     skills: '/fr-fr/competences',
-    education: '/fr-fr/parcours',
+    projects: '/fr-fr/projets',
     contact: '/fr-fr/contact',
   },
   'en-us': {
     profile: '/en-us/profile',
     skills: '/en-us/skills',
-    education: '/en-us/education',
+    projects: '/en-us/projects',
     contact: '/en-us/contact',
   },
 }
@@ -37,7 +37,7 @@ const copy = {
     nav: {
       profile: 'Profil',
       skills: 'Compétences',
-      education: 'Parcours',
+      projects: 'Projets',
       contact: 'Contact',
       menu: 'Ouvrir la navigation',
     },
@@ -52,48 +52,174 @@ const copy = {
     },
     interests: {
       label: 'Centres d’intérêt',
-      title: 'Ce qui nourrit ma curiosité.',
+      title: 'Mes passions',
       entries: [
         {
           title: 'Astrophysique & espace',
-          text: 'Comprendre les phénomènes, les échelles et les systèmes qui composent notre univers.',
+          text: "j'aime l'espace et j'aime découvrir, explorer, comprendre ce que peut de personne comprenne. Les phénomènes, les échelles et les systèmes qui composent notre univers me fascinent.",
         },
         {
           title: 'Aéronautique',
-          text: 'Une curiosité née avec le BIA, entre culture du vol, sciences et précision technique.',
+          text: "Cette passion est née suite a mon passage du BIA lors de mes année de seconde. D'un simple diplome, je me suis pris de passion pour la culture du vol et l'aviation ",
         },
         {
-          title: 'Systèmes & logiciel',
-          text: 'Le goût de relier une idée, une interface et une infrastructure dans un ensemble cohérent.',
+          title: 'Le sport (Boxe, randonnée, escalade, salle de sport)',
+          text: "Je suis une personne active, j'aime bouger, marcher, explorer et découvrir de nouveaux lieux. Le sport est pour moi un moyen de me défouler et de me ressourcer.",
+        },
+        {
+          title: 'Le Cinéma',
+          text: "Depuis mon plus jeune âge, j'ai toujours été passionné par le cinéma. J'aime découvrir de nouveaux films, de nouveaux réalisateurs et de nouvelles histoires.",
+        },
+        {
+          title: 'Les jeux vidéo',
+          text: "Une de mes principal passion, comme tout bon informaticien, est le monde du jeu vidéo. J'aime jouer et explorer de nouvelles histoires.",
         },
       ],
     },
+    skillsPreview: {
+      kicker: 'Compétences',
+      title: 'De la Conception à la mise en production.',
+      text: 'Je combine développement et exploitation pour construire des produits fiables et faciles à faire évoluer.',
+      action: 'Découvrir mes compétences',
+    },
     skills: {
       kicker: 'Compétences',
-      title: 'Les sujets DevOps que je pratique et approfondis.',
-      entries: [
-        ['Systèmes', ['Linux', 'Réseau', 'Shell', 'Sécurité']],
-        [
-          'Déploiement & automatisation',
-          ['CI/CD', 'Docker', 'Nginx', 'Release'],
+      title:
+        'Les compétences que je mobilise pour concevoir et livrer des produits fiables.',
+      development: {
+        title: 'Développement',
+        groups: [
+          ['Bas niveau', ['C', 'Rust', 'GO', 'C++']],
+          [
+            'Haut niveau',
+            [
+              'Java',
+              'Spring Boot',
+              'Python',
+              'bash',
+              'Programmation orientée objet',
+              'Programmation fonctionnelle',
+            ],
+          ],
+          [
+            'Web',
+            [
+              'Node.js',
+              'TypeScript',
+              'JavaScript',
+              'React',
+              'Angular',
+              'Next.js',
+              'Tailwind CSS',
+              'Tanstack',
+              '',
+            ],
+          ],
         ],
-        ['Développement', ['TypeScript', 'React', 'API', 'Scripting']],
+      },
+      entries: [
+        [
+          'systemes, cloud, virtualisation',
+          [
+            'Linux',
+            'Debian',
+            'Ubuntu',
+            'Arch Linux',
+            'Windows',
+            'Proxmox',
+            'VMware',
+            'VirtualBox',
+            'AWS',
+            'clever cloud',
+          ],
+        ],
+        [
+          'Conteneurs & déploiement',
+          [
+            'Docker',
+            'Docker Compose',
+            'Kubernetes',
+            'Kustomize',
+            'Helm',
+            'Terraform',
+            'Ansible',
+            'gitlab-ci',
+            'GitHub Actions',
+            'argoCD',
+          ],
+        ],
         [
           'Bases de données',
-          ['SQL', 'Modélisation', 'Requêtes', 'Persistance'],
+          [
+            'SQL',
+            'PL-SQL',
+            'NoSQL',
+            'ORM',
+            'Query builder',
+            'Migrations',
+            'Population',
+            'Indexation',
+          ],
         ],
-        ['Qualité', ['Pre-commit', 'Linting', 'Tests', 'Quality gates']],
-        ['Observabilité', ['Logs', 'Health checks', 'Alerting', 'Runbooks']],
         [
-          'Gestion',
-          ['Planification', 'Documentation', 'Coordination', 'Livraison'],
+          'Observabilité',
+          [
+            'OpenTelemetry',
+            'Prometheus',
+            'Grafana',
+            'Loki',
+            'Alerting',
+            'elasticsearch',
+            'Kibana',
+            'logstash',
+            'Traefik',
+            'Cadvizor',
+          ],
         ],
-        ['IA', ['LLM', 'Prompting', 'Automatisation', 'Intégration']],
+        [
+          'Qualité & sécurité',
+          [
+            'Postman',
+            'ESLint',
+            'Prettier',
+            'SonarQube',
+            'OxFormat',
+            'OxLint',
+            'Dependabot',
+            'Renovate',
+            'Trivy',
+            'Jfrog Xray',
+          ],
+        ],
+        [
+          'Gestion de projet',
+          [
+            'Agile',
+            'Scrum',
+            'Safe',
+            'cycle en V',
+            'Emergent design',
+            'Comptabilité (intermédiaire)',
+            'Coordination d’équipe',
+            'Droit du numérique (RGPD, CNIL, propriété intellectuelle)',
+          ],
+        ],
+        [
+          'IA & tooling',
+          [
+            'codex',
+            'claude code',
+            'open clo',
+            'Skills engineering',
+            'MCP',
+            'n8n',
+          ],
+        ],
       ],
     },
     education: {
       kicker: 'Parcours',
-      title: 'Un parcours technique, scientifique et opérationnel.',
+      title: 'Mes Etudes',
       inProgress: 'En cours',
       earned: 'Obtenu',
       entries: [
@@ -139,6 +265,43 @@ const copy = {
         ],
       ],
     },
+    projects: {
+      kicker: 'Projets',
+      title: 'Des produits pensés de la première ligne à la production.',
+      viewDetails: 'Voir le détail',
+      hideDetails: 'Masquer le détail',
+      viewGithub: 'Voir sur GitHub',
+      filters: {
+        label: 'Filtrer les projets',
+        all: 'Tous',
+        school: 'Scolaire',
+        personal: 'Personnel',
+        openSource: 'Open source',
+        empty: 'Aucun projet dans cette catégorie pour le moment.',
+      },
+      entries: [
+        {
+          title: 'Portfolio Léo Torres',
+          context: 'Portfolio personnel',
+          theme: 'personal',
+          githubUrl: 'https://github.com/laflut3/Portfolio-Leo-Torres',
+          text: 'Un portfolio bilingue conçu comme une expérience éditoriale, avec un socle React, TypeScript et une navigation localisée.',
+          details:
+            'Le projet réunit une identité visuelle personnelle, une gestion de thème clair, sombre et système, ainsi que des parcours français et anglais conçus pour le référencement.',
+          stack: ['React', 'TypeScript', 'TanStack Router', 'Docker'],
+        },
+        {
+          title: 'Hub LeMontage',
+          context: 'Plateforme collaborative',
+          theme: 'openSource',
+          githubUrl: null,
+          text: 'Une plateforme pensée pour centraliser les usages d’équipe, avec une attention portée à la qualité, aux déploiements et à l’observabilité.',
+          details:
+            'Le travail couvre les flux produit et les fondations techniques : API typée, conteneurisation, déploiement GitOps et instrumentation des parcours importants.',
+          stack: ['React', 'Fastify', 'Kubernetes', 'OpenTelemetry'],
+        },
+      ],
+    },
     contact: {
       kicker: 'Contact',
       title:
@@ -158,25 +321,21 @@ const copy = {
       copyright: 'Tous droits réservés.',
     },
     intro: {
-      title: 'Connexion au système',
-      statuses: [
-        ['Pipeline', 'Build vérifié'],
-        ['Sécurité', 'Contrôles actifs'],
-        ['Signal', 'Interface prête'],
-      ],
+      name: 'Léo Torres',
+      title: 'Développement logiciel & DevOps',
     },
     metadata: {
       profile: [
         'Portfolio Léo Torres — Profil',
-        'Développeur orienté DevOps, infrastructure, automatisation et systèmes fiables.',
+        'Profil, compétences techniques, parcours et projets de Léo Torres, étudiant ingénieur orienté développement et DevOps.',
       ],
       skills: [
         'Compétences — Portfolio Léo Torres',
         'Compétences techniques de Léo Torres : DevOps, cloud, automatisation et développement.',
       ],
-      education: [
-        'Parcours — Portfolio Léo Torres',
-        'Parcours académique et technique de Léo Torres.',
+      projects: [
+        'Projets — Portfolio Léo Torres',
+        'Une sélection de projets de Léo Torres autour du logiciel, du DevOps et de l’infrastructure.',
       ],
       contact: [
         'Contact — Portfolio Léo Torres',
@@ -196,7 +355,7 @@ const copy = {
     nav: {
       profile: 'Profile',
       skills: 'Skills',
-      education: 'Education',
+      projects: 'Projects',
       contact: 'Contact',
       menu: 'Open navigation',
     },
@@ -211,42 +370,172 @@ const copy = {
     },
     interests: {
       label: 'Interests',
-      title: 'What fuels my curiosity.',
+      title: 'My passions',
       entries: [
         {
           title: 'Astrophysics & space',
-          text: 'Understanding the phenomena, scales and systems that shape our universe.',
+          text: 'I enjoy discovering, exploring and understanding what few people grasp. The phenomena, scales and systems that shape our universe fascinate me.',
         },
         {
           title: 'Aeronautics',
-          text: 'A curiosity shaped by the BIA, between flight culture, science and technical precision.',
+          text: 'This passion began with the BIA during secondary school. What started as a diploma became a lasting interest in flight culture and aviation.',
         },
         {
-          title: 'Systems & software',
-          text: 'A taste for connecting an idea, an interface and infrastructure into a coherent whole.',
+          title: 'Sport (boxing, hiking, climbing and gym)',
+          text: 'I am an active person: I enjoy moving, walking, exploring and discovering new places. Sport helps me reset and recharge.',
+        },
+        {
+          title: 'Cinema',
+          text: 'Since childhood, I have loved cinema. I enjoy discovering new films, directors and stories.',
+        },
+        {
+          title: 'Video games',
+          text: 'One of my main passions is video games. I enjoy playing and exploring new stories.',
         },
       ],
     },
+    skillsPreview: {
+      kicker: 'Skills',
+      title: 'From design to production.',
+      text: 'I combine development and operations to build reliable products that are easy to evolve.',
+      action: 'Explore my skills',
+    },
     skills: {
       kicker: 'Skills',
-      title: 'The DevOps topics I like practicing and deepening.',
-      entries: [
-        ['Systems', ['Linux', 'Networking', 'Shell', 'Security']],
-        ['Deployment & automation', ['CI/CD', 'Docker', 'Nginx', 'Release']],
-        ['Development', ['TypeScript', 'React', 'APIs', 'Scripting']],
-        ['Databases', ['SQL', 'Modeling', 'Queries', 'Persistence']],
-        ['Quality', ['Pre-commit', 'Linting', 'Testing', 'Quality gates']],
-        ['Observability', ['Logs', 'Health checks', 'Alerting', 'Runbooks']],
-        [
-          'Management',
-          ['Planning', 'Documentation', 'Coordination', 'Delivery'],
+      title: 'The skills I use to design and deliver reliable products.',
+      development: {
+        title: 'Development',
+        groups: [
+          ['Low-level', ['C', 'Rust', 'Go', 'C++']],
+          [
+            'High-level',
+            [
+              'Java',
+              'Spring Boot',
+              'Python',
+              'Bash',
+              'Object-oriented programming',
+              'Functional programming',
+            ],
+          ],
+          [
+            'Web',
+            [
+              'Node.js',
+              'TypeScript',
+              'JavaScript',
+              'React',
+              'Angular',
+              'Next.js',
+              'Tailwind CSS',
+              'TanStack',
+            ],
+          ],
         ],
-        ['AI', ['LLMs', 'Prompting', 'Automation', 'Integration']],
+      },
+      entries: [
+        [
+          'Systems, cloud & virtualization',
+          [
+            'Linux',
+            'Debian',
+            'Ubuntu',
+            'Arch Linux',
+            'Windows',
+            'Proxmox',
+            'VMware',
+            'VirtualBox',
+            'AWS',
+            'Clever Cloud',
+          ],
+        ],
+        [
+          'Containers & deployment',
+          [
+            'Docker',
+            'Docker Compose',
+            'Kubernetes',
+            'Kustomize',
+            'Helm',
+            'Terraform',
+            'Ansible',
+            'GitLab CI',
+            'GitHub Actions',
+            'Argo CD',
+          ],
+        ],
+        [
+          'Databases',
+          [
+            'SQL',
+            'PL/SQL',
+            'NoSQL',
+            'ORMs',
+            'Query builders',
+            'Migrations',
+            'Seeding',
+            'Indexing',
+          ],
+        ],
+        [
+          'Observability',
+          [
+            'OpenTelemetry',
+            'Prometheus',
+            'Grafana',
+            'Loki',
+            'Alerting',
+            'Elasticsearch',
+            'Kibana',
+            'Logstash',
+            'Traefik',
+            'cAdvisor',
+          ],
+        ],
+        [
+          'Quality & security',
+          [
+            'Postman',
+            'ESLint',
+            'Prettier',
+            'SonarQube',
+            'OxFmt',
+            'OxLint',
+            'Dependabot',
+            'Renovate',
+            'Trivy',
+            'JFrog Xray',
+          ],
+        ],
+        [
+          'Project management',
+          [
+            'Agile',
+            'Scrum',
+            'SAFe',
+            'V-model',
+            'Emergent design',
+            'Accounting (intermediate)',
+            'Team coordination',
+            'Digital law (GDPR, CNIL, intellectual property)',
+          ],
+        ],
+        [
+          'AI & tooling',
+          [
+            'Codex',
+            'Claude Code',
+            'Open Claw',
+            'Skills engineering',
+            'MCP',
+            'n8n',
+          ],
+        ],
       ],
     },
     education: {
       kicker: 'Education',
-      title: 'A technical, scientific and operational path.',
+      title: 'My education',
       inProgress: 'In progress',
       earned: 'Earned',
       entries: [
@@ -292,6 +581,43 @@ const copy = {
         ],
       ],
     },
+    projects: {
+      kicker: 'Projects',
+      title: 'Products designed from the first line of code to production.',
+      viewDetails: 'View details',
+      hideDetails: 'Hide details',
+      viewGithub: 'View on GitHub',
+      filters: {
+        label: 'Filter projects',
+        all: 'All',
+        school: 'Academic',
+        personal: 'Personal',
+        openSource: 'Open source',
+        empty: 'No projects in this category yet.',
+      },
+      entries: [
+        {
+          title: 'Léo Torres Portfolio',
+          context: 'Personal portfolio',
+          theme: 'personal',
+          githubUrl: 'https://github.com/laflut3/Portfolio-Leo-Torres',
+          text: 'A bilingual portfolio designed as an editorial experience, built with React, TypeScript and localized navigation.',
+          details:
+            'The project combines a personal visual identity, light, dark and system theme handling, and French and English routes designed for search visibility.',
+          stack: ['React', 'TypeScript', 'TanStack Router', 'Docker'],
+        },
+        {
+          title: 'Hub LeMontage',
+          context: 'Collaborative platform',
+          theme: 'openSource',
+          githubUrl: null,
+          text: 'A platform designed to centralize team workflows, with particular attention to quality, deployments and observability.',
+          details:
+            'The work covers product workflows and technical foundations: a typed API, containerization, GitOps deployments and instrumentation for important user journeys.',
+          stack: ['React', 'Fastify', 'Kubernetes', 'OpenTelemetry'],
+        },
+      ],
+    },
     contact: {
       kicker: 'Contact',
       title:
@@ -311,25 +637,21 @@ const copy = {
       copyright: 'All rights reserved.',
     },
     intro: {
-      title: 'Connecting to the system',
-      statuses: [
-        ['Pipeline', 'Build verified'],
-        ['Security', 'Checks active'],
-        ['Signal', 'Interface ready'],
-      ],
+      name: 'Léo Torres',
+      title: 'Software development & DevOps',
     },
     metadata: {
       profile: [
         'Leo Torres Portfolio — Profile',
-        'DevOps-minded developer focused on infrastructure, automation and reliable systems.',
+        'Profile, technical skills, education and projects of Leo Torres, a computer engineering student focused on development and DevOps.',
       ],
       skills: [
         'Skills — Leo Torres Portfolio',
         'Leo Torres technical skills: DevOps, cloud, automation and software development.',
       ],
-      education: [
-        'Education — Leo Torres Portfolio',
-        'Leo Torres academic and technical background.',
+      projects: [
+        'Projects — Leo Torres Portfolio',
+        'A selection of Leo Torres projects focused on software, DevOps and infrastructure.',
       ],
       contact: [
         'Contact — Leo Torres Portfolio',

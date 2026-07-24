@@ -45,6 +45,9 @@ export function ExperienceSection() {
                 <p className="mt-2 text-base font-medium text-foreground">
                   {entry.company}
                 </p>
+                <p className="mt-1 text-sm font-medium text-[var(--portfolio-accent)]">
+                  {entry.team}
+                </p>
                 <p
                   id={`experience-${entryId}`}
                   className={`mt-4 max-w-3xl leading-7 text-[var(--portfolio-text-soft)] ${

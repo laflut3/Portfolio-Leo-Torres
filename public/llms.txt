@@ -9,7 +9,10 @@ espace, aéronautique, sport, cinéma et jeux vidéo, ainsi qu’un aperçu de s
 compétences avant son parcours académique. La page d’expérience professionnelle
 présente son parcours en entreprise : développement back-end Java et Spring
 Boot chez Crédit Agricole Technologies et Services, ainsi qu’une expérience
-d’administration réseau et systèmes chez Discomp Électronique.
+d’administration réseau et systèmes chez Discomp Électronique. Chez CA-TS,
+Léo Torres a travaillé dans les squads Identification & Authentification
+(septembre 2024 à septembre 2025), puis Accès fiabilisé des partenaires
+(depuis octobre 2025).
 
 Pages canoniques publiques :
 - /fr-fr/profil, /fr-fr/competences, /fr-fr/projets, /fr-fr/experience-professionnelle et /fr-fr/contact

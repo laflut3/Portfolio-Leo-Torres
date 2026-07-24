@@ -10,13 +10,26 @@ export const experience = {
       showLess: 'Voir moins',
       entries: [
         {
-          role: 'Développeur Open',
+          role: 'Dev Open',
           company: 'Crédit Agricole Technologies et Services',
           type: 'Contrat en alternance',
-          period: 'Sept. 2024 — aujourd’hui',
+          team: 'Squad Identification & Authentification',
+          period: 'Sept. 2024 — sept. 2025',
           location: 'Montpellier, Occitanie · Hybride',
           description:
-            'En tant que développeur back-end au sein de CA-TS, je travaille sur des projets utilisant Java et le framework Spring Boot. Mon rôle consiste à concevoir et faire évoluer des services en lien avec les besoins des équipes.',
+            'J’ai travaillé en tant que Dev Open sur du développement back-end en Java et Spring Boot. Cette expérience s’est déroulée dans la squad Identification & Authentification, de septembre 2024 à septembre 2025.',
+          skillsLabel: 'Compétences utilisées',
+          skills: ['Java', 'Spring Boot', 'Développement back-end'],
+        },
+        {
+          role: 'Dev Open',
+          company: 'Crédit Agricole Technologies et Services',
+          type: 'Contrat en alternance',
+          team: 'Squad Accès fiabilisé des partenaires',
+          period: 'Oct. 2025 — aujourd’hui',
+          location: 'Montpellier, Occitanie · Hybride',
+          description:
+            'Je travaille en tant que Dev Open sur du développement back-end en Java et Spring Boot. Depuis octobre 2025, cette expérience se poursuit dans la squad Accès fiabilisé des partenaires.',
           skillsLabel: 'Compétences utilisées',
           skills: ['Java', 'Spring Boot', 'Développement back-end'],
         },
@@ -24,6 +37,7 @@ export const experience = {
           role: 'Administrateur réseau et systèmes',
           company: 'Discomp Électronique',
           type: 'Stage',
+          team: 'Infrastructure informatique',
           period: 'Avr. 2024 — juin 2024',
           location: 'Montarnaud, Occitanie · Sur site',
           description:
@@ -52,10 +66,23 @@ export const experience = {
           role: 'Open Developer',
           company: 'Crédit Agricole Technologies et Services',
           type: 'Work-study contract',
-          period: 'Sept. 2024 — present',
+          team: 'Identification & Authentication squad',
+          period: 'Sept. 2024 — Sept. 2025',
           location: 'Montpellier, Occitanie · Hybrid',
           description:
-            'As a back-end developer at CA-TS, I work on projects using Java and the Spring Boot framework. My role involves designing and improving services to meet the needs of the teams.',
+            'I worked as an Open Developer on Java and Spring Boot back-end development. This experience took place in the Identification & Authentication squad, from September 2024 to September 2025.',
+          skillsLabel: 'Skills used',
+          skills: ['Java', 'Spring Boot', 'Back-end development'],
+        },
+        {
+          role: 'Open Developer',
+          company: 'Crédit Agricole Technologies et Services',
+          type: 'Work-study contract',
+          team: 'Partner Access Reliability squad',
+          period: 'Oct. 2025 — present',
+          location: 'Montpellier, Occitanie · Hybrid',
+          description:
+            'I work as an Open Developer on Java and Spring Boot back-end development. Since October 2025, this experience has continued in the Partner Access Reliability squad.',
           skillsLabel: 'Skills used',
           skills: ['Java', 'Spring Boot', 'Back-end development'],
         },
@@ -63,6 +90,7 @@ export const experience = {
           role: 'Network and systems administrator',
           company: 'Discomp Électronique',
           type: 'Internship',
+          team: 'IT infrastructure',
           period: 'Apr. 2024 — Jun. 2024',
           location: 'Montarnaud, Occitanie · On-site',
           description:

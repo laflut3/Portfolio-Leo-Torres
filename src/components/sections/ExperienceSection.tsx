@@ -50,7 +50,7 @@ export function ExperienceSection() {
                 </p>
                 <p
                   id={`experience-${entryId}`}
-                  className={`mt-4 max-w-3xl leading-7 text-[var(--portfolio-text-soft)] ${
+                  className={`mt-4 max-w-3xl whitespace-pre-line leading-7 text-[var(--portfolio-text-soft)] ${
                     isExpanded ? '' : 'line-clamp-2'
                   }`}
                 >

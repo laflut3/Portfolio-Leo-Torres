@@ -40,8 +40,15 @@ export const experience = {
           team: 'Infrastructure informatique',
           period: 'Avr. 2024 — juin 2024',
           location: 'Montarnaud, Occitanie · Sur site',
-          description:
-            'Ma mission était de recréer à partir de zéro le réseau informatique de Discomp Électronique pour l’adapter à son nouveau système d’information. Cela a commencé par l’achat de matériel de bureau et de composants réseau, puis par l’installation et la configuration de l’infrastructure.',
+          description: `Ma mission était de refondre de zéro le système d’information de Discomp Électronique afin de le moderniser.
+
+J’ai d’abord réalisé un état des lieux du système d’information. Cela a demandé de trier et de reclasser les anciennes archives, les fichiers et les dossiers papier.
+
+J’ai ensuite refondu l’ensemble du parc informatique, notamment avec l’achat de nouveaux équipements de bureau. J’ai configuré et sécurisé les postes sur le réseau, ainsi que l’ordinateur portable distant.
+
+J’ai mis en place un système de sessions par machine, permettant aux utilisateurs de se connecter à Azure Active Directory. Les employés n’étaient ainsi plus dépendants d’un poste précis.
+
+J’ai également mis en place le Wi-Fi invité, configuré les machines de la salle de réunion et documenté le travail réalisé.`,
           skillsLabel: 'Compétences utilisées',
           skills: ['Réseaux', 'Systèmes', 'Sécurité réseau'],
         },
@@ -93,8 +100,15 @@ export const experience = {
           team: 'IT infrastructure',
           period: 'Apr. 2024 — Jun. 2024',
           location: 'Montarnaud, Occitanie · On-site',
-          description:
-            'My assignment was to rebuild Discomp Électronique’s network from scratch to adapt it to its new information system. It started with purchasing office equipment and network components, followed by installing and configuring the infrastructure.',
+          description: `My assignment was to rebuild Discomp Électronique’s information system from scratch in order to modernize it.
+
+I first assessed the existing information system. This involved sorting and reorganizing the old archives, files and paper folders.
+
+I then rebuilt the entire IT estate, including purchasing new office equipment. I configured and secured the workstations on the network, as well as the remote laptop.
+
+I set up a per-machine session system allowing users to sign in to Azure Active Directory. Employees were therefore no longer dependent on a specific workstation.
+
+I also set up guest Wi-Fi, configured the meeting-room machines and documented the work carried out.`,
           skillsLabel: 'Skills used',
           skills: ['Networking', 'Systems', 'Network security'],
         },

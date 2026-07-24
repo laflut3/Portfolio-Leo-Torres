@@ -15,6 +15,14 @@ function App() {
   const [introComplete, setIntroComplete] = useState(false)
   const handleIntroComplete = useCallback(() => {
     setIntroComplete(true)
+
+    const targetId = window.location.hash.slice(1)
+
+    if (!targetId) return
+
+    requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView()
+    })
   }, [])
 
   usePortfolioAnimation(pageRef, introComplete)

@@ -57,33 +57,43 @@ export const skills = [
 
 export const education = [
   {
+    title: 'Engineering Degree',
+    date: 'In progress',
+    school: 'Polytech Montpellier',
+    meta: 'Software development and operational exploitation (DO)',
+    text: 'In progress at Polytech Montpellier, focused on development, operations and practical operational methods.',
+    status: 'In progress',
+  },
+  {
+    title: 'BUT in Computer Science',
+    date: '2025',
+    school: 'IUT Montpellier',
+    meta: 'DACS specialization',
+    text: 'Development, networking, security and production delivery for reliable applications.',
+    status: 'Earned',
+  },
+  {
+    title: 'Bachelor in Science, Technology and Health',
+    date: '2025',
+    school: 'IAE',
+    meta: 'Science and technology track, technology and science management path (e-learning)',
+    text: 'A scientific and organizational complement around technology management.',
+    status: 'Earned',
+  },
+  {
     title: 'STI2D Baccalaureate',
+    date: '2022',
+    school: 'Lycee Mermoz, Montpellier',
     meta: 'With honors',
     text: 'A technical foundation focused on design, systems and industrial reasoning.',
     status: 'Earned',
   },
   {
     title: 'BIA',
+    date: '2021',
+    school: 'Lycee Jean Jaures',
     meta: 'Aeronautics initiation certificate',
-    text: 'An early bridge between scientific curiosity, aeronautics and flight culture.',
+    text: 'Aeronautics initiation certificate, connecting scientific curiosity, aeronautics and flight culture.',
     status: 'Earned',
-  },
-  {
-    title: 'BUT in Computer Science',
-    meta: 'Specialization in deploying communicating and secure applications',
-    text: 'Development, networking, security and production delivery for reliable applications.',
-    status: 'Earned',
-  },
-  {
-    title: 'Bachelor in Science, Technology and Health',
-    meta: 'Science and technology track, technology and science management path (e-learning)',
-    text: 'A scientific and organizational complement around technology management.',
-    status: 'Earned',
-  },
-  {
-    title: 'Polytech Montpellier',
-    meta: 'Software development and operational exploitation (DO)',
-    text: 'Current program focused on development, operations and practical operational methods.',
-    status: 'In progress',
   },
 ]

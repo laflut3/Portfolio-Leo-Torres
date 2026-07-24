@@ -1,6 +1,8 @@
 import {
   BookOpen,
+  CalendarDays,
   GraduationCap,
+  MapPin,
   Plane,
   School,
   ShieldCheck,
@@ -8,7 +10,7 @@ import {
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { education } from '@/data/portfolio'
 
-const educationIcons = [GraduationCap, Plane, ShieldCheck, BookOpen, School]
+const educationIcons = [School, ShieldCheck, BookOpen, GraduationCap, Plane]
 
 export function EducationSection() {
   return (
@@ -48,9 +50,22 @@ export function EducationSection() {
                     <h3 className="m-0 text-xl leading-tight font-medium text-foreground">
                       {degree.title}
                     </h3>
-                    <p className="mt-1 max-w-3xl text-sm leading-6 text-[var(--portfolio-text-soft)]">
-                      {degree.meta}
-                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <span
+                        className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-semibold ${
+                          isCurrent
+                            ? 'border-[color-mix(in_oklch,var(--portfolio-amber)_38%,transparent)] bg-[color-mix(in_oklch,var(--portfolio-amber)_12%,transparent)] text-[color-mix(in_oklch,var(--portfolio-amber)_72%,var(--foreground))]'
+                            : 'border-[color-mix(in_oklch,var(--portfolio-cyan)_30%,transparent)] bg-[color-mix(in_oklch,var(--portfolio-cyan)_9%,transparent)] text-[color-mix(in_oklch,var(--portfolio-cyan)_62%,var(--foreground))]'
+                        }`}
+                      >
+                        <CalendarDays className="size-3.5" aria-hidden="true" />
+                        {degree.date}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 rounded-md border border-[var(--portfolio-line)] bg-[var(--portfolio-panel-strong)] px-2.5 py-1 text-xs font-semibold text-foreground">
+                        <MapPin className="size-3.5" aria-hidden="true" />
+                        {degree.school}
+                      </span>
+                    </div>
                   </div>
                   <span
                     className={`rounded-md border px-2.5 py-1 text-xs font-medium ${
@@ -62,6 +77,9 @@ export function EducationSection() {
                     {degree.status}
                   </span>
                 </div>
+                <p className="mt-4 max-w-3xl text-sm font-medium leading-6 text-foreground">
+                  {degree.meta}
+                </p>
                 <p className="mt-4 max-w-3xl leading-7 text-[var(--portfolio-text-soft)]">
                   {degree.text}
                 </p>

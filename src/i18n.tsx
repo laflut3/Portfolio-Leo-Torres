@@ -39,6 +39,7 @@ const copy = {
       skills: 'Compétences',
       education: 'Parcours',
       contact: 'Contact',
+      menu: 'Ouvrir la navigation',
     },
     hero: {
       coordinates: '43.61° N · Montpellier · Systèmes & logiciel',
@@ -144,7 +145,17 @@ const copy = {
       github: 'GitHub',
       email: 'Me contacter',
     },
-    footer: 'Conçu avec React, Vite, Tailwind et Docker.',
+    footer: {
+      description:
+        'Portfolio personnel dédié aux systèmes fiables, au logiciel et à la livraison.',
+      navigation: 'Navigation',
+      connect: 'Me retrouver',
+      stack: 'Stack',
+      github: 'GitHub',
+      contact: 'Me contacter',
+      stackValue: 'React · Vite · TypeScript · Docker',
+      copyright: 'Tous droits réservés.',
+    },
     intro: {
       title: 'Connexion au système',
       statuses: [
@@ -186,6 +197,7 @@ const copy = {
       skills: 'Skills',
       education: 'Education',
       contact: 'Contact',
+      menu: 'Open navigation',
     },
     hero: {
       coordinates: '43.61° N · Montpellier · Systems & software',
@@ -285,7 +297,17 @@ const copy = {
       github: 'GitHub',
       email: 'Contact me',
     },
-    footer: 'Built with React, Vite, Tailwind and Docker.',
+    footer: {
+      description:
+        'A personal portfolio about reliable systems, software and delivery.',
+      navigation: 'Navigation',
+      connect: 'Find me online',
+      stack: 'Stack',
+      github: 'GitHub',
+      contact: 'Contact me',
+      stackValue: 'React · Vite · TypeScript · Docker',
+      copyright: 'All rights reserved.',
+    },
     intro: {
       title: 'Connecting to the system',
       statuses: [

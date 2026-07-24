@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section
       id="profile"
-      className="hero-shell grid min-h-[calc(100dvh-132px)] grid-cols-[minmax(0,1.05fr)_minmax(320px,0.8fr)] items-center gap-10 py-10 pb-24 max-md:grid-cols-1 max-md:gap-5 max-md:pt-8"
+      className="hero-shell grid min-h-[calc(100dvh-132px)] grid-cols-[minmax(0,1.08fr)_minmax(360px,0.72fr)] items-center gap-x-14 gap-y-8 py-12 pb-20 max-lg:grid-cols-[minmax(0,1fr)_minmax(330px,0.68fr)] max-lg:gap-x-8 max-md:grid-cols-1 max-md:gap-5 max-md:pt-8"
     >
       <div className="relative z-[1]">
         <p
@@ -29,7 +29,7 @@ export function HeroSection() {
           {copy.hero.coordinates}
         </p>
         <h1
-          className="hero-title m-0 max-w-3xl text-[clamp(4rem,10.5vw,9.2rem)] leading-[0.82] font-semibold tracking-[-0.075em] text-foreground"
+          className="hero-title m-0 max-w-[42rem] text-[clamp(3.5rem,4.8vw,5.25rem)] leading-[0.9] font-semibold tracking-[-0.065em] text-foreground max-lg:text-[clamp(3.25rem,5vw,4.5rem)]"
           data-reveal
         >
           {titleLineOne}
@@ -37,7 +37,7 @@ export function HeroSection() {
           <span>{titleLineTwo}</span>
         </h1>
         <p
-          className="mt-7 max-w-xl text-[clamp(1.15rem,2.2vw,1.65rem)] leading-snug font-medium text-[var(--portfolio-amber)]"
+          className="mt-8 max-w-[38rem] text-[clamp(1.1rem,1.55vw,1.35rem)] leading-snug font-medium text-[var(--portfolio-amber)]"
           data-reveal
         >
           {copy.hero.lead}

@@ -267,6 +267,46 @@ html.theme-ready [class*='border-'] {
   gap: 0.5rem;
 }
 
+.footer-heading {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--portfolio-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-decoration: none;
+  transition:
+    color 240ms ease,
+    transform 240ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--foreground);
+  transform: translateX(0.15rem);
+}
+
+.footer-links a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
 .hero-shell::before {
   position: absolute;
   top: 10rem;
@@ -282,12 +322,12 @@ html.theme-ready [class*='border-'] {
 
 .hero-visual {
   position: relative;
-  min-height: 38rem;
+  min-height: 32rem;
 }
 
 .hero-visual-frame {
   position: absolute;
-  inset: 1rem 0 1rem 1rem;
+  inset: 0.75rem 0;
   overflow: hidden;
   border: 1px solid color-mix(in oklch, var(--portfolio-line) 92%, transparent);
   border-radius: 2.75rem;
@@ -360,10 +400,10 @@ html.theme-ready [class*='border-'] {
 }
 
 .hero-visual-card {
-  top: 2rem;
-  left: -1.3rem;
-  width: min(16.5rem, 62%);
-  padding: 1rem 1rem 1rem 2.3rem;
+  top: 1.5rem;
+  left: 1.25rem;
+  width: min(15.5rem, calc(100% - 2.5rem));
+  padding: 0.9rem 1rem;
   border: 1px solid color-mix(in oklch, var(--portfolio-line) 82%, transparent);
   border-radius: 1.25rem;
   background: color-mix(
@@ -421,7 +461,7 @@ html.theme-ready [class*='border-'] {
   }
 
   .hero-visual {
-    min-height: 27rem;
+    min-height: 26rem;
   }
 
   .hero-visual-frame {

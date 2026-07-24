@@ -1,31 +1,24 @@
-import { useCallback, useRef, useState } from 'react'
-import { ContactSection } from '@/components/sections/ContactSection'
-import { EducationSection } from '@/components/sections/EducationSection'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Outlet, useLocation } from '@tanstack/react-router'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { HeroSection } from '@/components/sections/HeroSection'
 import { IntroOverlay } from '@/components/layout/IntroOverlay'
-import { SignalSection } from '@/components/sections/SignalSection'
-import { SkillsSection } from '@/components/sections/SkillsSection'
 import { ThemeSwitch } from '@/components/layout/ThemeSwitch'
 import { usePortfolioAnimation } from '@/hooks/usePortfolioAnimation'
+import { type Locale, useTranslation } from '@/i18n'
 
-function App() {
+export function PortfolioLayout({ locale }: { locale: Locale }) {
   const pageRef = useRef<HTMLDivElement>(null)
   const [introComplete, setIntroComplete] = useState(false)
-  const handleIntroComplete = useCallback(() => {
-    setIntroComplete(true)
+  const location = useLocation()
+  const { copy } = useTranslation()
 
-    const targetId = window.location.hash.slice(1)
+  useEffect(() => {
+    document.documentElement.lang = copy.htmlLang
+  }, [copy.htmlLang])
 
-    if (!targetId) return
-
-    requestAnimationFrame(() => {
-      document.getElementById(targetId)?.scrollIntoView()
-    })
-  }, [])
-
-  usePortfolioAnimation(pageRef, introComplete)
+  const handleIntroComplete = useCallback(() => setIntroComplete(true), [])
+  usePortfolioAnimation(pageRef, introComplete, location.pathname)
 
   return (
     <div
@@ -48,21 +41,12 @@ function App() {
         className="pointer-events-none fixed top-24 right-[8vw] size-[38rem] rounded-full border border-[var(--portfolio-orbit)] opacity-50"
       />
       <ThemeSwitch />
-      <Header />
-      <main
-        id="top"
-        className="relative mx-auto w-[min(1120px,calc(100%_-_40px))] max-md:w-[min(100%_-_28px,1120px)]"
-      >
-        <HeroSection />
-        <SignalSection />
-        <SkillsSection />
-        <EducationSection />
-        <ContactSection />
+      <Header locale={locale} />
+      <main className="relative mx-auto w-[min(1120px,calc(100%_-_40px))] max-md:w-[min(100%_-_28px,1120px)]">
+        <Outlet />
       </main>
       <Footer />
       {!introComplete && <IntroOverlay onComplete={handleIntroComplete} />}
     </div>
   )
 }
-
-export default App

@@ -1,15 +1,16 @@
 import { Compass, Orbit, Rocket } from 'lucide-react'
-import { signals } from '@/data/portfolio'
+import { useTranslation } from '@/i18n'
 
 const signalIcons = [Rocket, Compass, Orbit]
 
 export function SignalSection() {
+  const { copy } = useTranslation()
   return (
     <section
       className="signal-grid grid grid-cols-12 gap-4 max-md:grid-cols-1"
       aria-label="Axes principaux"
     >
-      {signals.map((signal, index) => {
+      {copy.signals.map((signal, index) => {
         const Icon = signalIcons[index] ?? Rocket
 
         return (

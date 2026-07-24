@@ -17,10 +17,20 @@ export function useThemeMode() {
 
   useEffect(() => {
     const root = document.documentElement
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
 
-    root.classList.toggle('light', mode === 'light')
-    root.classList.toggle('dark', mode === 'dark')
+    const applyMode = () => {
+      const isDark = mode === 'dark' || (mode === 'system' && media.matches)
+      root.classList.toggle('light', !isDark)
+      root.classList.toggle('dark', isDark)
+    }
+
+    applyMode()
+    requestAnimationFrame(() => root.classList.add('theme-ready'))
+    media.addEventListener('change', applyMode)
     localStorage.setItem(storageKey, mode)
+
+    return () => media.removeEventListener('change', applyMode)
   }, [mode])
 
   return { mode, setMode }

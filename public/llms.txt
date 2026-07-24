@@ -3,6 +3,9 @@
 Portfolio professionnel public de Léo Torres, développeur orienté ingénierie
 logicielle, DevOps, infrastructure, cloud, automatisation et expériences web.
 
-La page d'accueil présente son profil, ses compétences, son parcours et ses
-coordonnées professionnelles. La visualisation 3D est décorative : les
-informations importantes sont également présentes dans le contenu HTML.
+Pages canoniques publiques :
+- /fr-fr/profil, /fr-fr/competences, /fr-fr/parcours et /fr-fr/contact
+- /en-us/profile, /en-us/skills, /en-us/education et /en-us/contact
+
+La visualisation 3D est décorative : les informations importantes sont
+également présentes dans le contenu HTML.

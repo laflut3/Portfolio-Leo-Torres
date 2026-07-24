@@ -4,6 +4,7 @@ import gsap from 'gsap'
 export function usePortfolioAnimation(
   pageRef: RefObject<HTMLDivElement | null>,
   enabled = true,
+  path = '',
 ) {
   useLayoutEffect(() => {
     if (!pageRef.current || !enabled) return
@@ -103,5 +104,5 @@ export function usePortfolioAnimation(
       observer?.disconnect()
       context.revert()
     }
-  }, [pageRef, enabled])
+  }, [pageRef, enabled, path])
 }

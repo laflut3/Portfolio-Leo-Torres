@@ -1,7 +1,9 @@
 import { Code, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useTranslation } from '@/i18n'
 
 export function ContactSection() {
+  const { copy } = useTranslation()
   return (
     <section
       id="contact"
@@ -11,24 +13,23 @@ export function ContactSection() {
       <div>
         <p className="m-0 inline-flex items-center gap-2 text-xs font-bold tracking-[0.16em] text-[var(--portfolio-cyan)] uppercase">
           <Mail className="size-4" aria-hidden="true" />
-          Contact
+          {copy.contact.kicker}
         </p>
         <h2 className="mt-3 text-[clamp(1.9rem,4vw,3.3rem)] leading-[1.08] font-medium tracking-normal text-foreground">
-          Let&apos;s talk infrastructure, automation or DevOps-oriented
-          projects.
+          {copy.contact.title}
         </h2>
       </div>
       <div className="flex flex-wrap justify-end gap-3 max-md:justify-start">
         <Button asChild>
           <a href="https://github.com/ltorres" target="_blank" rel="noreferrer">
             <Code data-icon="inline-start" />
-            GitHub
+            {copy.contact.github}
           </a>
         </Button>
         <Button asChild variant="outline">
           <a href="mailto:leo.torres@example.com">
             <Mail data-icon="inline-start" />
-            Contact me
+            {copy.contact.email}
           </a>
         </Button>
       </div>

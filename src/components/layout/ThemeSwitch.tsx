@@ -1,41 +1,56 @@
-import { Monitor, Moon, Sun } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { ChevronDown, Monitor, Moon, Sun } from 'lucide-react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { type ThemeMode, useThemeMode } from '@/hooks/useThemeMode'
-
-const options: Array<{
-  mode: ThemeMode
-  label: string
-  Icon: typeof Sun
-}> = [
-  { mode: 'light', label: 'Light mode', Icon: Sun },
-  { mode: 'dark', label: 'Dark mode', Icon: Moon },
-  { mode: 'system', label: 'System preference', Icon: Monitor },
-]
+import { useTranslation } from '@/i18n'
 
 export function ThemeSwitch() {
   const { mode, setMode } = useThemeMode()
+  const { copy } = useTranslation()
+  const options: Array<{ mode: ThemeMode; label: string; Icon: typeof Sun }> = [
+    { mode: 'light', label: copy.theme.light, Icon: Sun },
+    { mode: 'dark', label: copy.theme.dark, Icon: Moon },
+    { mode: 'system', label: copy.theme.system, Icon: Monitor },
+  ]
+  const active = options.find((option) => option.mode === mode) ?? options[2]
+  const ActiveIcon = active.Icon
 
   return (
-    <div
-      className="fixed top-5 right-5 z-30 flex rounded-full border border-[var(--portfolio-line)] bg-[color-mix(in_oklch,var(--portfolio-panel-strong)_88%,transparent)] p-1 shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl"
-      aria-label="Theme selection"
-    >
-      {options.map(({ mode: optionMode, label, Icon }) => (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
         <button
-          key={optionMode}
           type="button"
-          aria-label={label}
-          aria-pressed={mode === optionMode}
-          className={cn(
-            'inline-flex size-8 items-center justify-center rounded-full text-[var(--portfolio-text-soft)] transition-colors hover:text-foreground',
-            mode === optionMode &&
-              'bg-[var(--portfolio-panel-strong)] text-foreground shadow-sm',
-          )}
-          onClick={() => setMode(optionMode)}
+          className="theme-trigger fixed top-5 right-5 z-30"
+          aria-label={copy.theme.label}
         >
-          <Icon aria-hidden="true" className="size-3.5" />
+          <ActiveIcon aria-hidden="true" className="size-3.5" />
+          <span className="max-md:hidden">{active.label}</span>
+          <ChevronDown aria-hidden="true" className="size-3" />
         </button>
-      ))}
-    </div>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="theme-menu w-48">
+        <DropdownMenuLabel>{copy.theme.label}</DropdownMenuLabel>
+        <DropdownMenuRadioGroup
+          value={mode}
+          onValueChange={(value) => setMode(value as ThemeMode)}
+        >
+          {options.map(({ mode: optionMode, label, Icon }) => (
+            <DropdownMenuRadioItem
+              key={optionMode}
+              value={optionMode}
+              className="theme-menu-item"
+            >
+              <Icon aria-hidden="true" className="size-3.5" /> {label}
+            </DropdownMenuRadioItem>
+          ))}
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

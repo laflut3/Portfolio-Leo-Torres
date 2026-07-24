@@ -7,6 +7,7 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import gsap from 'gsap'
+import { useTranslation } from '@/i18n'
 
 type IntroOverlayProps = {
   onComplete: () => void
@@ -14,6 +15,7 @@ type IntroOverlayProps = {
 
 export function IntroOverlay({ onComplete }: IntroOverlayProps) {
   const introRef = useRef<HTMLDivElement>(null)
+  const { copy } = useTranslation()
 
   useIntroAnimation(introRef, onComplete)
 
@@ -83,27 +85,26 @@ export function IntroOverlay({ onComplete }: IntroOverlayProps) {
             data-intro-copy
             className="mt-3 text-[clamp(2.2rem,7vw,5.6rem)] leading-[0.92] font-medium tracking-normal"
           >
-            Connecting to the system
+            {copy.intro.title}
           </h1>
         </div>
         <div className="grid w-full gap-2 text-left" data-intro-status-list>
-          {[
-            { label: 'Pipeline', value: 'Build verified', Icon: Activity },
-            { label: 'Security', value: 'Checks active', Icon: ShieldCheck },
-            { label: 'Signal', value: 'Interface ready', Icon: RadioTower },
-          ].map(({ label, value, Icon }) => (
-            <div
-              key={label}
-              data-intro-status
-              className="flex items-center justify-between gap-4 rounded-xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] px-4 py-3 text-sm backdrop-blur-md"
-            >
-              <span className="inline-flex items-center gap-2 text-[var(--portfolio-text-soft)]">
-                <Icon className="size-4 text-[var(--portfolio-cyan)]" />
-                {label}
-              </span>
-              <span className="font-medium text-foreground">{value}</span>
-            </div>
-          ))}
+          {copy.intro.statuses.map(([label, value], index) => {
+            const Icon = [Activity, ShieldCheck, RadioTower][index] ?? Activity
+            return (
+              <div
+                key={label}
+                data-intro-status
+                className="flex items-center justify-between gap-4 rounded-xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] px-4 py-3 text-sm backdrop-blur-md"
+              >
+                <span className="inline-flex items-center gap-2 text-[var(--portfolio-text-soft)]">
+                  <Icon className="size-4 text-[var(--portfolio-cyan)]" />
+                  {label}
+                </span>
+                <span className="font-medium text-foreground">{value}</span>
+              </div>
+            )
+          })}
         </div>
         <div
           data-intro-loader

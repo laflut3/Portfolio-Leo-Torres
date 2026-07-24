@@ -10,7 +10,7 @@ import {
 } from 'lucide-react'
 import { TagList } from '@/components/common/TagList'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { skills } from '@/data/portfolio'
+import { useTranslation } from '@/i18n'
 
 const skillIcons = [
   ServerCog,
@@ -24,20 +24,21 @@ const skillIcons = [
 ]
 
 export function SkillsSection() {
+  const { copy } = useTranslation()
   return (
     <section id="skills" className="mt-24 max-md:mt-14">
       <SectionHeading
-        kicker="Skills"
-        title="The DevOps topics I like practicing and deepening."
+        kicker={copy.skills.kicker}
+        title={copy.skills.title}
         icon={<ServerCog className="size-4" aria-hidden="true" />}
       />
       <div className="grid grid-cols-12 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
-        {skills.map((skill, index) => {
+        {copy.skills.entries.map(([title, items], index) => {
           const Icon = skillIcons[index] ?? ServerCog
 
           return (
             <article
-              key={skill.title}
+              key={title}
               className={`skill-card rounded-[2rem] border border-[color-mix(in_oklch,var(--portfolio-line)_86%,transparent)] bg-[var(--portfolio-panel)] p-5 shadow-[0_22px_60px_color-mix(in_oklch,var(--foreground)_6%,transparent)] max-lg:col-span-1 max-md:col-span-1 ${
                 index === 0 || index === 5 ? 'col-span-4' : 'col-span-2'
               }`}
@@ -48,10 +49,10 @@ export function SkillsSection() {
                   <Icon className="size-4" aria-hidden="true" />
                 </span>
                 <h3 className="m-0 text-base font-medium text-foreground">
-                  {skill.title}
+                  {title}
                 </h3>
               </div>
-              <TagList items={skill.items} />
+              <TagList items={[...items]} />
             </article>
           )
         })}

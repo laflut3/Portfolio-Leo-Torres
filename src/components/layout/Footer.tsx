@@ -1,12 +1,13 @@
 import { Server } from 'lucide-react'
+import { useTranslation } from '@/i18n'
 
 export function Footer() {
+  const { copy } = useTranslation()
   return (
     <footer className="relative mx-auto flex w-[min(1120px,calc(100%_-_40px))] justify-between gap-5 border-t border-[var(--portfolio-line)] py-6 pb-9 text-sm text-[var(--portfolio-text-soft)] max-md:w-[min(100%_-_28px,1120px)] max-md:flex-col">
       <span>Leo Torres</span>
       <span className="inline-flex items-center gap-2">
-        <Server aria-hidden="true" className="size-4" /> Built with React, Vite,
-        Tailwind and Docker.
+        <Server aria-hidden="true" className="size-4" /> {copy.footer}
       </span>
     </footer>
   )

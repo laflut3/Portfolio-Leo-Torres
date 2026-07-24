@@ -1,8 +1,9 @@
 import { lazy, Suspense } from 'react'
 import { ArrowUpRight, Mail } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/ui/button'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
-import { heroCopy } from '@/i18n'
+import { pathFor, useTranslation } from '@/i18n'
 
 const OrbitArtifact = lazy(() =>
   import('@/components/visuals/OrbitArtifact').then((module) => ({
@@ -12,8 +13,8 @@ const OrbitArtifact = lazy(() =>
 
 export function HeroSection() {
   const reducedMotion = useReducedMotion()
-  const text = heroCopy()
-  const [titleLineOne, titleLineTwo] = text.title.split('|')
+  const { locale, copy } = useTranslation()
+  const [titleLineOne, titleLineTwo] = copy.hero.title
 
   return (
     <section
@@ -25,7 +26,7 @@ export function HeroSection() {
           className="hero-kicker m-0 text-xs font-bold tracking-[0.2em] text-[var(--portfolio-cyan)] uppercase"
           data-reveal
         >
-          {text.coordinates}
+          {copy.hero.coordinates}
         </p>
         <h1
           className="hero-title m-0 max-w-3xl text-[clamp(4rem,10.5vw,9.2rem)] leading-[0.82] font-semibold tracking-[-0.075em] text-foreground"
@@ -39,24 +40,24 @@ export function HeroSection() {
           className="mt-7 max-w-xl text-[clamp(1.15rem,2.2vw,1.65rem)] leading-snug font-medium text-[var(--portfolio-amber)]"
           data-reveal
         >
-          {text.lead}
+          {copy.hero.lead}
         </p>
         <p
           className="mt-6 max-w-xl text-[1.02rem] leading-8 text-[var(--portfolio-text-soft)]"
           data-reveal
         >
-          {text.body}
+          {copy.hero.body}
         </p>
         <div className="mt-8 flex flex-wrap gap-3" data-reveal>
           <Button asChild size="lg">
-            <a href="#skills">
-              {text.explore} <ArrowUpRight data-icon="inline-end" />
-            </a>
+            <Link to={pathFor(locale, 'skills')}>
+              {copy.hero.explore} <ArrowUpRight data-icon="inline-end" />
+            </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#contact">
-              {text.contact} <Mail data-icon="inline-end" />
-            </a>
+            <Link to={pathFor(locale, 'contact')}>
+              {copy.hero.contact} <Mail data-icon="inline-end" />
+            </Link>
           </Button>
         </div>
       </div>
@@ -68,12 +69,14 @@ export function HeroSection() {
             <OrbitArtifact reducedMotion={reducedMotion} />
           </Suspense>
           <div className="hero-visual-caption">
-            <span>{text.system}</span>
-            <span>{text.quiet}</span>
+            <span>{copy.hero.system}</span>
+            <span>{copy.hero.quiet}</span>
           </div>
           <div className="hero-visual-card">
-            <span className="hero-visual-card-label">{text.principle}</span>
-            <strong>{text.clarity}</strong>
+            <span className="hero-visual-card-label">
+              {copy.hero.principle}
+            </span>
+            <strong>{copy.hero.clarity}</strong>
           </div>
         </div>
       </div>

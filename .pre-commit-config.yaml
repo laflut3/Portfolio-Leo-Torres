@@ -30,9 +30,3 @@ repos:
         language: system
         pass_filenames: false
         files: \.(js|jsx|ts|tsx|css|json|md|yml|yaml|html)$
-
-      - id: hadolint
-        name: hadolint
-        entry: hadolint
-        language: system
-        files: (^|/)(Dockerfile|Dockerfile\..*|.*\.Dockerfile)$

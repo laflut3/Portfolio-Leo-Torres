@@ -1,15 +1,19 @@
 # Portfolio Léo Torres
 
-## Contact par Gmail
+## Formulaire de contact
 
-Le formulaire de contact appelle l’API privée `/api/contact`. Crée un fichier
-`.env` à partir de `.env.example`, puis renseigne l’adresse Gmail, son mot de
-passe d’application et le destinataire. Ces variables ne doivent jamais être
-préfixées par `VITE_` : elles sont lues uniquement par le serveur Node.
+Le formulaire utilise Formspree, sans serveur applicatif. Crée un fichier `.env`
+à partir de `.env.example`, puis renseigne l’endpoint public Formspree.
 
-En développement, démarre le serveur d’envoi avec `pnpm dev:api` dans un second
-terminal, puis le frontend avec `pnpm dev`. En production, l’image Docker sert
-le portfolio et l’API sur le même port.
+La variable `VITE_FORMSPREE_ENDPOINT` est publique par nature : n’y place jamais
+un mot de passe Gmail ou une clé SMTP.
+
+## Déploiement Vercel
+
+Utilise le preset **Vite**, `pnpm run build` comme commande de build, `dist` comme
+répertoire de sortie et `pnpm install --frozen-lockfile` pour l’installation.
+Ajoute `VITE_FORMSPREE_ENDPOINT` dans les variables d’environnement Vercel avant
+le déploiement : Vite l’intègre au build du frontend.
 
 Portfolio React/Vite de Léo Torres, avec des routes publiques localisées :
 

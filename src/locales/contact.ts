@@ -32,7 +32,7 @@ export const contact = {
         error:
           'Le message n’a pas pu être envoyé. Essaie à nouveau ou utilise les coordonnées ci-dessus.',
         configuration:
-          'Le service d’envoi n’est pas encore configuré. Utilise les coordonnées ci-dessus.',
+          'Le formulaire n’est pas encore configuré. Utilise les coordonnées ci-dessus.',
       },
     },
     metadata: {
@@ -74,7 +74,7 @@ export const contact = {
         error:
           'The message could not be sent. Please try again or use the details above.',
         configuration:
-          'The mail service has not been configured yet. Please use the details above.',
+          'The form has not been configured yet. Please use the details above.',
       },
     },
     metadata: {

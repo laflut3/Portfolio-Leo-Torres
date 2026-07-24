@@ -8,6 +8,8 @@ import { useTranslation } from '@/i18n'
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error' | 'configuration'
 
+const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
+
 export function ContactForm() {
   const { copy } = useTranslation()
   const [status, setStatus] = useState<FormStatus>('idle')
@@ -15,24 +17,21 @@ export function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
+    if (!formspreeEndpoint) {
+      setStatus('configuration')
+      return
+    }
+
     setStatus('sending')
     const form = event.currentTarget
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: new FormData(form).get('name'),
-          email: new FormData(form).get('email'),
-          message: new FormData(form).get('message'),
-        }),
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
       })
 
-      if (response.status === 503) {
-        setStatus('configuration')
-        return
-      }
       if (!response.ok) throw new Error('Formspree request failed')
 
       form.reset()

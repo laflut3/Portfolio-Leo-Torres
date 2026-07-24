@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Format, lint and Dockerfile checks
+    name: Format and lint
     runs-on: ubuntu-latest
 
     steps:
@@ -41,8 +41,3 @@ jobs:
 
       - name: Run ESLint
         run: pnpm run lint
-
-      - name: Run Hadolint
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: Dockerfile

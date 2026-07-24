@@ -1,10 +1,13 @@
 import {
   ArrowUpRight,
   BriefcaseBusiness,
+  Check,
   Code2,
+  Copy,
   Mail,
   Phone,
 } from 'lucide-react'
+import { useState } from 'react'
 import { useTranslation } from '@/i18n'
 
 type ContactLinkProps = {
@@ -14,6 +17,27 @@ type ContactLinkProps = {
   icon: typeof Mail
   external?: boolean
   featured?: boolean
+}
+
+type ContactCopyProps = Omit<ContactLinkProps, 'href' | 'external'> & {
+  copyLabel: string
+  copiedLabel: string
+}
+
+async function copyToClipboard(value: string) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value)
+    return
+  }
+
+  const input = document.createElement('textarea')
+  input.value = value
+  input.style.position = 'fixed'
+  input.style.opacity = '0'
+  document.body.append(input)
+  input.select()
+  document.execCommand('copy')
+  input.remove()
 }
 
 function ContactLink({
@@ -54,6 +78,59 @@ function ContactLink({
   )
 }
 
+function ContactCopy({
+  label,
+  value,
+  icon: Icon,
+  featured = false,
+  copyLabel,
+  copiedLabel,
+}: ContactCopyProps) {
+  const [copied, setCopied] = useState(false)
+
+  async function handleCopy() {
+    try {
+      await copyToClipboard(value)
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1800)
+    } catch {
+      setCopied(false)
+    }
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      className={`group flex min-h-24 w-full items-center gap-4 border-b border-[var(--portfolio-line)] px-7 py-5 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring max-md:px-5 ${featured ? 'bg-foreground text-background hover:bg-[var(--portfolio-accent)]' : 'text-foreground hover:bg-[color-mix(in_oklch,var(--portfolio-accent)_7%,transparent)]'}`}
+    >
+      <span
+        className={`grid size-10 shrink-0 place-items-center border ${featured ? 'border-background/30' : 'border-[var(--portfolio-line)] text-[var(--portfolio-accent)]'}`}
+      >
+        <Icon aria-hidden="true" className="size-4" />
+      </span>
+      <span className="min-w-0">
+        <span
+          className={`block text-xs font-semibold tracking-[0.13em] uppercase ${featured ? 'text-background/65' : 'text-[var(--portfolio-text-soft)]'}`}
+        >
+          {label}
+        </span>
+        <span className="mt-1 block truncate text-base font-medium">
+          {value}
+        </span>
+      </span>
+      <span className="ml-auto inline-flex shrink-0 items-center gap-2 text-xs font-semibold">
+        {copied ? copiedLabel : copyLabel}
+        {copied ? (
+          <Check aria-hidden="true" className="size-4" />
+        ) : (
+          <Copy aria-hidden="true" className="size-4" />
+        )}
+      </span>
+    </button>
+  )
+}
+
 export function ContactSection() {
   const { copy } = useTranslation()
 
@@ -82,18 +159,20 @@ export function ContactSection() {
           className="border-l border-[var(--portfolio-line)] max-lg:border-l-0"
           data-reveal
         >
-          <ContactLink
-            href="mailto:leo0609leo@gmail.com"
+          <ContactCopy
             label={copy.contact.emailLabel}
             value={copy.contact.email}
             icon={Mail}
             featured
+            copyLabel={copy.contact.copy}
+            copiedLabel={copy.contact.copied}
           />
-          <ContactLink
-            href="tel:+33783084992"
+          <ContactCopy
             label={copy.contact.phoneLabel}
             value={copy.contact.phone}
             icon={Phone}
+            copyLabel={copy.contact.copy}
+            copiedLabel={copy.contact.copied}
           />
           <ContactLink
             href="https://github.com/laflut3"

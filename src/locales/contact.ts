@@ -16,6 +16,8 @@ export const contact = {
       email: 'leo0609leo@gmail.com',
       phoneLabel: 'Téléphone',
       phone: '+33 7 83 08 49 92',
+      copy: 'Copier',
+      copied: 'Copié',
     },
     metadata: {
       contact: [
@@ -39,6 +41,8 @@ export const contact = {
       email: 'leo0609leo@gmail.com',
       phoneLabel: 'Phone',
       phone: '+33 7 83 08 49 92',
+      copy: 'Copy',
+      copied: 'Copied',
     },
     metadata: {
       contact: [

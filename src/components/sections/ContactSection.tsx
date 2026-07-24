@@ -1,4 +1,4 @@
-import { Code, Mail } from 'lucide-react'
+import { BriefcaseBusiness, Code, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTranslation } from '@/i18n'
 
@@ -21,13 +21,23 @@ export function ContactSection() {
       </div>
       <div className="flex flex-col items-start gap-3">
         <Button asChild className="contact-primary-action">
-          <a href="https://github.com/ltorres" target="_blank" rel="noreferrer">
+          <a href="https://github.com/laflut3" target="_blank" rel="noreferrer">
             <Code data-icon="inline-start" />
             {copy.contact.github}
           </a>
         </Button>
+        <Button asChild variant="outline" className="contact-secondary-action">
+          <a
+            href="https://www.linkedin.com/in/leo-torres-804687264/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BriefcaseBusiness data-icon="inline-start" />
+            {copy.contact.linkedin}
+          </a>
+        </Button>
         <Button asChild variant="ghost" className="contact-secondary-action">
-          <a href="mailto:leo.torres@example.com">
+          <a href="mailto:leo0609leo@gmail.com">
             <Mail data-icon="inline-start" />
             {copy.contact.email}
           </a>

@@ -48,6 +48,10 @@ export const profile = {
       title: 'Mes Etudes',
       inProgress: 'En cours',
       earned: 'Obtenu',
+      actions: {
+        projects: 'Voir mes projets',
+        experience: 'Mon expérience professionnelle',
+      },
       entries: [
         [
           'Diplôme d’ingénieur',
@@ -145,6 +149,10 @@ export const profile = {
       title: 'My education',
       inProgress: 'In progress',
       earned: 'Earned',
+      actions: {
+        projects: 'View my projects',
+        experience: 'My professional experience',
+      },
       entries: [
         [
           'Engineering degree',

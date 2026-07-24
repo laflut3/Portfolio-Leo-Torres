@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { EducationSection } from '@/components/sections/EducationSection'
+import { ExperienceSection } from '@/components/sections/ExperienceSection'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { InterestsSection } from '@/components/sections/SignalSection'
@@ -37,9 +38,9 @@ export function ProfilePage() {
     <>
       <PageMetadata page="profile" />
       <HeroSection />
-      <InterestsSection />
       <SkillsPreviewSection />
       <EducationSection />
+      <InterestsSection />
     </>
   )
 }
@@ -58,6 +59,15 @@ export function ProjectsPage() {
     <>
       <PageMetadata page="projects" />
       <ProjectsSection />
+    </>
+  )
+}
+
+export function ExperiencePage() {
+  return (
+    <>
+      <PageMetadata page="experience" />
+      <ExperienceSection />
     </>
   )
 }

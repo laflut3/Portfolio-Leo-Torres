@@ -6,6 +6,7 @@ export const contact = {
       kicker: 'Contact',
       title: 'Me contacter',
       github: 'GitHub',
+      linkedin: 'LinkedIn',
       email: 'leo0609leo@gmail.com',
     },
     metadata: {
@@ -21,6 +22,7 @@ export const contact = {
       title:
         "Let's talk infrastructure, automation or DevOps-oriented projects.",
       github: 'GitHub',
+      linkedin: 'LinkedIn',
       email: 'leo0609leo@gmail.com',
     },
     metadata: {

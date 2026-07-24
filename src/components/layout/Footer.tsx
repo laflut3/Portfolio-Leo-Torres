@@ -1,8 +1,20 @@
 import { Link } from '@tanstack/react-router'
-import { ArrowUpRight, Code2, GitFork, Mail } from 'lucide-react'
+import {
+  ArrowUpRight,
+  BriefcaseBusiness,
+  Code2,
+  GitFork,
+  Mail,
+} from 'lucide-react'
 import { pathFor, type PageKey, useTranslation } from '@/i18n'
 
-const pages: PageKey[] = ['profile', 'skills', 'projects', 'contact']
+const pages = [
+  'profile',
+  'skills',
+  'projects',
+  'experience',
+  'contact',
+] as const satisfies readonly PageKey[]
 
 export function Footer() {
   const { locale, copy } = useTranslation()
@@ -42,12 +54,23 @@ export function Footer() {
           <ul className="footer-links">
             <li>
               <a
-                href="https://github.com/ltorres"
+                href="https://github.com/laflut3"
                 target="_blank"
                 rel="noreferrer"
               >
                 <GitFork aria-hidden="true" className="size-4" />
                 {copy.footer.github}
+                <ArrowUpRight aria-hidden="true" className="size-3.5" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/leo-torres-804687264/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BriefcaseBusiness aria-hidden="true" className="size-4" />
+                {copy.footer.linkedin}
                 <ArrowUpRight aria-hidden="true" className="size-3.5" />
               </a>
             </li>

@@ -9,6 +9,7 @@ import { PortfolioLayout } from '@/App'
 import { I18nProvider } from '@/i18n'
 import {
   ContactPage,
+  ExperiencePage,
   ProjectsPage,
   ProfilePage,
   SkillsPage,
@@ -79,6 +80,11 @@ const frenchContactRoute = createRoute({
   path: 'contact',
   component: ContactPage,
 })
+const frenchExperienceRoute = createRoute({
+  getParentRoute: () => frenchRoute,
+  path: 'experience-professionnelle',
+  component: ExperiencePage,
+})
 const englishProfileRoute = createRoute({
   getParentRoute: () => englishRoute,
   path: 'profile',
@@ -99,6 +105,11 @@ const englishContactRoute = createRoute({
   path: 'contact',
   component: ContactPage,
 })
+const englishExperienceRoute = createRoute({
+  getParentRoute: () => englishRoute,
+  path: 'professional-experience',
+  component: ExperiencePage,
+})
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -107,6 +118,7 @@ const routeTree = rootRoute.addChildren([
     frenchProfileRoute,
     frenchSkillsRoute,
     frenchProjectsRoute,
+    frenchExperienceRoute,
     frenchContactRoute,
   ]),
   englishRoute.addChildren([
@@ -114,6 +126,7 @@ const routeTree = rootRoute.addChildren([
     englishProfileRoute,
     englishSkillsRoute,
     englishProjectsRoute,
+    englishExperienceRoute,
     englishContactRoute,
   ]),
 ])

@@ -14,6 +14,11 @@ function pageForPath(pathname: string): PageKey {
     return 'skills'
   if (pathname.endsWith('/projects') || pathname.endsWith('/projets'))
     return 'projects'
+  if (
+    pathname.endsWith('/professional-experience') ||
+    pathname.endsWith('/experience-professionnelle')
+  )
+    return 'experience'
   if (pathname.endsWith('/contact')) return 'contact'
   return 'profile'
 }

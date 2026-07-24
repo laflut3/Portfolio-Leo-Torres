@@ -13,7 +13,13 @@ import {
 } from '@/components/ui/sheet'
 import { type Locale, pathFor, type PageKey, useTranslation } from '@/i18n'
 
-const pages: PageKey[] = ['profile', 'skills', 'projects', 'contact']
+const pages = [
+  'profile',
+  'skills',
+  'projects',
+  'experience',
+  'contact',
+] as const satisfies readonly PageKey[]
 
 export function Header({ locale }: { locale: Locale }) {
   const location = useLocation()

@@ -1,9 +1,10 @@
-import { GraduationCap } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
+import { ArrowUpRight, BriefcaseBusiness, GraduationCap } from 'lucide-react'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { useTranslation } from '@/i18n'
+import { pathFor, useTranslation } from '@/i18n'
 
 export function EducationSection() {
-  const { copy } = useTranslation()
+  const { copy, locale } = useTranslation()
   return (
     <section id="education" className="mt-24 max-md:mt-14">
       <SectionHeading
@@ -52,6 +53,22 @@ export function EducationSection() {
             )
           },
         )}
+      </div>
+      <div className="mt-8 flex flex-wrap gap-3" data-reveal>
+        <Link
+          to={pathFor(locale, 'projects')}
+          className="inline-flex min-h-11 items-center gap-2 border border-foreground bg-foreground px-4 text-sm font-semibold text-background no-underline transition-colors hover:bg-transparent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          {copy.education.actions.projects}
+          <ArrowUpRight className="size-4" aria-hidden="true" />
+        </Link>
+        <Link
+          to={pathFor(locale, 'experience')}
+          className="inline-flex min-h-11 items-center gap-2 border border-[var(--portfolio-line)] px-4 text-sm font-semibold text-foreground no-underline transition-colors hover:border-[var(--portfolio-accent)] hover:bg-[color-mix(in_oklch,var(--portfolio-accent)_7%,transparent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          {copy.education.actions.experience}
+          <BriefcaseBusiness className="size-4" aria-hidden="true" />
+        </Link>
       </div>
     </section>
   )

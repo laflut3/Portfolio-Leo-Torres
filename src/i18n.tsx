@@ -2,25 +2,29 @@
 import { createContext, type ReactNode, useContext } from 'react'
 import { common } from '@/locales/common'
 import { contact } from '@/locales/contact'
+import { experience } from '@/locales/experience'
 import { profile } from '@/locales/profile'
 import { projects } from '@/locales/projects'
 import { skills } from '@/locales/skills'
 
 export const locales = ['fr-fr', 'en-us'] as const
 export type Locale = (typeof locales)[number]
-export type PageKey = 'profile' | 'skills' | 'projects' | 'contact'
+export type PageKey =
+  'profile' | 'skills' | 'projects' | 'experience' | 'contact'
 
 const paths: Record<Locale, Record<PageKey, string>> = {
   'fr-fr': {
     profile: '/fr-fr/profil',
     skills: '/fr-fr/competences',
     projects: '/fr-fr/projets',
+    experience: '/fr-fr/experience-professionnelle',
     contact: '/fr-fr/contact',
   },
   'en-us': {
     profile: '/en-us/profile',
     skills: '/en-us/skills',
     projects: '/en-us/projects',
+    experience: '/en-us/professional-experience',
     contact: '/en-us/contact',
   },
 }
@@ -35,11 +39,13 @@ const copy = {
     ...profile['fr-fr'],
     ...skills['fr-fr'],
     ...projects['fr-fr'],
+    ...experience['fr-fr'],
     ...contact['fr-fr'],
     metadata: {
       ...profile['fr-fr'].metadata,
       ...skills['fr-fr'].metadata,
       ...projects['fr-fr'].metadata,
+      ...experience['fr-fr'].metadata,
       ...contact['fr-fr'].metadata,
     },
   },
@@ -48,11 +54,13 @@ const copy = {
     ...profile['en-us'],
     ...skills['en-us'],
     ...projects['en-us'],
+    ...experience['en-us'],
     ...contact['en-us'],
     metadata: {
       ...profile['en-us'].metadata,
       ...skills['en-us'].metadata,
       ...projects['en-us'].metadata,
+      ...experience['en-us'].metadata,
       ...contact['en-us'].metadata,
     },
   },

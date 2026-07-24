@@ -1,9 +1,11 @@
 # Portfolio Léo Torres
 
-Portfolio professionnel public de Léo Torres, développeur orienté ingénierie
-logicielle, DevOps, infrastructure, cloud et automatisation. Le profil présente
-une approche éditoriale et personnelle, centrée sur des systèmes fiables,
-compréhensibles et maintenables.
+Portfolio professionnel public de Léo Torres, étudiant à Polytech Montpellier
+en développement informatique et exploitation opérationnelle, orienté DevOps,
+infrastructure, cloud et automatisation. Le profil présente une approche
+éditoriale et personnelle, centrée sur des systèmes fiables, compréhensibles et
+maintenables. La page profil inclut aussi ses centres d’intérêt : astrophysique,
+espace, aéronautique, systèmes et logiciel.
 
 Pages canoniques publiques :
 - /fr-fr/profil, /fr-fr/competences, /fr-fr/parcours et /fr-fr/contact

@@ -43,27 +43,31 @@ const copy = {
     },
     hero: {
       coordinates: 'Léo Torres · Montpellier',
-      title: ['Développeur logiciel', '& DevOps.'],
-      lead: 'J’accompagne les équipes de la conception à la mise en production avec des solutions fiables, automatisées et maintenables.',
-      body: "J'aime travailler sur ce qui relie le code, l'infrastructure et les usages : des fondations claires pour que les projets durent.",
-      explore: 'Voir mes projets',
+      title: ['Ingénieur en informatique', '& DevOps.'],
+      lead: 'Étudiant à Polytech Montpellier en développement informatique et exploitation opérationnelle, l’informatique est plus qu’un travail : c’est une passion.',
+      body: 'J’aime travailler sur ce qui relie le code, l’infrastructure et les utilisateurs. Je pense que la sécurité et la gestion de projet sont les points clés qui permettent à un projet d’être mené à bien.',
+      explore: 'Voir mes compétences',
       contact: 'Me contacter',
       photoAlt: 'Portrait de Léo Torres',
     },
-    signals: [
-      {
-        title: 'Des infrastructures fiables',
-        text: 'Des environnements cloud robustes, sécurisés et observables.',
-      },
-      {
-        title: 'Automatiser ce qui compte',
-        text: 'Des déploiements et tâches récurrentes plus rapides et plus sûrs.',
-      },
-      {
-        title: 'Du code qui tient dans le temps',
-        text: 'Des applications lisibles, testées et documentées pour évoluer sereinement.',
-      },
-    ],
+    interests: {
+      label: 'Centres d’intérêt',
+      title: 'Ce qui nourrit ma curiosité.',
+      entries: [
+        {
+          title: 'Astrophysique & espace',
+          text: 'Comprendre les phénomènes, les échelles et les systèmes qui composent notre univers.',
+        },
+        {
+          title: 'Aéronautique',
+          text: 'Une curiosité née avec le BIA, entre culture du vol, sciences et précision technique.',
+        },
+        {
+          title: 'Systèmes & logiciel',
+          text: 'Le goût de relier une idée, une interface et une infrastructure dans un ensemble cohérent.',
+        },
+      ],
+    },
     skills: {
       kicker: 'Compétences',
       title: 'Les sujets DevOps que je pratique et approfondis.',
@@ -198,27 +202,31 @@ const copy = {
     },
     hero: {
       coordinates: 'Léo Torres · Montpellier',
-      title: ['Software developer', '& DevOps.'],
-      lead: 'I support teams from design to production with reliable, automated and maintainable solutions.',
-      body: 'I enjoy working at the intersection of code, infrastructure and real usage: clear foundations that help projects last.',
-      explore: 'See my projects',
+      title: ['Computer engineering student', '& DevOps.'],
+      lead: 'A computer engineering and operational systems student at Polytech Montpellier, I see computing as more than work: it is a passion.',
+      body: 'I enjoy working on what connects code, infrastructure and users. I believe security and project management are key elements that enable a project to succeed.',
+      explore: 'See my skills',
       contact: 'Contact me',
       photoAlt: 'Portrait of Leo Torres',
     },
-    signals: [
-      {
-        title: 'Reliable infrastructure',
-        text: 'Robust, secure and observable cloud environments.',
-      },
-      {
-        title: 'Automate what matters',
-        text: 'Faster and safer deployments and recurring tasks.',
-      },
-      {
-        title: 'Code that lasts',
-        text: 'Readable, tested and documented applications that can evolve with confidence.',
-      },
-    ],
+    interests: {
+      label: 'Interests',
+      title: 'What fuels my curiosity.',
+      entries: [
+        {
+          title: 'Astrophysics & space',
+          text: 'Understanding the phenomena, scales and systems that shape our universe.',
+        },
+        {
+          title: 'Aeronautics',
+          text: 'A curiosity shaped by the BIA, between flight culture, science and technical precision.',
+        },
+        {
+          title: 'Systems & software',
+          text: 'A taste for connecting an idea, an interface and infrastructure into a coherent whole.',
+        },
+      ],
+    },
     skills: {
       kicker: 'Skills',
       title: 'The DevOps topics I like practicing and deepening.',

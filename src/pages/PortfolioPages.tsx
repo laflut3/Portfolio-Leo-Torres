@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { EducationSection } from '@/components/sections/EducationSection'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { SignalSection } from '@/components/sections/SignalSection'
+import { InterestsSection } from '@/components/sections/SignalSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
 import { pathFor, type PageKey, useTranslation } from '@/i18n'
 
@@ -35,7 +35,7 @@ export function ProfilePage() {
     <>
       <PageMetadata page="profile" />
       <HeroSection />
-      <SignalSection />
+      <InterestsSection />
     </>
   )
 }

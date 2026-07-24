@@ -199,3 +199,191 @@ body {
     @apply border-border outline-ring/50;
   }
 }
+
+::selection {
+  background: color-mix(in oklch, var(--portfolio-amber) 70%, transparent);
+  color: var(--background);
+}
+
+.hero-title span {
+  color: color-mix(in oklch, var(--portfolio-cyan) 76%, var(--foreground));
+}
+
+.hero-shell::before {
+  position: absolute;
+  top: 10rem;
+  left: -13rem;
+  z-index: 0;
+  width: 32rem;
+  height: 32rem;
+  content: '';
+  border: 1px solid color-mix(in oklch, var(--portfolio-cyan) 18%, transparent);
+  border-radius: 999px;
+  transform: rotate(-25deg);
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 38rem;
+}
+
+.hero-visual-frame {
+  position: absolute;
+  inset: 1rem 0 1rem 1rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklch, var(--portfolio-line) 92%, transparent);
+  border-radius: 2.75rem;
+  background:
+    radial-gradient(
+      circle at 50% 44%,
+      color-mix(in oklch, var(--portfolio-cyan) 17%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(in oklch, var(--portfolio-panel-strong) 85%, transparent),
+      color-mix(in oklch, var(--portfolio-bg-c) 80%, transparent)
+    );
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 40%, transparent),
+    0 34px 90px color-mix(in oklch, var(--foreground) 13%, transparent);
+}
+
+.hero-visual-frame::before {
+  position: absolute;
+  inset: 0.45rem;
+  z-index: 1;
+  content: '';
+  border: 1px solid color-mix(in oklch, var(--portfolio-line) 65%, transparent);
+  border-radius: 2.35rem;
+  pointer-events: none;
+}
+
+.orbit-artifact {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-visual-fallback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in oklch, var(--portfolio-cyan) 55%, transparent);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 28%, #f6d58d 0 2%, transparent 12%),
+    radial-gradient(circle at 57% 62%, #b56d20 0 5%, transparent 28%),
+    radial-gradient(circle at 50% 50%, #d9a441, #5d3010 68%, transparent 69%);
+  box-shadow:
+    0 0 0 2.6rem color-mix(in oklch, var(--portfolio-cyan) 4%, transparent),
+    0 0 0 5.4rem color-mix(in oklch, var(--portfolio-amber) 3%, transparent),
+    0 0 6rem color-mix(in oklch, var(--portfolio-cyan) 18%, transparent);
+  transform: translate(-50%, -50%);
+}
+
+.hero-visual-caption,
+.hero-visual-card {
+  position: absolute;
+  z-index: 2;
+}
+
+.hero-visual-caption {
+  right: 1.8rem;
+  bottom: 1.7rem;
+  display: grid;
+  gap: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  color: var(--portfolio-text-soft);
+  text-align: right;
+}
+
+.hero-visual-card {
+  top: 2rem;
+  left: -1.3rem;
+  width: min(16.5rem, 62%);
+  padding: 1rem 1rem 1rem 2.3rem;
+  border: 1px solid color-mix(in oklch, var(--portfolio-line) 82%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(
+    in oklch,
+    var(--portfolio-panel-strong) 88%,
+    transparent
+  );
+  box-shadow: 0 12px 40px color-mix(in oklch, var(--foreground) 9%, transparent);
+}
+
+.hero-visual-card-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  color: var(--portfolio-cyan);
+  text-transform: uppercase;
+}
+
+.hero-visual-card strong {
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--foreground);
+}
+
+.signal-card,
+.skill-card,
+.education-card,
+.contact-shell {
+  transition:
+    transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 700ms cubic-bezier(0.32, 0.72, 0, 1),
+    background-color 700ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@media (hover: hover) {
+  .signal-card:hover,
+  .skill-card:hover,
+  .education-card:hover {
+    border-color: color-mix(in oklch, var(--portfolio-cyan) 36%, transparent);
+    transform: translateY(-0.35rem);
+  }
+
+  .signal-card:first-child:hover {
+    transform: translateY(-0.35rem) rotate(-0.35deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-shell::before {
+    top: auto;
+    bottom: 1rem;
+    left: -17rem;
+  }
+
+  .hero-visual {
+    min-height: 27rem;
+  }
+
+  .hero-visual-frame {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-visual-card {
+    left: 0.75rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

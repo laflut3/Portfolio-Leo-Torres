@@ -32,7 +32,7 @@ export function EducationSection() {
           return (
             <article
               key={degree.title}
-              className="grid grid-cols-[2.35rem_minmax(0,1fr)] gap-4 rounded-2xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-5 shadow-[0_18px_56px_rgba(0,0,0,0.06)] backdrop-blur-sm max-md:grid-cols-1"
+              className="education-card grid grid-cols-[2.35rem_minmax(0,1fr)] gap-4 rounded-[2rem] border border-[color-mix(in_oklch,var(--portfolio-line)_86%,transparent)] bg-[var(--portfolio-panel)] p-6 shadow-[0_22px_60px_color-mix(in_oklch,var(--foreground)_6%,transparent)] max-md:grid-cols-1"
               data-reveal
             >
               <span

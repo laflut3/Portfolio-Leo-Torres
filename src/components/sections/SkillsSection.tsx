@@ -31,14 +31,16 @@ export function SkillsSection() {
         title="The DevOps topics I like practicing and deepening."
         icon={<ServerCog className="size-4" aria-hidden="true" />}
       />
-      <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
+      <div className="grid grid-cols-12 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
         {skills.map((skill, index) => {
           const Icon = skillIcons[index] ?? ServerCog
 
           return (
             <article
               key={skill.title}
-              className="rounded-2xl border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-5 shadow-[0_18px_56px_rgba(0,0,0,0.06)] backdrop-blur-sm"
+              className={`skill-card rounded-[2rem] border border-[color-mix(in_oklch,var(--portfolio-line)_86%,transparent)] bg-[var(--portfolio-panel)] p-5 shadow-[0_22px_60px_color-mix(in_oklch,var(--foreground)_6%,transparent)] max-lg:col-span-1 max-md:col-span-1 ${
+                index === 0 || index === 5 ? 'col-span-4' : 'col-span-2'
+              }`}
               data-reveal
             >
               <div className="flex items-center gap-3">

@@ -5,7 +5,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="mt-24 mb-18 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-[2rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-8 max-md:mt-14 max-md:grid-cols-1"
+      className="contact-shell mt-24 mb-18 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-[2.5rem] border border-[color-mix(in_oklch,var(--portfolio-line)_88%,transparent)] bg-[var(--portfolio-panel-strong)] p-8 shadow-[0_30px_90px_color-mix(in_oklch,var(--foreground)_8%,transparent)] max-md:mt-14 max-md:grid-cols-1"
       data-reveal
     >
       <div>

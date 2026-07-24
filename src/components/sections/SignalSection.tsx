@@ -6,7 +6,7 @@ export function InterestsSection() {
   return (
     <section
       id="interests"
-      className="mt-24 max-md:mt-16"
+      className="profile-section mt-24 max-md:mt-16"
       aria-label={copy.interests.label}
     >
       <SectionHeading

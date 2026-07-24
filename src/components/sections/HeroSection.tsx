@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/ui/button'
 import { PortraitPanel } from '@/components/visuals/PortraitPanel'
@@ -42,11 +42,6 @@ export function HeroSection() {
         </p>
         <div className="mt-8 flex flex-wrap gap-3" data-reveal>
           <Button asChild size="lg">
-            <Link to={pathFor(locale, 'skills')}>
-              {copy.hero.explore} <ArrowUpRight data-icon="inline-end" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
             <Link to={pathFor(locale, 'contact')}>
               {copy.hero.contact} <Mail data-icon="inline-end" />
             </Link>

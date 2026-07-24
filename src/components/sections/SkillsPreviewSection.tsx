@@ -12,7 +12,10 @@ export function SkillsPreviewSection() {
   const { locale, copy } = useTranslation()
 
   return (
-    <section className="mt-24 border-y border-[var(--portfolio-line)] py-12 max-md:mt-16 max-md:py-9">
+    <section
+      id="skills-overview"
+      className="profile-section profile-section--skills mt-24 max-md:mt-16"
+    >
       <div className="grid grid-cols-[minmax(0,1fr)_minmax(17rem,0.45fr)] items-end gap-10 max-md:grid-cols-1 max-md:gap-7">
         <div className="max-w-3xl" data-reveal>
           <div className="flex items-center gap-2 text-[var(--portfolio-accent)]">

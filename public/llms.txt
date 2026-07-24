@@ -7,7 +7,9 @@ infrastructure, cloud et automatisation. Le profil présente une approche
 maintenables. La page profil inclut aussi ses centres d’intérêt : astrophysique,
 espace, aéronautique, sport, cinéma et jeux vidéo, ainsi qu’un aperçu de ses
 compétences avant son parcours académique. La page d’expérience professionnelle
-présente son parcours en entreprise et ses responsabilités.
+présente son parcours en entreprise : développement back-end Java et Spring
+Boot chez Crédit Agricole Technologies et Services, ainsi qu’une expérience
+d’administration réseau et systèmes chez Discomp Électronique.
 
 Pages canoniques publiques :
 - /fr-fr/profil, /fr-fr/competences, /fr-fr/projets, /fr-fr/experience-professionnelle et /fr-fr/contact

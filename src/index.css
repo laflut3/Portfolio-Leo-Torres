@@ -330,6 +330,32 @@ html.theme-ready [class*='border-'] {
   outline-offset: 3px;
 }
 
+.profile-section {
+  position: relative;
+  scroll-margin-top: 7rem;
+  border-top: 1px solid var(--portfolio-line);
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.profile-section::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: clamp(2.5rem, 5vw, 4.5rem);
+  border-top: 2px solid var(--portfolio-accent);
+  content: '';
+}
+
+.profile-section--skills {
+  padding-bottom: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.experience-card {
+  transition:
+    background-color 300ms ease,
+    padding-left 300ms ease;
+}
+
 .skill-card,
 .education-card {
   transition:
@@ -339,7 +365,8 @@ html.theme-ready [class*='border-'] {
 
 @media (hover: hover) {
   .skill-card:hover,
-  .education-card:hover {
+  .education-card:hover,
+  .experience-card:hover {
     background: color-mix(in oklch, var(--portfolio-accent) 5%, transparent);
   }
 }

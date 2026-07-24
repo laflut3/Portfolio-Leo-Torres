@@ -7,7 +7,6 @@ export const profile = {
       title: ['Ingénieur en informatique', '& DevOps.'],
       lead: 'Étudiant à Polytech Montpellier en développement informatique et exploitation opérationnelle, l’informatique est plus qu’un travail : c’est une passion.',
       body: 'J’aime travailler sur ce qui relie le code, l’infrastructure et les utilisateurs. Je pense que la sécurité et la gestion de projet sont les points clés qui permettent à un projet d’être mené à bien.',
-      explore: 'Voir mes compétences',
       contact: 'Me contacter',
       photoAlt: 'Portrait de Léo Torres',
     },
@@ -49,13 +48,9 @@ export const profile = {
     },
     education: {
       kicker: 'Parcours',
-      title: 'Mes Etudes',
+      title: 'Mes Études',
       inProgress: 'En cours',
       earned: 'Obtenu',
-      actions: {
-        projects: 'Voir mes projets',
-        experience: 'Mon expérience professionnelle',
-      },
       entries: [
         [
           'Diplôme d’ingénieur',
@@ -112,7 +107,6 @@ export const profile = {
       title: ['Computer engineering student', '& DevOps.'],
       lead: 'A computer engineering and operational systems student at Polytech Montpellier, I see computing as more than work: it is a passion.',
       body: 'I enjoy working on what connects code, infrastructure and users. I believe security and project management are key elements that enable a project to succeed.',
-      explore: 'See my skills',
       contact: 'Contact me',
       photoAlt: 'Portrait of Leo Torres',
     },
@@ -157,10 +151,6 @@ export const profile = {
       title: 'My education',
       inProgress: 'In progress',
       earned: 'Earned',
-      actions: {
-        projects: 'View my projects',
-        experience: 'My professional experience',
-      },
       entries: [
         [
           'Engineering degree',

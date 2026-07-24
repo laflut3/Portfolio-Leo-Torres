@@ -5,7 +5,6 @@ import {
   Mail,
   Phone,
 } from 'lucide-react'
-import { ContactForm } from '@/components/sections/ContactForm'
 import { useTranslation } from '@/i18n'
 
 type ContactLinkProps = {
@@ -112,7 +111,6 @@ export function ContactSection() {
           />
         </div>
       </div>
-      <ContactForm />
     </section>
   )
 }

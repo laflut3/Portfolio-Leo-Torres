@@ -11,13 +11,24 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-FROM nginxinc/nginx-unprivileged:1.27.3-alpine3.20
+FROM node:22.13.1-alpine3.21 AS runtime
+
+WORKDIR /app
+
+RUN npm install --global pnpm@11.9.0
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile
 
 LABEL org.opencontainers.image.title="Portfolio Leo Torres" \
-  org.opencontainers.image.description="React portfolio built with Vite" \
-  org.opencontainers.image.source="https://github.com/ltorres/Portfolio-Leo-Torres" \
+  org.opencontainers.image.description="Portfolio React with a private contact mail API" \
+  org.opencontainers.image.source="https://github.com/laflut3/Portfolio-Leo-Torres" \
   org.opencontainers.image.licenses="UNLICENSED"
 
-COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist /usr/share/nginx/html
+ENV NODE_ENV=production
+ENV PORT=8080
+
+COPY --from=build /app/dist ./dist
+COPY server ./server
+USER node
 EXPOSE 8080
+CMD ["node", "server/index.mjs"]

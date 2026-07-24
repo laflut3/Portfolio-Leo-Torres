@@ -39,9 +39,13 @@ export const profile = {
     },
     skillsPreview: {
       kicker: 'Compétences',
-      title: 'De la Conception à la mise en production.',
-      text: " J'utilise le développement et l'exploitation pour concevoir des solutions qui répondent aux besoins des utilisateurs.",
-      action: 'Découvrir mes compétences',
+      title: 'Du code, des projets et des systèmes.',
+      text: 'J’aime créer des applications, les mettre en ligne et les faire évoluer.',
+      actions: {
+        skills: 'Mes compétences',
+        projects: 'Mes projets',
+        experience: 'Mon expérience',
+      },
     },
     education: {
       kicker: 'Parcours',
@@ -140,9 +144,13 @@ export const profile = {
     },
     skillsPreview: {
       kicker: 'Skills',
-      title: 'From design to production.',
-      text: 'I combine development and operations to build reliable products that are easy to evolve.',
-      action: 'Explore my skills',
+      title: 'Code, projects and systems.',
+      text: 'I enjoy building applications, putting them online and improving them over time.',
+      actions: {
+        skills: 'My skills',
+        projects: 'My projects',
+        experience: 'My experience',
+      },
     },
     education: {
       kicker: 'Education',

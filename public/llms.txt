@@ -20,3 +20,9 @@ Pages canoniques publiques :
 
 Les visuels, dont le portrait, sont décoratifs : les informations importantes
 sont également présentes dans le contenu HTML.
+
+La page projets présente des réalisations personnelles, scolaires et open source,
+dont Pixie, Let Note, DO Royal, LeMontage, La Confrérie du Manchot, Barenetes,
+Omni, Projet DO-cument et une analyse de données de santé. Chaque fiche expose
+ses catégories, une description textuelle, ses technologies et son dépôt source
+lorsqu’il est référencé publiquement.

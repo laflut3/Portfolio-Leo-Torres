@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { useTranslation } from '@/i18n'
 
 type ProjectTheme = 'all' | 'school' | 'personal' | 'openSource'
+type ProjectCategory = Exclude<ProjectTheme, 'all'>
 
 export function ProjectsSection() {
   const { copy } = useTranslation()
@@ -13,7 +14,7 @@ export function ProjectsSection() {
   const [activeTheme, setActiveTheme] = useState<ProjectTheme>('all')
   const themes: ProjectTheme[] = ['all', 'school', 'personal', 'openSource']
   const projects = copy.projects.entries.filter(
-    (project) => activeTheme === 'all' || project.theme === activeTheme,
+    (project) => activeTheme === 'all' || project.themes.includes(activeTheme),
   )
 
   return (
@@ -59,8 +60,14 @@ export function ProjectsSection() {
               <span className="text-sm font-semibold tabular-nums text-[var(--portfolio-accent)]">
                 0{index + 1}
               </span>
-              <p className="mt-8 text-sm font-medium text-[var(--portfolio-text-soft)]">
-                {project.context}
+              <TagList
+                items={(project.themes as ProjectCategory[]).map(
+                  (theme) => copy.projects.filters[theme],
+                )}
+              />
+              <p className="mt-4 text-sm font-medium text-[var(--portfolio-text-soft)]">
+                {copy.projects.labels.categories} ·{' '}
+                {project.categories.join(' · ')}
               </p>
               <h3 className="mt-2 text-2xl leading-tight font-medium text-foreground">
                 {project.title}
@@ -68,6 +75,14 @@ export function ProjectsSection() {
               <p className="mt-5 leading-7 text-[var(--portfolio-text-soft)]">
                 {project.text}
               </p>
+              {project.languages.length > 0 && (
+                <p className="mt-4 text-sm text-[var(--portfolio-text-soft)]">
+                  <span className="font-medium text-foreground">
+                    {copy.projects.labels.languages}
+                  </span>{' '}
+                  {project.languages.join(' · ')}
+                </p>
+              )}
               <div className="mt-6">
                 <TagList items={[...project.stack]} />
               </div>

@@ -7,15 +7,20 @@ import { useTranslation } from '@/i18n'
 
 type ProjectTheme = 'all' | 'school' | 'personal' | 'openSource'
 type ProjectCategory = Exclude<ProjectTheme, 'all'>
+const projectsPerPage = 10
 
 export function ProjectsSection() {
   const { copy } = useTranslation()
   const [expandedProject, setExpandedProject] = useState<string | null>(null)
   const [activeTheme, setActiveTheme] = useState<ProjectTheme>('all')
+  const [page, setPage] = useState(0)
   const themes: ProjectTheme[] = ['all', 'school', 'personal', 'openSource']
   const projects = copy.projects.entries.filter(
     (project) => activeTheme === 'all' || project.themes.includes(activeTheme),
   )
+  const totalPages = Math.ceil(projects.length / projectsPerPage)
+  const pageStart = page * projectsPerPage
+  const visibleProjects = projects.slice(pageStart, pageStart + projectsPerPage)
 
   return (
     <section id="projects" className="mt-24 max-md:mt-14">
@@ -39,6 +44,7 @@ export function ProjectsSection() {
             onClick={() => {
               setActiveTheme(theme)
               setExpandedProject(null)
+              setPage(0)
             }}
           >
             {copy.projects.filters[theme]}
@@ -51,14 +57,14 @@ export function ProjectsSection() {
         </p>
       ) : (
         <div className="grid grid-cols-2 gap-px border border-[var(--portfolio-line)] bg-[var(--portfolio-line)] max-md:grid-cols-1">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <article
               key={project.title}
               className="skill-card flex min-h-80 flex-col bg-background p-7 max-md:min-h-0 max-md:p-6"
               data-reveal
             >
               <span className="text-sm font-semibold tabular-nums text-[var(--portfolio-accent)]">
-                0{index + 1}
+                {String(pageStart + index + 1).padStart(2, '0')}
               </span>
               <TagList
                 items={(project.themes as ProjectCategory[]).map(
@@ -144,6 +150,41 @@ export function ProjectsSection() {
             </article>
           ))}
         </div>
+      )}
+      {totalPages > 1 && (
+        <nav
+          className="mt-7 flex items-center justify-between gap-4"
+          aria-label={copy.projects.pagination.label}
+        >
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => {
+              setPage((current) => current - 1)
+              setExpandedProject(null)
+            }}
+            disabled={page === 0}
+          >
+            {copy.projects.pagination.previous}
+          </Button>
+          <span
+            className="text-sm tabular-nums text-[var(--portfolio-text-soft)]"
+            aria-live="polite"
+          >
+            {page + 1} / {totalPages}
+          </span>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => {
+              setPage((current) => current + 1)
+              setExpandedProject(null)
+            }}
+            disabled={page === totalPages - 1}
+          >
+            {copy.projects.pagination.next}
+          </Button>
+        </nav>
       )}
     </section>
   )

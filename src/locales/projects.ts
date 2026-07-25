@@ -18,6 +18,11 @@ export const projects = {
         openSource: 'Open source',
         empty: 'Aucun projet dans cette catégorie pour le moment.',
       },
+      pagination: {
+        label: 'Pagination des projets',
+        previous: 'Précédent',
+        next: 'Suivant',
+      },
       entries: [
         {
           title: 'Pixie',
@@ -223,6 +228,11 @@ export const projects = {
         personal: 'Personal',
         openSource: 'Open source',
         empty: 'No projects in this category yet.',
+      },
+      pagination: {
+        label: 'Project pagination',
+        previous: 'Previous',
+        next: 'Next',
       },
       entries: [
         {

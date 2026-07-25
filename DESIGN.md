@@ -16,6 +16,17 @@ la sécurité et l'automatisation restent reliés, visibles et maîtrisés.
 - Thèmes : les tokens `--portfolio-*` pilotent les deux modes ; aucun contenu
   dépend du canvas pour être compris.
 
+## Logo
+
+- Le logo repose sur un monogramme LT géométrique, traversé par une seule orbite
+  et un point cuivré. Il reprend la métaphore du système solaire sans devenir
+  une illustration.
+- Les variantes vectorielles et les règles d’utilisation se trouvent dans
+  `public/brand/`. Le favicon simplifie le signe pour conserver la lisibilité à
+  16 px.
+- Utiliser `logo-light.svg` sur fond clair, `logo-dark.svg` sur fond sombre et
+  `logo-monochrome.svg` lorsque la couleur est imposée.
+
 ## 3D et animation
 
 - Le noyau est une icosphère procédurale, entourée de trois orbites : aucun

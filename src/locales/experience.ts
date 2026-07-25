@@ -5,7 +5,7 @@ export const experience = {
     experience: {
       kicker: 'Expérience professionnelle',
       title: 'Mes expériences en entreprise.',
-      text: 'Les expériences qui m’ont permis de travailler sur le développement, les systèmes et les réseaux.',
+      text: 'Des expériences en développement, systèmes et réseaux.',
       showMore: 'Voir plus',
       showLess: 'Voir moins',
       entries: [
@@ -17,7 +17,7 @@ export const experience = {
           period: 'Sept. 2024 — sept. 2025',
           location: 'Montpellier, Occitanie · Hybride',
           description:
-            'J’ai travaillé en tant que Dev Open sur du développement back-end en Java et Spring Boot. Cette expérience s’est déroulée dans la squad Identification & Authentification, de septembre 2024 à septembre 2025.',
+            'J’ai travaillé comme Dev Open sur du développement back-end en Java et Spring Boot, au sein de la squad Identification & Authentification, de septembre 2024 à septembre 2025.',
           skillsLabel: 'Compétences utilisées',
           skills: ['Java', 'Spring Boot', 'Développement back-end'],
         },
@@ -29,7 +29,7 @@ export const experience = {
           period: 'Oct. 2025 — aujourd’hui',
           location: 'Montpellier, Occitanie · Hybride',
           description:
-            'Je travaille en tant que Dev Open sur du développement back-end en Java et Spring Boot. Depuis octobre 2025, cette expérience se poursuit dans la squad Accès fiabilisé des partenaires.',
+            'Je travaille comme Dev Open sur du développement back-end en Java et Spring Boot, dans la squad Accès fiabilisé des partenaires depuis octobre 2025.',
           skillsLabel: 'Compétences utilisées',
           skills: ['Java', 'Spring Boot', 'Développement back-end'],
         },
@@ -42,7 +42,7 @@ export const experience = {
           location: 'Montarnaud, Occitanie · Sur site',
           description: `Ma mission était de refondre de zéro le système d’information de Discomp Électronique afin de le moderniser.
 
-J’ai d’abord réalisé un état des lieux du système d’information. Cela a demandé de trier et de reclasser les anciennes archives, les fichiers et les dossiers papier.
+J’ai d’abord fait un état des lieux du système d’information et trié les anciennes archives, fichiers et dossiers papier.
 
 J’ai ensuite refondu l’ensemble du parc informatique, notamment avec l’achat de nouveaux équipements de bureau. J’ai configuré et sécurisé les postes sur le réseau, ainsi que l’ordinateur portable distant.
 
@@ -65,7 +65,7 @@ J’ai également mis en place le Wi-Fi invité, configuré les machines de la s
     experience: {
       kicker: 'Professional experience',
       title: 'My professional experience.',
-      text: 'The experiences through which I have worked on development, systems and networking.',
+      text: 'Experience in development, systems and networking.',
       showMore: 'See more',
       showLess: 'See less',
       entries: [
@@ -77,7 +77,7 @@ J’ai également mis en place le Wi-Fi invité, configuré les machines de la s
           period: 'Sept. 2024 — Sept. 2025',
           location: 'Montpellier, Occitanie · Hybrid',
           description:
-            'I worked as an Open Developer on Java and Spring Boot back-end development. This experience took place in the Identification & Authentication squad, from September 2024 to September 2025.',
+            'I worked as an Open Developer on Java and Spring Boot back-end development in the Identification & Authentication squad from September 2024 to September 2025.',
           skillsLabel: 'Skills used',
           skills: ['Java', 'Spring Boot', 'Back-end development'],
         },
@@ -89,7 +89,7 @@ J’ai également mis en place le Wi-Fi invité, configuré les machines de la s
           period: 'Oct. 2025 — present',
           location: 'Montpellier, Occitanie · Hybrid',
           description:
-            'I work as an Open Developer on Java and Spring Boot back-end development. Since October 2025, this experience has continued in the Partner Access Reliability squad.',
+            'I have worked as an Open Developer on Java and Spring Boot back-end development in the Partner Access Reliability squad since October 2025.',
           skillsLabel: 'Skills used',
           skills: ['Java', 'Spring Boot', 'Back-end development'],
         },
@@ -102,7 +102,7 @@ J’ai également mis en place le Wi-Fi invité, configuré les machines de la s
           location: 'Montarnaud, Occitanie · On-site',
           description: `My assignment was to rebuild Discomp Électronique’s information system from scratch in order to modernize it.
 
-I first assessed the existing information system. This involved sorting and reorganizing the old archives, files and paper folders.
+I first assessed the existing information system and sorted the old archives, files and paper folders.
 
 I then rebuilt the entire IT estate, including purchasing new office equipment. I configured and secured the workstations on the network, as well as the remote laptop.
 

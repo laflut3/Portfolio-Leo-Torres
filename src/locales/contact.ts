@@ -6,8 +6,8 @@ export const contact = {
       kicker: 'Contact',
       title: 'On échange ?',
       intro:
-        'Un projet, une opportunité ou simplement une question : tu peux me joindre directement ici.',
-      note: 'Le plus simple reste l’e-mail. Je te répondrai dès que possible.',
+        'Pour un projet, une opportunité ou une question, tu peux me joindre ici.',
+      note: 'L’e-mail est le moyen le plus simple de me joindre. Je répondrai dès que possible.',
       github: 'GitHub',
       githubHandle: 'github.com/laflut3',
       linkedin: 'LinkedIn',
@@ -31,8 +31,8 @@ export const contact = {
       kicker: 'Contact',
       title: 'Let’s talk.',
       intro:
-        'For a project, an opportunity or simply a question, you can reach me directly here.',
-      note: 'Email is the easiest way to reach me. I will get back to you as soon as I can.',
+        'For a project, an opportunity or a question, you can reach me here.',
+      note: 'Email is the easiest way to reach me. I will reply as soon as I can.',
       github: 'GitHub',
       githubHandle: 'github.com/laflut3',
       linkedin: 'LinkedIn',

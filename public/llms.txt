@@ -23,6 +23,6 @@ sont également présentes dans le contenu HTML.
 
 La page projets présente des réalisations personnelles, scolaires et open source,
 dont Pixie, Let Note, DO Royal, LeMontage, La Confrérie du Manchot, Barenetes,
-Omni, Projet DO-cument et une analyse de données de santé. Chaque fiche expose
-ses catégories, une description textuelle, ses technologies et son dépôt source
-lorsqu’il est référencé publiquement.
+Omni, Projet DO-cument et une analyse de données de santé. Chaque fiche indique
+ses catégories, ses technologies et son dépôt source lorsqu’il est public. Les
+projets qui disposent d’un site public proposent aussi un lien vers celui-ci.

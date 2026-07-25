@@ -8,6 +8,7 @@ export const projects = {
       viewDetails: 'Voir le détail',
       hideDetails: 'Masquer le détail',
       viewGithub: 'Voir le dépôt',
+      viewWebsite: 'Voir le site',
       labels: { categories: 'Domaines', languages: 'Langages' },
       filters: {
         label: 'Filtrer les projets',
@@ -79,6 +80,7 @@ export const projects = {
           categories: ['Site web', 'Documentation technique', 'DevOps'],
           languages: ['TypeScript'],
           githubUrl: 'https://github.com/FleoThing/docs-LeMontage',
+          websiteUrl: 'https://docs-lemontage.fleothing.com/',
           text: 'Site de présentation et de documentation publique de l’écosystème LeMontage.',
           details:
             'Une application React localisée avec TanStack Router, Tailwind CSS et shadcn, construite dans une image Nginx non-root puis déployée avec Helm sur Kubernetes.',
@@ -125,6 +127,7 @@ export const projects = {
           categories: ['Jeu web 3D', 'Éducation', 'Événementiel'],
           languages: ['JavaScript'],
           githubUrl: 'https://github.com/laflut3/NDI',
+          websiteUrl: 'https://ndi-seven.vercel.app',
           text: 'Jeu éducatif 3D créé pour la Nuit de l’Info 2025.',
           details:
             'Le jeu sensibilise à l’indépendance numérique, aux logiciels libres et à la sobriété numérique par des quêtes et des quiz.',
@@ -211,6 +214,7 @@ export const projects = {
       viewDetails: 'View details',
       hideDetails: 'Hide details',
       viewGithub: 'View repository',
+      viewWebsite: 'Visit website',
       labels: { categories: 'Domains', languages: 'Languages' },
       filters: {
         label: 'Filter projects',
@@ -282,6 +286,7 @@ export const projects = {
           categories: ['Website', 'Technical documentation', 'DevOps'],
           languages: ['TypeScript'],
           githubUrl: 'https://github.com/FleoThing/docs-LeMontage',
+          websiteUrl: 'https://docs-lemontage.fleothing.com/',
           text: 'The public presentation and documentation website for the LeMontage ecosystem.',
           details:
             'A localized React application with TanStack Router, Tailwind CSS and shadcn, built into a non-root Nginx image and deployed to Kubernetes with Helm.',
@@ -328,6 +333,7 @@ export const projects = {
           categories: ['3D web game', 'Education', 'Event project'],
           languages: ['JavaScript'],
           githubUrl: 'https://github.com/laflut3/NDI',
+          websiteUrl: 'https://ndi-seven.vercel.app',
           text: 'A 3D educational game created for Nuit de l’Info 2025.',
           details:
             'The game raises awareness of digital independence, free software and digital sobriety through quests and quizzes.',

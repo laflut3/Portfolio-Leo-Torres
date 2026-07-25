@@ -21,7 +21,7 @@ export const common = {
     },
     footer: {
       description:
-        'Portfolio personnel de Léo Torres ingénieur en informatique / DevOps',
+        'Portfolio personnel de Léo Torres, ingénieur en informatique et DevOps.',
       navigation: 'Navigation',
       connect: 'Me retrouver',
       stack: 'Stack',
@@ -56,7 +56,7 @@ export const common = {
     },
     footer: {
       description:
-        'A personal portfolio about reliable systems, software and delivery.',
+        'Leo Torres’s personal portfolio for software development and DevOps.',
       navigation: 'Navigation',
       connect: 'Find me online',
       stack: 'Stack',

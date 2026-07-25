@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, FolderGit2, GitFork } from 'lucide-react'
+import { ChevronDown, FolderGit2, GitFork, Globe } from 'lucide-react'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { TagList } from '@/components/common/TagList'
 import { Button } from '@/components/ui/button'
@@ -116,6 +116,18 @@ export function ProjectsSection() {
                       >
                         {copy.projects.viewGithub}
                         <GitFork aria-hidden="true" />
+                      </a>
+                    </Button>
+                  )}
+                  {project.websiteUrl && (
+                    <Button variant="outline" asChild>
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {copy.projects.viewWebsite}
+                        <Globe aria-hidden="true" />
                       </a>
                     </Button>
                   )}

@@ -5,8 +5,8 @@ export const profile = {
     hero: {
       coordinates: 'Léo Torres · Montpellier',
       title: ['Ingénieur en informatique', '/ DevOps.'],
-      lead: 'Étudiant à Polytech Montpellier en développement informatique et exploitation opérationnelle, l’informatique est plus qu’un travail : c’est une passion.',
-      body: 'J’aime travailler sur ce qui relie le code, l’infrastructure et les utilisateurs. Je pense que la sécurité et la gestion de projet sont les points clés qui permettent à un projet d’être mené à bien.',
+      lead: 'Étudiant à Polytech Montpellier en développement informatique et exploitation opérationnelle, je suis passionné par l’informatique.',
+      body: 'J’aime faire le lien entre le code, l’infrastructure et les utilisateurs. Pour moi, la sécurité et la gestion de projet font partie des bases d’un projet solide.',
       contact: 'Me contacter',
       photoAlt: 'Portrait de Léo Torres',
     },
@@ -16,23 +16,23 @@ export const profile = {
       entries: [
         {
           title: 'Astrophysique & espace',
-          text: "j'aime l'espace et j'aime découvrir, explorer, comprendre ce que peut de personne comprenne. Les phénomènes, les échelles et les systèmes qui composent notre univers me fascinent.",
+          text: "J'aime comprendre l'espace, ses phénomènes, ses échelles et les systèmes qui composent notre univers.",
         },
         {
           title: 'Aéronautique',
-          text: "Cette passion est née suite a mon passage du BIA lors de mes année de seconde. D'un simple diplome, je me suis pris de passion pour la culture du vol et l'aviation ",
+          text: "Cette passion est née pendant la préparation du BIA, au lycée. Ce diplôme m'a fait découvrir la culture du vol et l'aviation.",
         },
         {
           title: 'Le sport (Boxe, randonnée, escalade, salle de sport)',
-          text: "Je suis une personne active, j'aime bouger, marcher, explorer et découvrir de nouveaux lieux. Le sport est pour moi un moyen de me défouler et de me ressourcer.",
+          text: "J'aime bouger, marcher et découvrir de nouveaux lieux. Le sport me permet de me dépenser et de me ressourcer.",
         },
         {
           title: 'Le Cinéma',
-          text: "Depuis mon plus jeune âge, j'ai toujours été passionné par le cinéma. J'aime découvrir de nouveaux films, de nouveaux réalisateurs et de nouvelles histoires.",
+          text: "Le cinéma me passionne depuis l'enfance. J'aime découvrir des films, des réalisateurs et leurs histoires.",
         },
         {
           title: 'Les jeux vidéo',
-          text: "Une de mes principal passion, comme tout bon informaticien, est le monde du jeu vidéo. J'aime jouer et explorer de nouvelles histoires.",
+          text: "Les jeux vidéo font partie de mes principales passions. J'aime jouer et découvrir de nouvelles histoires.",
         },
       ],
     },
@@ -57,7 +57,7 @@ export const profile = {
           'En cours',
           'Polytech Montpellier',
           'Développement logiciel et exploitation opérationnelle (DO)',
-          'Formation en développement, opérations et méthodes de production concrètes.',
+          'Formation en développement logiciel et en exploitation opérationnelle.',
           'En cours',
         ],
         [
@@ -65,7 +65,7 @@ export const profile = {
           '2025',
           'IUT Montpellier',
           'Parcours DACS',
-          'Développement, réseau, sécurité et mise en production d’applications fiables.',
+          'Formation en développement, réseau, sécurité et mise en production d’applications.',
           'Obtenu',
         ],
         [
@@ -73,7 +73,7 @@ export const profile = {
           '2025',
           'IAE',
           'Parcours sciences et technologies, management des technologies et des sciences (e-learning)',
-          'Un complément scientifique et organisationnel autour du management de la technologie.',
+          'Formation complémentaire en sciences, technologies et management de la technologie.',
           'Obtenu',
         ],
         [
@@ -81,7 +81,7 @@ export const profile = {
           '2022',
           'Lycée Mermoz, Montpellier',
           'Mention bien',
-          'Une base technique dédiée à la conception, aux systèmes et au raisonnement industriel.',
+          'Formation technique autour de la conception, des systèmes et du raisonnement industriel.',
           'Obtenu',
         ],
         [
@@ -89,7 +89,7 @@ export const profile = {
           '2021',
           'Lycée Jean Jaurès',
           'Brevet d’initiation aéronautique',
-          'Le lien entre curiosité scientifique, aéronautique et culture du vol.',
+          'Découverte de l’aéronautique et de la culture du vol.',
           'Obtenu',
         ],
       ],
@@ -105,8 +105,8 @@ export const profile = {
     hero: {
       coordinates: 'Léo Torres · Montpellier',
       title: ['Computer engineering student', '/ DevOps.'],
-      lead: 'A computer engineering and operational systems student at Polytech Montpellier, I see computing as more than work: it is a passion.',
-      body: 'I enjoy working on what connects code, infrastructure and users. I believe security and project management are key elements that enable a project to succeed.',
+      lead: 'I study computer engineering and operational systems at Polytech Montpellier, and I am passionate about computing.',
+      body: 'I like connecting code, infrastructure and users. To me, security and project management are part of what makes a project solid.',
       contact: 'Contact me',
       photoAlt: 'Portrait of Leo Torres',
     },
@@ -116,23 +116,23 @@ export const profile = {
       entries: [
         {
           title: 'Astrophysics & space',
-          text: 'I enjoy discovering, exploring and understanding what few people grasp. The phenomena, scales and systems that shape our universe fascinate me.',
+          text: 'I enjoy learning about space, its phenomena, its scales and the systems that make up our universe.',
         },
         {
           title: 'Aeronautics',
-          text: 'This passion began with the BIA during secondary school. What started as a diploma became a lasting interest in flight culture and aviation.',
+          text: 'My interest in aviation began while preparing for the BIA in secondary school. It introduced me to flight culture and aviation.',
         },
         {
           title: 'Sport (boxing, hiking, climbing and gym)',
-          text: 'I am an active person: I enjoy moving, walking, exploring and discovering new places. Sport helps me reset and recharge.',
+          text: 'I enjoy moving, walking and discovering new places. Sport helps me let off steam and recharge.',
         },
         {
           title: 'Cinema',
-          text: 'Since childhood, I have loved cinema. I enjoy discovering new films, directors and stories.',
+          text: 'I have enjoyed cinema since childhood. I like discovering films, directors and their stories.',
         },
         {
           title: 'Video games',
-          text: 'One of my main passions is video games. I enjoy playing and exploring new stories.',
+          text: 'Video games are one of my main interests. I enjoy playing and discovering new stories.',
         },
       ],
     },
@@ -157,7 +157,7 @@ export const profile = {
           'In progress',
           'Polytech Montpellier',
           'Software development and operational exploitation (DO)',
-          'Focused on development, operations and practical production methods.',
+          'Coursework in software development and operational systems.',
           'In progress',
         ],
         [
@@ -165,7 +165,7 @@ export const profile = {
           '2025',
           'IUT Montpellier',
           'DACS specialization',
-          'Development, networking, security and production delivery for reliable applications.',
+          'Coursework in development, networking, security and application delivery.',
           'Earned',
         ],
         [
@@ -173,7 +173,7 @@ export const profile = {
           '2025',
           'IAE',
           'Science and technology track, technology and science management path (e-learning)',
-          'A scientific and organizational complement around technology management.',
+          'Additional coursework in science, technology and technology management.',
           'Earned',
         ],
         [
@@ -189,7 +189,7 @@ export const profile = {
           '2021',
           'Lycee Jean Jaures',
           'Aeronautics initiation certificate',
-          'An introduction to aeronautics connecting scientific curiosity, flight culture and aviation.',
+          'An introduction to aeronautics and flight culture.',
           'Earned',
         ],
       ],

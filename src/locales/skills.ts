@@ -14,6 +14,8 @@ export const skills = {
             [
               'Java',
               'Spring Boot',
+              'Scala',
+              'Swift',
               'Python',
               'bash',
               'Programmation orientée objet',
@@ -49,6 +51,7 @@ export const skills = {
             'VMware',
             'VirtualBox',
             'AWS',
+            'GCP',
             'clever cloud',
           ],
         ],
@@ -60,6 +63,8 @@ export const skills = {
             'Kubernetes',
             'Kustomize',
             'Helm',
+            'Traefik',
+            'Dokku',
             'Terraform',
             'Ansible',
             'gitlab-ci',
@@ -95,7 +100,6 @@ export const skills = {
             'elasticsearch',
             'Kibana',
             'logstash',
-            'Traefik',
             'Cadvizor',
           ],
         ],
@@ -103,6 +107,7 @@ export const skills = {
           'Qualité & sécurité',
           [
             'Postman',
+            'Biome',
             'ESLint',
             'Prettier',
             'SonarQube',
@@ -130,6 +135,7 @@ export const skills = {
         [
           'IA & tooling',
           [
+            'Copilot',
             'codex',
             'claude code',
             'open clo',
@@ -160,6 +166,8 @@ export const skills = {
             [
               'Java',
               'Spring Boot',
+              'Scala',
+              'Swift',
               'Python',
               'Bash',
               'Object-oriented programming',
@@ -194,6 +202,7 @@ export const skills = {
             'VMware',
             'VirtualBox',
             'AWS',
+            'GCP',
             'Clever Cloud',
           ],
         ],
@@ -205,6 +214,8 @@ export const skills = {
             'Kubernetes',
             'Kustomize',
             'Helm',
+            'Traefik',
+            'Dokku',
             'Terraform',
             'Ansible',
             'GitLab CI',
@@ -240,7 +251,6 @@ export const skills = {
             'Elasticsearch',
             'Kibana',
             'Logstash',
-            'Traefik',
             'cAdvisor',
           ],
         ],
@@ -248,6 +258,7 @@ export const skills = {
           'Quality & security',
           [
             'Postman',
+            'Biome',
             'ESLint',
             'Prettier',
             'SonarQube',
@@ -275,6 +286,7 @@ export const skills = {
         [
           'AI & tooling',
           [
+            'GitHub Copilot',
             'Codex',
             'Claude Code',
             'Open Claw',

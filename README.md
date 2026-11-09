@@ -7,8 +7,8 @@ répertoire de sortie et `pnpm install --frozen-lockfile` pour l’installation.
 
 Portfolio React/Vite de Léo Torres, avec des routes publiques localisées :
 
-- Français : `/fr-fr/profil`, `/fr-fr/competences`, `/fr-fr/projets`, `/fr-fr/contact`
-- English: `/en-us/profile`, `/en-us/skills`, `/en-us/projects`, `/en-us/contact`
+- Français : `/fr-fr/profil`, `/fr-fr/competences`, `/fr-fr/projets`, `/fr-fr/projets/:slug`, `/fr-fr/contact`, `/fr-fr/confidentialite`
+- English: `/en-us/profile`, `/en-us/skills`, `/en-us/projects`, `/en-us/projects/:slug`, `/en-us/contact`, `/en-us/privacy`
 
 ## Développement
 

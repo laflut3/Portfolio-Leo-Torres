@@ -43,11 +43,14 @@ export function Header({ locale }: { locale: Locale }) {
       >
         {pages.map((page) => {
           const path = pathFor(locale, page)
+          const isActive =
+            location.pathname === path ||
+            (page === 'projects' && location.pathname.startsWith(`${path}/`))
           return (
             <Link
               key={page}
               to={path}
-              className={`inline-flex min-h-10 items-center border-b px-2 py-1 text-sm no-underline transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${location.pathname === path ? 'border-[var(--portfolio-accent)] text-foreground' : 'border-transparent text-[var(--portfolio-text-soft)] hover:border-[var(--portfolio-line)] hover:text-foreground'}`}
+              className={`inline-flex min-h-10 items-center border-b px-2 py-1 text-sm no-underline transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${isActive ? 'border-[var(--portfolio-accent)] text-foreground' : 'border-transparent text-[var(--portfolio-text-soft)] hover:border-[var(--portfolio-line)] hover:text-foreground'}`}
             >
               {copy.nav[page]}
             </Link>
@@ -90,12 +93,16 @@ export function Header({ locale }: { locale: Locale }) {
             >
               {pages.map((page) => {
                 const path = pathFor(locale, page)
+                const isActive =
+                  location.pathname === path ||
+                  (page === 'projects' &&
+                    location.pathname.startsWith(`${path}/`))
                 return (
                   <Link
                     key={page}
                     to={path}
                     onClick={() => setMenuOpen(false)}
-                    className={`flex items-center justify-between border-l-2 px-3 py-3 text-lg no-underline transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${location.pathname === path ? 'border-[var(--portfolio-accent)] bg-[color-mix(in_oklch,var(--portfolio-accent)_10%,transparent)] text-foreground' : 'border-transparent text-[var(--portfolio-text-soft)] hover:border-[var(--portfolio-line)] hover:bg-[color-mix(in_oklch,var(--portfolio-accent)_5%,transparent)] hover:text-foreground'}`}
+                    className={`flex items-center justify-between border-l-2 px-3 py-3 text-lg no-underline transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${isActive ? 'border-[var(--portfolio-accent)] bg-[color-mix(in_oklch,var(--portfolio-accent)_10%,transparent)] text-foreground' : 'border-transparent text-[var(--portfolio-text-soft)] hover:border-[var(--portfolio-line)] hover:bg-[color-mix(in_oklch,var(--portfolio-accent)_5%,transparent)] hover:text-foreground'}`}
                   >
                     {copy.nav[page]}
                     <span aria-hidden="true">↗</span>

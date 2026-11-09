@@ -46,6 +46,9 @@ export function Footer() {
                 <Link to={pathFor(locale, page)}>{copy.nav[page]}</Link>
               </li>
             ))}
+            <li>
+              <Link to={pathFor(locale, 'legal')}>{copy.nav.legal}</Link>
+            </li>
           </ul>
         </div>
 

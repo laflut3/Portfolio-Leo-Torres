@@ -3,6 +3,7 @@ import { createContext, type ReactNode, useContext } from 'react'
 import { common } from '@/locales/common'
 import { contact } from '@/locales/contact'
 import { experience } from '@/locales/experience'
+import { legal } from '@/locales/legal'
 import { profile } from '@/locales/profile'
 import { projects } from '@/locales/projects'
 import { skills } from '@/locales/skills'
@@ -10,7 +11,7 @@ import { skills } from '@/locales/skills'
 export const locales = ['fr-fr', 'en-us'] as const
 export type Locale = (typeof locales)[number]
 export type PageKey =
-  'profile' | 'skills' | 'projects' | 'experience' | 'contact'
+  'profile' | 'skills' | 'projects' | 'experience' | 'contact' | 'legal'
 
 const paths: Record<Locale, Record<PageKey, string>> = {
   'fr-fr': {
@@ -19,6 +20,7 @@ const paths: Record<Locale, Record<PageKey, string>> = {
     projects: '/fr-fr/projets',
     experience: '/fr-fr/experience-professionnelle',
     contact: '/fr-fr/contact',
+    legal: '/fr-fr/confidentialite',
   },
   'en-us': {
     profile: '/en-us/profile',
@@ -26,6 +28,7 @@ const paths: Record<Locale, Record<PageKey, string>> = {
     projects: '/en-us/projects',
     experience: '/en-us/professional-experience',
     contact: '/en-us/contact',
+    legal: '/en-us/privacy',
   },
 }
 
@@ -41,12 +44,14 @@ const copy = {
     ...projects['fr-fr'],
     ...experience['fr-fr'],
     ...contact['fr-fr'],
+    ...legal['fr-fr'],
     metadata: {
       ...profile['fr-fr'].metadata,
       ...skills['fr-fr'].metadata,
       ...projects['fr-fr'].metadata,
       ...experience['fr-fr'].metadata,
       ...contact['fr-fr'].metadata,
+      ...legal['fr-fr'].metadata,
     },
   },
   'en-us': {
@@ -56,12 +61,14 @@ const copy = {
     ...projects['en-us'],
     ...experience['en-us'],
     ...contact['en-us'],
+    ...legal['en-us'],
     metadata: {
       ...profile['en-us'].metadata,
       ...skills['en-us'].metadata,
       ...projects['en-us'].metadata,
       ...experience['en-us'].metadata,
       ...contact['en-us'].metadata,
+      ...legal['en-us'].metadata,
     },
   },
 } as const

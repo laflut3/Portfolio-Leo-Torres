@@ -5,18 +5,34 @@ export const projects = {
     projects: {
       kicker: 'Projets',
       title: 'Mes projets',
-      viewDetails: 'Voir le détail',
+      intro:
+        'Des projets personnels, scolaires et open source, du web aux outils système.',
+      viewDetails: 'Voir le projet',
       hideDetails: 'Masquer le détail',
       viewGithub: 'Voir le dépôt',
       viewWebsite: 'Voir le site',
-      labels: { categories: 'Domaines', languages: 'Langages' },
+      labels: {
+        categories: 'Domaines',
+        languages: 'Langages',
+        technologies: 'Technologies',
+        overview: 'À propos',
+        diagram: 'Fonctionnement',
+        diagramCaption: 'Vue simplifiée',
+        links: 'Liens',
+        back: 'Tous les projets',
+        previous: 'Projet précédent',
+        next: 'Projet suivant',
+        projectNavigation: 'Navigation entre projets',
+        unknown: 'Projet introuvable',
+        noTechnologies: 'Technologies non précisées',
+      },
       filters: {
         label: 'Filtrer les projets',
         all: 'Tous',
         school: 'Scolaire',
         personal: 'Personnel',
         openSource: 'Open source',
-        empty: 'Aucun projet dans cette catégorie pour le moment.',
+        empty: 'Aucun projet dans cette catégorie.',
       },
       pagination: {
         label: 'Pagination des projets',
@@ -26,6 +42,7 @@ export const projects = {
       entries: [
         {
           title: 'Pixie',
+          slug: 'pixie',
           themes: ['openSource'],
           categories: ['Logiciel système', 'Backend', 'Infrastructure web'],
           languages: ['Rust'],
@@ -33,10 +50,12 @@ export const projects = {
           text: 'Serveur HTTP statique écrit en Rust.',
           details:
             'Un projet open source centré sur un serveur web léger, distribué notamment via Docker.',
+          diagram: ['Client HTTP', 'Serveur statique Pixie', 'Fichiers servis'],
           stack: ['Rust', 'HTTP', 'Docker'],
         },
         {
           title: 'Let Note',
+          slug: 'let-note',
           themes: ['personal', 'openSource'],
           categories: ['Application web', 'Éducation', 'Logiciel'],
           languages: ['TypeScript', 'Rust'],
@@ -44,10 +63,16 @@ export const projects = {
           text: 'Application de suivi universitaire inspirée de Pronote.',
           details:
             'Le projet associe une interface React avec Vite et un backend Rust, avec une documentation de déploiement local et Kubernetes.',
+          diagram: [
+            'Interface React et Vite',
+            'Backend Rust',
+            'Déploiement local ou Kubernetes',
+          ],
           stack: ['React', 'Vite', 'Rust', 'Kubernetes'],
         },
         {
           title: 'DO Royal',
+          slug: 'do-royal',
           themes: ['school'],
           categories: ['Jeu vidéo', 'Multijoueur', 'Application web'],
           languages: ['Java', 'JavaScript'],
@@ -55,10 +80,17 @@ export const projects = {
           text: 'Jeu de battle royale multijoueur réalisé dans un cadre scolaire.',
           details:
             'Il réunit un backend Java et un frontend JavaScript autour d’une carte, d’une zone de jeu, de personnages et d’un mode spectateur.',
-          stack: ['Java', 'JavaScript', 'Jeu multijoueur'],
+          diagram: [
+            'Joueur',
+            'Client JavaScript',
+            'Serveur Java',
+            'Partie multijoueur',
+          ],
+          stack: ['Java', 'JavaScript'],
         },
         {
           title: 'Rust-based project',
+          slug: 'rust-service-template',
           themes: ['openSource'],
           categories: ['Outillage développeur', 'Backend', 'DevOps'],
           languages: ['Rust'],
@@ -66,10 +98,17 @@ export const projects = {
           text: 'Socle reproductible pour démarrer un service Rust.',
           details:
             'Le dépôt structure l’intégration continue, la construction de conteneurs, les releases et les contrôles de sécurité d’un service Rust.',
-          stack: ['Rust', 'CI/CD', 'Docker', 'Sécurité'],
+          diagram: [
+            'Code du service Rust',
+            'CI et contrôles de sécurité',
+            'Image Docker',
+            'Release',
+          ],
+          stack: ['Rust', 'GitHub Actions', 'CI/CD', 'Docker'],
         },
         {
           title: 'Portfolio Léo Torres',
+          slug: 'portfolio-leo-torres',
           themes: ['personal'],
           categories: ['Site web', 'Portfolio', 'Expérience interactive'],
           languages: ['TypeScript'],
@@ -77,10 +116,17 @@ export const projects = {
           text: 'Portfolio professionnel localisé, conçu comme une expérience éditoriale.',
           details:
             'Il présente le parcours et les projets de Léo Torres avec React, TypeScript, une navigation localisée et une préparation au déploiement.',
+          diagram: [
+            'Visiteur',
+            'Application React et Vite',
+            'Routes localisées',
+            'Pages du portfolio',
+          ],
           stack: ['React', 'TypeScript', 'Vite', 'i18n'],
         },
         {
           title: 'docs-LeMontage',
+          slug: 'docs-lemontage',
           themes: ['personal'],
           categories: ['Site web', 'Documentation technique', 'DevOps'],
           languages: ['TypeScript'],
@@ -89,16 +135,24 @@ export const projects = {
           text: 'Site de présentation et de documentation publique de l’écosystème LeMontage.',
           details:
             'Une application React localisée avec TanStack Router, Tailwind CSS et shadcn, construite dans une image Nginx non-root puis déployée avec Helm sur Kubernetes.',
+          diagram: [
+            'Application React',
+            'Image Nginx non-root',
+            'Chart Helm',
+            'Cluster Kubernetes',
+          ],
           stack: [
             'React',
             'TanStack Router',
             'Tailwind CSS',
+            'shadcn',
             'Helm',
             'Kubernetes',
           ],
         },
         {
           title: 'Hub LeMontage',
+          slug: 'hub-lemontage',
           themes: ['personal'],
           categories: ['Application web', 'Collaboration', 'DevOps'],
           languages: ['TypeScript'],
@@ -106,10 +160,18 @@ export const projects = {
           text: 'Plateforme collaborative full-stack de l’écosystème LeMontage.',
           details:
             'Monorepo React et Fastify, avec API validée par Zod, persistance PostgreSQL via Kysely, déploiement local Compose et livraison Kubernetes pilotée par Helm et Argo CD.',
+          diagram: [
+            'Frontend React',
+            'API Fastify et Zod',
+            'PostgreSQL via Kysely',
+            'Compose ou Helm et Argo CD',
+          ],
           stack: [
             'React',
             'Fastify',
             'PostgreSQL',
+            'Zod',
+            'Kysely',
             'Docker Compose',
             'Helm',
             'Argo CD',
@@ -117,6 +179,7 @@ export const projects = {
         },
         {
           title: 'LeMontage',
+          slug: 'lemontage',
           themes: ['openSource'],
           categories: ['Logiciel', 'Automatisation', 'Création vidéo'],
           languages: ['Python'],
@@ -124,10 +187,18 @@ export const projects = {
           text: 'Moteur de pipelines YAML local-first pour transformer des vidéos longues en clips sous-titrés.',
           details:
             'Il orchestre localement transcription, détection d’extraits, découpe, sous-titrage et export pour les formats vidéo courts.',
+          diagram: [
+            'Pipeline YAML',
+            'Transcription',
+            'Détection et découpe des extraits',
+            'Sous-titres',
+            'Export vidéo',
+          ],
           stack: ['Python', 'YAML', 'FFmpeg', 'Whisper', 'Docker'],
         },
         {
           title: 'La Confrérie du Manchot',
+          slug: 'la-confrerie-du-manchot',
           themes: ['school'],
           categories: ['Jeu web 3D', 'Éducation', 'Événementiel'],
           languages: ['JavaScript'],
@@ -136,10 +207,17 @@ export const projects = {
           text: 'Jeu éducatif 3D créé pour la Nuit de l’Info 2025.',
           details:
             'Le jeu sensibilise à l’indépendance numérique, aux logiciels libres et à la sobriété numérique par des quêtes et des quiz.',
-          stack: ['JavaScript', '3D', 'Jeu web', 'Nuit de l’Info'],
+          diagram: [
+            'Explorer le campus',
+            'Accomplir des quêtes',
+            'Répondre aux quiz',
+            'Découvrir l’indépendance numérique',
+          ],
+          stack: ['React', 'React Three Fiber', 'Three.js', 'PeerJS', 'Vite'],
         },
         {
           title: 'Barenetes',
+          slug: 'barenetes',
           themes: ['school', 'openSource'],
           categories: ['Logiciel système', 'Orchestration', 'Infrastructure'],
           languages: ['Rust'],
@@ -147,10 +225,12 @@ export const projects = {
           text: 'Réimplémentation minimale et pédagogique de Kubernetes en Rust.',
           details:
             'Le projet décompose les primitives du plan de contrôle en composants gRPC : API, agent, ordonnanceur, CLI et réseau.',
+          diagram: ['CLI', 'API', 'Ordonnanceur', 'Agents', 'Réseau'],
           stack: ['Rust', 'Kubernetes', 'gRPC', 'Protobuf'],
         },
         {
           title: 'Forum Angular',
+          slug: 'forum-angular',
           themes: ['school'],
           categories: ['Application web', 'Réseau social', 'Apprentissage'],
           languages: ['TypeScript'],
@@ -158,10 +238,12 @@ export const projects = {
           text: 'Projet d’apprentissage autour du développement d’un forum avec Angular.',
           details:
             'Dépôt scolaire référencé pour illustrer l’apprentissage du framework Angular.',
-          stack: ['Angular', 'TypeScript', 'Apprentissage'],
+          diagram: ['Navigateur', 'Application Angular', 'Forum'],
+          stack: ['Angular', 'TypeScript', 'RxJS'],
         },
         {
           title: 'Omni',
+          slug: 'omni',
           themes: ['school'],
           categories: [
             'Application web',
@@ -174,10 +256,12 @@ export const projects = {
           text: 'Projet scolaire de reproduction d’outils collaboratifs inspirés de Google.',
           details:
             'Il explore la conception d’outils de productivité et de collaboration dans le cadre d’un projet de groupe.',
-          stack: ['Projet de groupe', 'Outils collaboratifs'],
+          diagram: ['Besoins collaboratifs', 'Omni', 'Outils collaboratifs'],
+          stack: [],
         },
         {
           title: 'Projet DO-cument',
+          slug: 'do-cument',
           themes: ['school'],
           categories: [
             'Application web',
@@ -190,10 +274,16 @@ export const projects = {
           text: 'Projet scolaire de reproduction d’un service de stockage et de partage de fichiers.',
           details:
             'Il s’inscrit dans un travail de groupe autour des usages et mécanismes d’un drive.',
-          stack: ['Projet de groupe', 'Partage de fichiers'],
+          diagram: [
+            'Fichiers à stocker ou partager',
+            'Projet DO-cument',
+            'Accès au partage',
+          ],
+          stack: [],
         },
         {
           title: 'Heart disease analysis',
+          slug: 'heart-disease-analysis',
           themes: ['school'],
           categories: ['Science des données', 'Santé', 'Analyse statistique'],
           languages: ['R'],
@@ -201,14 +291,19 @@ export const projects = {
           text: 'Analyse de données sur les maladies cardiaques dans une démarche d’apprentissage de R.',
           details:
             'Projet scolaire consacré à l’exploration et à l’analyse de données de santé.',
-          stack: ['R', 'Analyse de données', 'Santé'],
+          diagram: [
+            'Données de santé',
+            'Analyse avec R',
+            'Résultats statistiques',
+          ],
+          stack: ['R'],
         },
       ],
     },
     metadata: {
       projects: [
         'Projets — Portfolio Léo Torres',
-        'Une sélection de projets de Léo Torres autour du logiciel, du DevOps et de l’infrastructure.',
+        'Projets de Léo Torres avec descriptions, technologies et schémas de fonctionnement.',
       ],
     },
   },
@@ -216,11 +311,27 @@ export const projects = {
     projects: {
       kicker: 'Projects',
       title: 'My projects',
-      viewDetails: 'View details',
+      intro:
+        'Personal, academic and open-source work, from web apps to system tools.',
+      viewDetails: 'View project',
       hideDetails: 'Hide details',
       viewGithub: 'View repository',
       viewWebsite: 'Visit website',
-      labels: { categories: 'Domains', languages: 'Languages' },
+      labels: {
+        categories: 'Domains',
+        languages: 'Languages',
+        technologies: 'Technologies',
+        overview: 'About',
+        diagram: 'How it works',
+        diagramCaption: 'Simplified view',
+        links: 'Links',
+        back: 'All projects',
+        previous: 'Previous project',
+        next: 'Next project',
+        projectNavigation: 'Project navigation',
+        unknown: 'Project not found',
+        noTechnologies: 'Technologies not specified',
+      },
       filters: {
         label: 'Filter projects',
         all: 'All',
@@ -237,6 +348,7 @@ export const projects = {
       entries: [
         {
           title: 'Pixie',
+          slug: 'pixie',
           themes: ['openSource'],
           categories: ['Systems software', 'Backend', 'Web infrastructure'],
           languages: ['Rust'],
@@ -244,10 +356,12 @@ export const projects = {
           text: 'A static HTTP server written in Rust.',
           details:
             'An open-source project focused on a lightweight web server, distributed in particular through Docker.',
+          diagram: ['HTTP client', 'Pixie static server', 'Served files'],
           stack: ['Rust', 'HTTP', 'Docker'],
         },
         {
           title: 'Let Note',
+          slug: 'let-note',
           themes: ['personal', 'openSource'],
           categories: ['Web application', 'Education', 'Software'],
           languages: ['TypeScript', 'Rust'],
@@ -255,10 +369,16 @@ export const projects = {
           text: 'A university tracking application inspired by Pronote.',
           details:
             'The project combines a React and Vite interface with a Rust backend, plus local and Kubernetes deployment documentation.',
+          diagram: [
+            'React and Vite frontend',
+            'Rust backend',
+            'Local or Kubernetes deployment',
+          ],
           stack: ['React', 'Vite', 'Rust', 'Kubernetes'],
         },
         {
           title: 'DO Royal',
+          slug: 'do-royal',
           themes: ['school'],
           categories: ['Video game', 'Multiplayer', 'Web application'],
           languages: ['Java', 'JavaScript'],
@@ -266,10 +386,17 @@ export const projects = {
           text: 'A multiplayer battle royale game developed as an academic project.',
           details:
             'It combines a Java backend and a JavaScript frontend around a map, play zone, characters and spectator mode.',
-          stack: ['Java', 'JavaScript', 'Multiplayer game'],
+          diagram: [
+            'Player',
+            'JavaScript client',
+            'Java server',
+            'Multiplayer session',
+          ],
+          stack: ['Java', 'JavaScript'],
         },
         {
           title: 'Rust-based project',
+          slug: 'rust-service-template',
           themes: ['openSource'],
           categories: ['Developer tooling', 'Backend', 'DevOps'],
           languages: ['Rust'],
@@ -277,10 +404,17 @@ export const projects = {
           text: 'A reproducible foundation for starting a Rust service.',
           details:
             'The repository structures CI, container builds, releases and security checks for a Rust service.',
-          stack: ['Rust', 'CI/CD', 'Docker', 'Security'],
+          diagram: [
+            'Rust service code',
+            'CI and security checks',
+            'Docker image',
+            'Release',
+          ],
+          stack: ['Rust', 'GitHub Actions', 'CI/CD', 'Docker'],
         },
         {
           title: 'Léo Torres Portfolio',
+          slug: 'portfolio-leo-torres',
           themes: ['personal'],
           categories: ['Website', 'Portfolio', 'Interactive experience'],
           languages: ['TypeScript'],
@@ -288,10 +422,17 @@ export const projects = {
           text: 'A localized professional portfolio designed as an editorial experience.',
           details:
             'It presents Léo Torres’s background and projects with React, TypeScript, localized navigation and deployment readiness.',
+          diagram: [
+            'Visitor',
+            'React and Vite app',
+            'Localized routes',
+            'Portfolio pages',
+          ],
           stack: ['React', 'TypeScript', 'Vite', 'i18n'],
         },
         {
           title: 'docs-LeMontage',
+          slug: 'docs-lemontage',
           themes: ['personal'],
           categories: ['Website', 'Technical documentation', 'DevOps'],
           languages: ['TypeScript'],
@@ -300,16 +441,24 @@ export const projects = {
           text: 'The public presentation and documentation website for the LeMontage ecosystem.',
           details:
             'A localized React application with TanStack Router, Tailwind CSS and shadcn, built into a non-root Nginx image and deployed to Kubernetes with Helm.',
+          diagram: [
+            'React app',
+            'Non-root Nginx image',
+            'Helm chart',
+            'Kubernetes cluster',
+          ],
           stack: [
             'React',
             'TanStack Router',
             'Tailwind CSS',
+            'shadcn',
             'Helm',
             'Kubernetes',
           ],
         },
         {
           title: 'Hub LeMontage',
+          slug: 'hub-lemontage',
           themes: ['personal'],
           categories: ['Web application', 'Collaboration', 'DevOps'],
           languages: ['TypeScript'],
@@ -317,10 +466,18 @@ export const projects = {
           text: 'A full-stack collaborative platform in the LeMontage ecosystem.',
           details:
             'A React and Fastify monorepo with a Zod-validated API, PostgreSQL persistence through Kysely, local Compose deployment and Kubernetes delivery driven by Helm and Argo CD.',
+          diagram: [
+            'React frontend',
+            'Fastify and Zod API',
+            'PostgreSQL through Kysely',
+            'Compose or Helm and Argo CD',
+          ],
           stack: [
             'React',
             'Fastify',
             'PostgreSQL',
+            'Zod',
+            'Kysely',
             'Docker Compose',
             'Helm',
             'Argo CD',
@@ -328,6 +485,7 @@ export const projects = {
         },
         {
           title: 'LeMontage',
+          slug: 'lemontage',
           themes: ['openSource'],
           categories: ['Software', 'Automation', 'Video creation'],
           languages: ['Python'],
@@ -335,10 +493,18 @@ export const projects = {
           text: 'A local-first YAML pipeline engine that turns long videos into captioned clips.',
           details:
             'It orchestrates transcription, clip detection, cutting, captions and exports locally for short-form video.',
+          diagram: [
+            'YAML pipeline',
+            'Transcription',
+            'Clip detection and cutting',
+            'Captions',
+            'Video export',
+          ],
           stack: ['Python', 'YAML', 'FFmpeg', 'Whisper', 'Docker'],
         },
         {
           title: 'The Penguin Brotherhood',
+          slug: 'la-confrerie-du-manchot',
           themes: ['school'],
           categories: ['3D web game', 'Education', 'Event project'],
           languages: ['JavaScript'],
@@ -347,10 +513,17 @@ export const projects = {
           text: 'A 3D educational game created for Nuit de l’Info 2025.',
           details:
             'The game raises awareness of digital independence, free software and digital sobriety through quests and quizzes.',
-          stack: ['JavaScript', '3D', 'Web game', 'Nuit de l’Info'],
+          diagram: [
+            'Explore the campus',
+            'Complete quests',
+            'Answer quizzes',
+            'Learn about digital independence',
+          ],
+          stack: ['React', 'React Three Fiber', 'Three.js', 'PeerJS', 'Vite'],
         },
         {
           title: 'Barenetes',
+          slug: 'barenetes',
           themes: ['school', 'openSource'],
           categories: ['Systems software', 'Orchestration', 'Infrastructure'],
           languages: ['Rust'],
@@ -358,10 +531,12 @@ export const projects = {
           text: 'A minimal, educational reimplementation of Kubernetes in Rust.',
           details:
             'The project breaks down control-plane primitives into gRPC components: API, agent, scheduler, CLI and networking.',
+          diagram: ['CLI', 'API', 'Scheduler', 'Agents', 'Networking'],
           stack: ['Rust', 'Kubernetes', 'gRPC', 'Protobuf'],
         },
         {
           title: 'Angular Forum',
+          slug: 'forum-angular',
           themes: ['school'],
           categories: ['Web application', 'Social network', 'Learning'],
           languages: ['TypeScript'],
@@ -369,10 +544,12 @@ export const projects = {
           text: 'A learning project focused on building a forum with Angular.',
           details:
             'An academic repository that illustrates learning the Angular framework.',
-          stack: ['Angular', 'TypeScript', 'Learning'],
+          diagram: ['Browser', 'Angular application', 'Forum'],
+          stack: ['Angular', 'TypeScript', 'RxJS'],
         },
         {
           title: 'Omni',
+          slug: 'omni',
           themes: ['school'],
           categories: [
             'Web application',
@@ -385,10 +562,12 @@ export const projects = {
           text: 'An academic project recreating collaborative tools inspired by Google.',
           details:
             'It explores the design of productivity and collaboration tools as part of a group project.',
-          stack: ['Group project', 'Collaborative tools'],
+          diagram: ['Collaboration needs', 'Omni', 'Collaborative tools'],
+          stack: [],
         },
         {
           title: 'Projet DO-cument',
+          slug: 'do-cument',
           themes: ['school'],
           categories: ['Web application', 'File management', 'Group project'],
           languages: [],
@@ -397,10 +576,16 @@ export const projects = {
           text: 'An academic project recreating a file storage and sharing service.',
           details:
             'It is a group project around the uses and mechanics of a drive.',
-          stack: ['Group project', 'File sharing'],
+          diagram: [
+            'Files to store or share',
+            'Projet DO-cument',
+            'Shared access',
+          ],
+          stack: [],
         },
         {
           title: 'Heart disease analysis',
+          slug: 'heart-disease-analysis',
           themes: ['school'],
           categories: ['Data science', 'Health', 'Statistical analysis'],
           languages: ['R'],
@@ -408,14 +593,15 @@ export const projects = {
           text: 'Heart disease data analysis as part of learning R.',
           details:
             'An academic project focused on exploring and analyzing health data.',
-          stack: ['R', 'Data analysis', 'Health'],
+          diagram: ['Health data', 'Analysis with R', 'Statistical results'],
+          stack: ['R'],
         },
       ],
     },
     metadata: {
       projects: [
         'Projects — Leo Torres Portfolio',
-        'A selection of Leo Torres projects focused on software, DevOps and infrastructure.',
+        'Leo Torres projects with concise descriptions, technologies and flow diagrams.',
       ],
     },
   },

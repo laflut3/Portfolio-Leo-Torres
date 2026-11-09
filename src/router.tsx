@@ -10,6 +10,8 @@ import { I18nProvider } from '@/i18n'
 import {
   ContactPage,
   ExperiencePage,
+  LegalPage,
+  ProjectDetailPage,
   ProjectsPage,
   ProfilePage,
   SkillsPage,
@@ -75,6 +77,11 @@ const frenchProjectsRoute = createRoute({
   path: 'projets',
   component: ProjectsPage,
 })
+const frenchProjectDetailRoute = createRoute({
+  getParentRoute: () => frenchRoute,
+  path: 'projets/$slug',
+  component: ProjectDetailPage,
+})
 const frenchContactRoute = createRoute({
   getParentRoute: () => frenchRoute,
   path: 'contact',
@@ -100,6 +107,11 @@ const englishProjectsRoute = createRoute({
   path: 'projects',
   component: ProjectsPage,
 })
+const englishProjectDetailRoute = createRoute({
+  getParentRoute: () => englishRoute,
+  path: 'projects/$slug',
+  component: ProjectDetailPage,
+})
 const englishContactRoute = createRoute({
   getParentRoute: () => englishRoute,
   path: 'contact',
@@ -110,6 +122,16 @@ const englishExperienceRoute = createRoute({
   path: 'professional-experience',
   component: ExperiencePage,
 })
+const frenchLegalRoute = createRoute({
+  getParentRoute: () => frenchRoute,
+  path: 'confidentialite',
+  component: LegalPage,
+})
+const englishLegalRoute = createRoute({
+  getParentRoute: () => englishRoute,
+  path: 'privacy',
+  component: LegalPage,
+})
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -118,16 +140,20 @@ const routeTree = rootRoute.addChildren([
     frenchProfileRoute,
     frenchSkillsRoute,
     frenchProjectsRoute,
+    frenchProjectDetailRoute,
     frenchExperienceRoute,
     frenchContactRoute,
+    frenchLegalRoute,
   ]),
   englishRoute.addChildren([
     englishIndexRoute,
     englishProfileRoute,
     englishSkillsRoute,
     englishProjectsRoute,
+    englishProjectDetailRoute,
     englishExperienceRoute,
     englishContactRoute,
+    englishLegalRoute,
   ]),
 ])
 

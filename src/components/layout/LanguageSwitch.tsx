@@ -10,9 +10,16 @@ import {
 import { type Locale, pathFor, type PageKey, useTranslation } from '@/i18n'
 
 function pageForPath(pathname: string): PageKey {
+  if (pathname.endsWith('/privacy') || pathname.endsWith('/confidentialite'))
+    return 'legal'
   if (pathname.endsWith('/skills') || pathname.endsWith('/competences'))
     return 'skills'
-  if (pathname.endsWith('/projects') || pathname.endsWith('/projets'))
+  if (
+    pathname.endsWith('/projects') ||
+    pathname.endsWith('/projets') ||
+    pathname.startsWith('/en-us/projects/') ||
+    pathname.startsWith('/fr-fr/projets/')
+  )
     return 'projects'
   if (
     pathname.endsWith('/professional-experience') ||
@@ -27,6 +34,9 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
   const location = useLocation()
   const { copy } = useTranslation()
   const page = pageForPath(location.pathname)
+  const projectSlug = location.pathname.match(
+    /^\/(?:fr-fr\/projets|en-us\/projects)\/([^/]+)$/,
+  )?.[1]
   const options: Array<{ locale: Locale; label: string }> = [
     { locale: 'fr-fr', label: copy.language.french },
     { locale: 'en-us', label: copy.language.english },
@@ -48,10 +58,33 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
         <DropdownMenuLabel>{copy.language.label}</DropdownMenuLabel>
         {options.map((option) => (
           <DropdownMenuItem key={option.locale} asChild>
-            <Link to={pathFor(option.locale, page)} className="theme-menu-item">
-              <span>{option.label}</span>
-              {option.locale === locale && <span aria-hidden="true">✓</span>}
-            </Link>
+            {projectSlug && option.locale === 'fr-fr' ? (
+              <Link
+                to="/fr-fr/projets/$slug"
+                params={{ slug: projectSlug }}
+                className="theme-menu-item"
+              >
+                <span>{option.label}</span>
+                {option.locale === locale && <span aria-hidden="true">✓</span>}
+              </Link>
+            ) : projectSlug ? (
+              <Link
+                to="/en-us/projects/$slug"
+                params={{ slug: projectSlug }}
+                className="theme-menu-item"
+              >
+                <span>{option.label}</span>
+                {option.locale === locale && <span aria-hidden="true">✓</span>}
+              </Link>
+            ) : (
+              <Link
+                to={pathFor(option.locale, page)}
+                className="theme-menu-item"
+              >
+                <span>{option.label}</span>
+                {option.locale === locale && <span aria-hidden="true">✓</span>}
+              </Link>
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

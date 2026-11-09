@@ -330,6 +330,29 @@ html.theme-ready [class*='border-'] {
   outline-offset: 3px;
 }
 
+.legal-copy p {
+  margin: 0 0 1rem;
+}
+
+.legal-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-external-link {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--portfolio-accent);
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.legal-external-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+}
+
 .profile-section {
   position: relative;
   scroll-margin-top: 7rem;

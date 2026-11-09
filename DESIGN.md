@@ -27,6 +27,25 @@ la sécurité et l'automatisation restent reliés, visibles et maîtrisés.
 - Utiliser `logo-light.svg` sur fond clair, `logo-dark.svg` sur fond sombre et
   `logo-monochrome.svg` lorsque la couleur est imposée.
 
+## Projets
+
+- L’index utilise une liste éditoriale numérotée. Chaque ligne met en avant le
+  nom, une description courte, les technologies connues et l’accès à la fiche.
+- Une fiche projet présente son résumé, ses technologies, ses liens publics et
+  un schéma de fonctionnement en HTML. Les schémas restent lisibles sans
+  animation et passent en colonne sur mobile.
+- Les diagrammes décrivent uniquement les éléments présents dans les sources
+  disponibles. Les projets sans stack documentée l’indiquent clairement.
+- Les filtres restent utilisables au clavier et les couleurs s’appuient sur les
+  variables du thème clair et sombre.
+
+## Confidentialité
+
+- Les informations de confidentialité et d’hébergement sont accessibles depuis
+  le pied de page dans les deux langues du site.
+- Aucune bannière cookies ne s’affiche tant que le site n’active aucun traceur
+  non essentiel. La préférence d’apparence reste dans le stockage local.
+
 ## 3D et animation
 
 - Le noyau est une icosphère procédurale, entourée de trois orbites : aucun

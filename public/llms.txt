@@ -17,12 +17,17 @@ Léo Torres a travaillé dans les squads Identification & Authentification
 Pages canoniques publiques :
 - /fr-fr/profil, /fr-fr/competences, /fr-fr/projets, /fr-fr/experience-professionnelle et /fr-fr/contact
 - /en-us/profile, /en-us/skills, /en-us/projects, /en-us/professional-experience et /en-us/contact
+- /fr-fr/confidentialite et /en-us/privacy
+- Fiches projet en français : /fr-fr/projets/pixie, /fr-fr/projets/let-note, /fr-fr/projets/do-royal, /fr-fr/projets/rust-service-template, /fr-fr/projets/portfolio-leo-torres, /fr-fr/projets/docs-lemontage, /fr-fr/projets/hub-lemontage, /fr-fr/projets/lemontage, /fr-fr/projets/la-confrerie-du-manchot, /fr-fr/projets/barenetes, /fr-fr/projets/forum-angular, /fr-fr/projets/omni, /fr-fr/projets/do-cument et /fr-fr/projets/heart-disease-analysis.
+- Project pages in English: /en-us/projects/pixie, /en-us/projects/let-note, /en-us/projects/do-royal, /en-us/projects/rust-service-template, /en-us/projects/portfolio-leo-torres, /en-us/projects/docs-lemontage, /en-us/projects/hub-lemontage, /en-us/projects/lemontage, /en-us/projects/la-confrerie-du-manchot, /en-us/projects/barenetes, /en-us/projects/forum-angular, /en-us/projects/omni, /en-us/projects/do-cument and /en-us/projects/heart-disease-analysis.
 
 Les visuels, dont le portrait, sont décoratifs : les informations importantes
 sont également présentes dans le contenu HTML.
 
-La page projets présente des réalisations personnelles, scolaires et open source,
-dont Pixie, Let Note, DO Royal, LeMontage, La Confrérie du Manchot, Barenetes,
-Omni, Projet DO-cument et une analyse de données de santé. Chaque fiche indique
-ses catégories, ses technologies et son dépôt source lorsqu’il est public. Les
-projets qui disposent d’un site public proposent aussi un lien vers celui-ci.
+Les fiches projet présentent une courte description, les technologies connues,
+un schéma de fonctionnement simplifié et les liens publics disponibles.
+
+Slugs des fiches projet : pixie, let-note, do-royal, rust-service-template,
+portfolio-leo-torres, docs-lemontage, hub-lemontage, lemontage,
+la-confrerie-du-manchot, barenetes, forum-angular, omni, do-cument et
+heart-disease-analysis.
